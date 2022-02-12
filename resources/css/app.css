@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800');
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: Poppins, 'san-serif';
+    scroll-behavior: smooth;
+}
+.home__main {
+    animation: 1000ms slideIn ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes slideIn {
+    0% {
+        opacity:0;
+        transform: translateX(-300px)
+    }
+    100% {
+        opacity:1;
+        transform: translateX(0px)
+    }
+}
+.home__svg {
+    animation: 1000ms slideInSVG ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes slideInSVG {
+    0% {
+        opacity:0;
+        transform: translateY(300px)
+    }
+    100% {
+        opacity:1;
+        transform: translateY(0px)
+    }
+}
+.downNav {
+    animation: 1000ms bounceUpDown ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes bounceUpDown {
+    0% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(-10px)
+    }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
