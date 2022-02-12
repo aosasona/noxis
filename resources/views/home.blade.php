@@ -10,7 +10,7 @@
 <img src="{{ asset('img/main.svg') }}" alt="Main SVG" class="p-6 mt-8 lg:p-0 lg:mt-0 h-1/2 home__svg"/>
 </div>
 
-<a href="#home__about" class="absolute right-5 bottom-8 border-2 border-white rounded-[50%] lg:hidden p-3 px-4 text-xl font-semibold downNav"><i class="fa-solid fa-chevron-down"></i></a>
+<a href="#home__about" class="absolute right-5 bottom-8 border-2 border-white rounded-[50%] lg:hidden p-2 px-3 text-xl font-semibold downNav"><i class="fa-solid fa-chevron-down"></i></a>
 
 <div class="" id="home__about">
     <div class="">
