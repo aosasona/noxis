@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="w-full h-[85vh] lg:h-[85vh] flex flex-col lg:flex-row justify-center items-center p-2">
+<div class="w-full h-[95vh] lg:h-[85vh] flex flex-col lg:flex-row justify-center items-center p-2">
 <div class="home__main">
 <h1 class="font-medium text-6xl lg:text-7xl text-blue-500">Hello,</h1>
 <h2 class="font-medium text-2xl lg:text-4xl text-gray-200">Welcome to <span class="text-blue-500 font-semibold">RanCh</span></h2>
