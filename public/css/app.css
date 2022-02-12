@@ -610,6 +610,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex{
     display: flex;
 }
+.hidden{
+    display: none;
+}
 .h-\[95vh\]{
     height: 95vh;
 }
@@ -624,6 +627,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-full{
     height: 100%;
+}
+.h-\[85vh\]{
+    height: 85vh;
 }
 .w-full{
     width: 100%;
