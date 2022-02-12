@@ -31,6 +31,7 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.jpeg') }}"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 
@@ -53,5 +54,9 @@
     <div class="mx-1 my-4 lg:my-8 lg:mx-20 xl:mx-80 text-white">
     @yield('content')
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
