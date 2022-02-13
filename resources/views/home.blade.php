@@ -32,6 +32,29 @@
     </div>
 </div>
 
+<center>
+<div class="mx-8 mt-16 mb-14 relative" data-aos="flip-left" data-aos-duration="1000">
+ 
+<h1 class="text-sky-500 text-3xl font-semibold">Getting Started</h1>
+<ul class="mt-10 p-5 py-6 bg-zinc-800 lg:w-1/3 rounded-2xl text-sm text-left tiltDiv">
+    
+    <div class="absolute top-[-10px] left-[-20px] w-2 h-2 p-4 rounded-[50%] bg-red-700"></div>
+    <li><span class="text-white">Proceed to the sign-up page using the button below or in the navigation bar.</span></li>
+    <li><span class="text-white">Enter a valid e-mail and a backup e-mail address on the sign-up page.</span></li>
+    <li><span class="text-white">You will be sent an OTP for login authentication every-time, we do <b class="text-sky-500">NOT</b> use fixed passwords for security
+    reasons.</span></li>
+    <li><span class="text-white">Login data is only saved locally on your device for 7 days, after which you'll need to sign in again.</span></li>
+    <li><span class="text-white">Conversations are also <b class="text-sky-500">automatically</b> deleted after 7 days. Your RanCh link will be available on your dashboard immediately after signing up,
+      guests do not need to sign up to chat with you.</span></li>
+  </ul>
+</div>
+</center>
+
+<footer class="flex flex-col lg:flex-row-reverse justify-between pt-10 mx-3 items-center">
+    <a href="https://twitter.com/ranch_web" target="_blank" rel="noreferrer"><i class="fab fa-twitter bg-sky-700 text-sky-400 px-2 py-2 rounded-lg"></i></a>
+    <span class="text-sm my-4 lg:my-0">Developed by <a href="https://twitter.com/_realao" target="_blank" rel="noreferrer" class="text-sky-600 underline">Ayodeji</a></span>
+    
+</footer>
 
 <script>
     window.onscroll = () => {

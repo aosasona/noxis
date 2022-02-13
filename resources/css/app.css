@@ -51,6 +51,12 @@
     }
 }
 
+.tiltDiv {
+    transform: rotate(3deg);
+}
+.tiltDiv li {
+    margin-bottom: 10px;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
