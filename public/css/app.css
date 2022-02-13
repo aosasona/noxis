@@ -480,6 +480,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-\[1\]{
     z-index: 1;
 }
+.z-\[-1\]{
+    z-index: -1;
+}
 .my-8{
     margin-top: 2rem;
     margin-bottom: 2rem;
