@@ -695,6 +695,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-bg-opacity: 1;
     background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
+.object-cover{
+    -o-object-fit: cover;
+       object-fit: cover;
+}
 .p-2{
     padding: 0.5rem;
 }

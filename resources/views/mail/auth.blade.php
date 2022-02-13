@@ -22,7 +22,7 @@
 
       $gen_code = $alph[$rand_keys[0]].$alph[$rand_keys[1]].$gen_c.$alph[$rand_keys[2]].$gen_d;
     ?>
-    <img src="https://ranch-beta.herokuapp.com/img/favicon.jpeg" alt="Logo" class="h-12 w-12 px-4 p-4"/>
+    <img src="https://ranch-beta.herokuapp.com/img/favicon.jpeg" alt="Logo" class="h-12 w-12 object-cover px-4 p-4"/>
 
 </br>
 
