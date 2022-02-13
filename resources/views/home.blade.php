@@ -33,7 +33,7 @@
 </div>
 
 <center>
-<div class="mx-8 mt-16 mb-10 relative" data-aos="flip-left" data-aos-duration="1000">
+<div class="mx-8 mt-16 mb-12 relative" data-aos="flip-left" data-aos-duration="1000">
  
 <h1 class="text-sky-500 text-3xl font-semibold">Getting Started</h1>
 <ul class="mt-10 p-5 py-6 bg-zinc-800 lg:w-1/3 rounded-2xl text-sm text-left tiltDiv">
