@@ -51,7 +51,7 @@
 <a href="/signup" class="border-2 border-sky-500 text-sky-500 px-6 p-3 rounded-xl hover:bg-sky-700 hover:text-white hover:border-none">Get Started</a>
 </center>
 
-<footer class="flex flex-col lg:flex-row-reverse justify-between lg:mt-12 mt-8 mx-3 items-center">
+<footer class="flex flex-row-reverse justify-between lg:mt-16 mt-10 mx-3 items-center">
     <a href="https://twitter.com/ranch_web" target="_blank" rel="noreferrer"><i class="fab fa-twitter bg-sky-700 text-sky-400 hover:bg-sky-400 hover:text-sky-700 px-2 py-2 rounded-lg"></i></a>
     <span class="text-sm my-4 lg:my-0">Developed by <a href="https://twitter.com/_realao" target="_blank" rel="noreferrer" class="text-sky-600 underline">Ayodeji</a></span>
     
