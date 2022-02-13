@@ -843,6 +843,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-text-opacity: 1;
     color: rgb(239 68 68 / var(--tw-text-opacity));
 }
+.text-zinc-400{
+    --tw-text-opacity: 1;
+    color: rgb(161 161 170 / var(--tw-text-opacity));
+}
 .underline{
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;

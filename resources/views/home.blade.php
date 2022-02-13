@@ -11,7 +11,7 @@
 </div>
 
 
-<div class="w-full px-8 my-8 lg:mt-0 lg:my-20 text-left lg:text-center font-light lg:font-medium text-lg lg:text-2xl text-white" data-aos="fade-up" data-aos-duration="1000"><span class="text-sky-600">RanCh</span> is a web service aimed at giving you a platform to communicate quickly, easily & anonymously with whomever you want to chat with – without the distractions of setting passwords or filling long, boring forms. We don't have the standard registration process users usually go through, we don’t serve ads either, we serve you 😎
+<div class="w-full px-8 my-8 lg:mt-0 lg:my-20 text-left lg:text-center font-light lg:font-medium text-lg lg:text-2xl text-zinc-400" data-aos="fade-up" data-aos-duration="1000"><span class="text-sky-500 font-semibold">RanCh</span> is a web service aimed at giving you a platform to communicate quickly, easily & anonymously with whomever you want to chat with – without the distractions of setting passwords or filling long, boring forms. We don't have the standard registration process users usually go through, we don’t serve ads either, we serve you 😎
 </div>
 
 <div class="w-full px-4 pb-5 lg:px-4 lg:mx-0 flex flex-col lg:flex-row text-center mt-10 lg:mt-32 lg:justify-around" id="home__about">
