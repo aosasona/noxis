@@ -8,7 +8,7 @@
 <h2 class="font-medium text-2xl lg:text-4xl text-gray-200">Welcome to <span class="text-sky-600 font-semibold">RanCh</span></h2>
 </div>
 <img src="{{ asset('img/main.svg') }}" alt="Main SVG" class="p-6 mt-8 lg:p-0 lg:mt-0 h-1/2 home__svg"/>
-<p class="downNav lg:hidden text-xs text-sky-600 z-[-1]">What is RanCh? &darr;</p>
+<p class="downNav lg:hidden text-xs text-sky-600 z-[-1]" id="downNav">What is RanCh? &darr;</p>
 </div>
 
 
@@ -57,6 +57,12 @@
     
 </footer>
 
+<script>
+    window.onscroll = () => {
+        var downNav = document.getElementById('downNav');
+        downNav.classList.add('hidden');
+    }
+</script>
 @endsection
 
 
