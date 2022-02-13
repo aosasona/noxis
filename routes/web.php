@@ -18,3 +18,5 @@ use App\Http\Controllers\AccountController;
 Route::get('/', [GeneralController::class, 'home']); //Home route
 Route::get('/signin', [AccountController::class, 'signin']); //Sign-in route
 Route::get('/signup', [AccountController::class, 'signup']); //Sign-in route
+Route::post('/signup/auth', [AccountController::class, 'signup_auth']); //sign-up post form
+Route::post('/signin/auth', [AccountController::class, 'signin_auth']); //sign-up post form
