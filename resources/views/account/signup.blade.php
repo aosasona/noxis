@@ -69,6 +69,12 @@
         }
     })
 
+    signup_auth() {
+        const xhttp = new XMLHttpRequest();
+
+        
+    }
+
 </script>
 
 @endsection

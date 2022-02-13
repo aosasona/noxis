@@ -10,7 +10,6 @@
 <img src="{{ asset('img/main.svg') }}" alt="Main SVG" class="p-6 mt-8 lg:p-0 lg:mt-0 h-1/2 home__svg"/>
 </div>
 
-<a href="#home__about" class="absolute right-5 bottom-8 border-2 border-white rounded-[50%] lg:hidden p-2 px-3 text-xl font-semibold downNav" id="downNav"><i class="fa-solid fa-chevron-down"></i></a>
 
 <div class="w-full px-8 my-8 lg:mt-0 lg:my-20 text-left lg:text-center font-light lg:font-medium text-lg lg:text-2xl text-white" data-aos="fade-up" data-aos-duration="1000"><span class="text-sky-600">RanCh</span> is a web service aimed at giving you a platform to communicate quickly, easily & anonymously with whomever you want to chat with – without the distractions of setting passwords or filling long, boring forms. We don't have the standard registration process users usually go through, we don’t serve ads either, we serve you 😎
 </div>
