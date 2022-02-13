@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="flex w-screen h-[85vh] justify-center items-center px-4">
-<form method="POST" onsubmit="return false;" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
+<form method="POST" action="auth/send-mail" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
     <h1 class="font-medium text-4xl lg:text-5xl mb-8 p-4">Sign Up</h1>
     <div class="lg:px-5">
 
@@ -22,7 +22,7 @@
 
     <div class="flex flex-row justify-between items-center mt-10">
         <a href="/signin" class="underline hover:text-sky-500">Sign In Instead</a>
-    <button type="submit" name="signup" class="bg-sky-900 text-sky-400 px-5 py-2 rounded-lg text-lg hover:text-sky-900 hover:bg-sky-400" onclick="signup_auth()" id="signup_btn">Next</button>
+    <button type="submit" name="signup" class="bg-sky-900 text-sky-400 px-5 py-2 rounded-lg text-lg hover:text-sky-900 hover:bg-sky-400 font-medium" id="signup_btn">Next</button>
     </div>
     </div>
 </form>
@@ -43,16 +43,16 @@
        
         if(emailInput.length < 6 && emailInput.length != 0) { 
             emailError.innerText = "eMail address is too short";
-            Btn.disabled = true;
+            
             } else {
                 const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
                 const emailString = String(emailInput);
                 if(emailString.match(re)) {
-                    Btn.disabled = false;
+                   
                     emailError.innerText = "";
                 } else {
                     emailError.innerText = "Invalid email address";
-                    Btn.disabled = true;
+                
                 }
         }
     })
@@ -61,19 +61,13 @@
         const userInput = userField.value;
 
         if(userInput.length <= 3 && userInput.length != 0) {
-            Btn.disabled = true;
+      
             userError.innerText = `Username is too short (${userInput.length})`;
         } else {
             userError.innerText = "";
-            Btn.disabled = false;
+      
         }
     })
-
-    signup_auth() {
-        const xhttp = new XMLHttpRequest();
-
-        
-    }
 
 </script>
 
