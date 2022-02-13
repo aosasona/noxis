@@ -16,17 +16,17 @@
 </div>
 
 <div class="w-full px-4 pb-5 lg:px-4 lg:mx-0 flex flex-col lg:flex-row text-center mt-10 lg:mt-32 lg:justify-around" id="home__about">
-    <div class="w-full mt-8 lg:mt-0 lg:w-1/3 bg-zinc-800 p-4 rounded-xl lg:mx-4" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="w-full mt-8 lg:mt-0 lg:w-1/3 bg-zinc-800 p-4 py-6 rounded-xl lg:mx-4" data-aos="zoom-in" data-aos-duration="1000">
         <img src="{{ asset('img/chat.svg') }}" alt="Main SVG 1" class="w-full lg:w-auto lg:h-3/4 p-4"/>
         <h1 class="text-2xl font-semibold ">Quick Setup</h1>
     </div>
 
-    <div class="w-full mt-8 lg:mt-0 lg:w-1/3 bg-zinc-800 p-4 rounded-xl lg:mx-4" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="w-full mt-8 lg:mt-0 lg:w-1/3 bg-zinc-800 p-4 py-6 rounded-xl lg:mx-4" data-aos="zoom-in" data-aos-duration="1000">
         <img src="{{ asset('img/fast.svg') }}" alt="Main SVG 2" class="w-full lg:w-auto lg:h-3/4 p-4"/>
         <h1 class="text-2xl font-semibold ">Text Anonymously</h1>
     </div>
 
-    <div class="w-full mt-8 lg:mt-0 lg:w-1/3 bg-zinc-800 p-4 rounded-xl lg:mx-4" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="w-full mt-8 lg:mt-0 lg:w-1/3 bg-zinc-800 p-4 py-6 rounded-xl lg:mx-4" data-aos="zoom-in" data-aos-duration="1000">
         <img src="{{ asset('img/secure.svg') }}" alt="Main SVG 3" class="w-full lg:w-auto lg:h-3/4 p-4"/>
         <h1 class="text-2xl font-semibold ">Chat Securely</h1>
     </div>
