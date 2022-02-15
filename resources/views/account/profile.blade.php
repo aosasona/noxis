@@ -4,9 +4,9 @@
 
 @if (!$user->isEmpty())
     <title>{{ $user[0]->username }}'s Profile</title>
-<div class='flex flex-col h-[80vh] justify-center items-center mt-6'>
-<img src="{{asset('/img/user.png')}}" class='p-6 w-2/3 lg:w-1/3 h-auto border-0 rounded-[50%] object-cover' alt='profile image'/>
-<div class='text-sky-500 mt-2 w-full mx-9 lg:w-2/3 flex flex-row justify-around bg-zinc-700 py-5 rounded-2xl'>
+<div class='flex flex-col h-[75vh] justify-center items-center mt-6'>
+<img src="{{asset('/img/user.png')}}" class='p-6 w-2/3 lg:w-1/3 h-auto border-0 object-cover' alt='profile image'/>
+<div class='text-sky-500 mt-2 w-[95%] lg:w-2/3 flex flex-row justify-around bg-zinc-700 py-5 rounded-2xl'>
     <h2 class='inline font-medium text-2xl'>{{ $user[0]->username }}</h2>
     <a href='/chats/{{ $user[0]->username }}' class='text-white text-xl' title='Text User'><i class="fa-solid fa-message"></i></a>
 </div>

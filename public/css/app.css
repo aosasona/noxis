@@ -622,6 +622,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-auto{
     height: auto;
 }
+.h-\[75vh\]{
+    height: 75vh;
+}
 .w-full{
     width: 100%;
 }
