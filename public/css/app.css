@@ -615,6 +615,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[250px\]{
     height: 250px;
 }
+.h-auto{
+    height: auto;
+}
 .w-full{
     width: 100%;
 }
@@ -686,6 +689,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .rounded-md{
     border-radius: 0.375rem;
+}
+.rounded-3xl{
+    border-radius: 1.5rem;
 }
 .border-2{
     border-width: 2px;
