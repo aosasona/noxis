@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{ config('app.name', 'RanCh')}} - Quick, Easy & Anonymous Conversations</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="RanCh is a quick, easy and anonymous message service for your professional & personal usage."/>
   <meta name="keywords" content="RanCh, ran-ch, anonymous, ranch web, ranch twitter, ranch group, message, messaging, quick registration, chat, ranch chat, link chat, anon, quick convo, quick messaging, influencer medium, easy chat"/>

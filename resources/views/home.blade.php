@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<title>{{ config('app.name', 'RanCh')}} - Quick, Easy & Anonymous Conversations</title>
 <div class="w-full h-[95vh] lg:h-[85vh] flex flex-col lg:flex-row justify-center items-center p-2">
 <div class="home__main">
 <h1 class="font-medium text-6xl lg:text-7xl text-sky-600">Hello,</h1>

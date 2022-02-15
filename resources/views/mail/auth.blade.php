@@ -28,7 +28,7 @@
 
 <h1 class="text-lg font-medium text-zinc-800 mt-7">Account Authorization</h1>
 <center>
-    <span class="text-zinc-700 font-light text-xs mt-10">USE THIS OTP TO AUTHORIZE YOUR ACCOUNT</span></br>
+    <span class="text-zinc-700 font-light text-xs mt-10">USE THIS OTP TO AUTHORIZE YOUR ACCOUNT</span><br/>
     <h1 class="text-black py-3 bg-gray-300 px-4 rounded-md text-3xl">{{ $gen_code }}</h1>
 
     <div class="text-red-600 text-xs font-normal mt-18">Do not share this code or email with ANYONE. We will not contact you by any means to ask for your code!</div>

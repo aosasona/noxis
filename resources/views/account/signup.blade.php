@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<title>{{ config('app.name', 'RanCh')}} | Sign Up</title>
 <div class="flex w-screen h-[85vh] justify-center items-center px-4">
 <form method="POST" action="auth/send-mail" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
     <h1 class="font-medium text-4xl lg:text-5xl mb-8 p-4">Sign Up</h1>
