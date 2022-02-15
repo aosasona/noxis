@@ -5,7 +5,7 @@
 @if (!$user->isEmpty())
     <title>{{ $user[0]->username }}'s Profile</title>
 <div class='flex flex-col items-center mt-6'>
-<img src="{{asset('/img/user.png')}}" class='p-6 w-2/3 lg:w-1/3 h-auto border-0 rounded-3xl' alt='profile image'/>
+<img src="{{asset('/img/user.png')}}" class='p-6 w-2/3 lg:w-1/3 h-auto border-0 rounded-3xl object-cover' alt='profile image'/>
 <div class='text-sky-500 mt-2 text-xl'><h2 class='inline'>@</h2><h2 class='inline'>{{ $user[0]->username }}</h2></div>
 
 <div class='blur-sm bg-zinc-500 text-zinc-900 px-6 p-2 mt-3' id='email'>It's a secret!</div>
