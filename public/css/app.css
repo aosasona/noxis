@@ -609,6 +609,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[80vh\]{
     height: 80vh;
 }
+.h-\[200px\]{
+    height: 200px;
+}
+.h-\[250px\]{
+    height: 250px;
+}
 .w-full{
     width: 100%;
 }
@@ -641,6 +647,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-2\/3{
     width: 66.666667%;
+}
+.w-\[200px\]{
+    width: 200px;
+}
+.w-\[250px\]{
+    width: 250px;
 }
 .flex-row{
     flex-direction: row;
@@ -1094,6 +1106,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
     .lg\:h-14{
         height: 3.5rem;
+    }
+
+    .lg\:h-auto{
+        height: auto;
     }
 
     .lg\:w-1\/3{
