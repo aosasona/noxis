@@ -1272,6 +1272,11 @@ Ensure the default browser behavior of the `hidden` attribute.
         padding-right: 0px;
     }
 
+    .lg\:py-6{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
     .lg\:text-center{
         text-align: center;
     }
@@ -1294,6 +1299,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     .lg\:text-5xl{
         font-size: 3rem;
         line-height: 1;
+    }
+
+    .lg\:text-xl{
+        font-size: 1.25rem;
+        line-height: 1.75rem;
     }
 
     .lg\:font-medium{

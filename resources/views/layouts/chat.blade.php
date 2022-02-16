@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <div
-        class="bg-zinc-800 fixed bottom-0 flex flex-row w-screen h-auto justify-evenly items-center py-6 m-0 text-xl text-white">
+        class="bg-zinc-800 fixed bottom-0 flex flex-row w-screen h-auto justify-evenly items-center py-3 lg:py-6 m-0 text-lg lg:text-xl text-white">
         <a href='/chats'><i class="fa-solid fa-message hover:text-sky-500"></i></a>
         <a href='/search'><i class="fa-solid fa-magnifying-glass hover:text-sky-500"></i></a>
         <a href='/users/{{}}'><i class="fa-solid fa-user hover:text-sky-500"></i></a>
