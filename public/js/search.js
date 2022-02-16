@@ -5,6 +5,6 @@ searchTerm.addEventListener('keyup',
 () => {
     var searchValue = searchTerm.value
     
-    searchValue.length <= 2 ? errorText.innerText = 'Username term is too short'  : errorText.innerText = ''
+    searchValue.length <= 3 && searchValue.length != 0 ? errorText.innerText = 'Search term is too short or empty'  : errorText.innerText = ''
 
 })
