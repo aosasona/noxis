@@ -21,8 +21,12 @@ Route::get('/signin', [AccountController::class, 'signin']); //Sign-in route
 Route::get('/signup', [AccountController::class, 'signup']); //Sign-in route
 Route::post('/signup/auth', [AccountController::class, 'signup_auth']); //sign-up post form
 Route::post('/signin/auth', [AccountController::class, 'signin_auth']); //sign-up post form
+Route::resource('users', UsersController::class); //Users route for different methods
+Route::get('/search', function () {
+    return view('search.index');
+});
 
-Route::resource('users', UsersController::class);
+
 /*Route::get('/auth/send-mail', function () {
 
   
