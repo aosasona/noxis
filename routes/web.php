@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Mail;
 
 /*
@@ -25,6 +26,7 @@ Route::resource('users', UsersController::class); //Users route for different me
 Route::get('/search', function () {
     return view('search.index');
 });
+Route::get('/search/result', [SearchController::class, 'result']);
 
 
 /*Route::get('/auth/send-mail', function () {

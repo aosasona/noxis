@@ -577,6 +577,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-0{
     margin-top: 0px;
 }
+.ml-3{
+    margin-left: 0.75rem;
+}
 .box-border{
     box-sizing: border-box;
 }
@@ -672,6 +675,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[250px\]{
     width: 250px;
+}
+.list-none{
+    list-style-type: none;
 }
 .flex-row{
     flex-direction: row;
@@ -885,6 +891,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+.py-1{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
 .pb-5{
     padding-bottom: 1.25rem;
 }
@@ -899,6 +909,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-1{
     padding-top: 0.25rem;
+}
+.pt-3{
+    padding-top: 0.75rem;
 }
 .text-left{
     text-align: left;
@@ -1111,6 +1124,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-sky-700:hover{
     --tw-bg-opacity: 1;
     background-color: rgb(3 105 161 / var(--tw-bg-opacity));
+}
+.hover\:bg-sky-600:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(2 132 199 / var(--tw-bg-opacity));
 }
 .hover\:text-blue-700:hover{
     --tw-text-opacity: 1;
