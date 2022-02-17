@@ -28,10 +28,9 @@ class AuthController extends Controller
         }
 
 
-        Mail::to($email)->send(new \App\Mail\Auth);
+        Mail::to($email)->send(new \app\Mail\Auth);
         return view('account.auth.signup')->with('email', $email)
-                                          ->with('username', $username)
-                                          ->with('_token', $token);
+                                          ->with('username', $username);
     
     }
 }
