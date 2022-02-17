@@ -5,7 +5,7 @@
     <div class="flex w-screen h-[85vh] justify-center items-center px-4">
 
         <form method="POST" action="/users" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
-            @csrf
+            <input type="hidden" name="_token" value="{{ $_token }}">
             <h1 class="font-medium text-4xl lg:text-5xl mb-8 p-4">Authorize Access</h1>
 
             <div class="lg:px-5">

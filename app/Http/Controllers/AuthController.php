@@ -15,6 +15,7 @@ class AuthController extends Controller
 
         $email = $request->input('email');
         $username = $request->input('username');
+        $token =$request->input('_token');
 
         $emailFetch = Users::where('email', '=', $email)->get();
         $userFetch = Users::where('username', '=', $username)->get();
@@ -29,7 +30,8 @@ class AuthController extends Controller
 
         Mail::to($email)->send(new \App\Mail\Auth);
         return view('account.auth.signup')->with('email', $email)
-                                          ->with('username', $username);
+                                          ->with('username', $username)
+                                          ->with('_token', $token);
     
     }
 }
