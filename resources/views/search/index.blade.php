@@ -4,7 +4,7 @@
 
 <title>Search</title>
 
-    <form class='w-screen flex flex-col items-center mt-6 lg:mt-5 box-border px-6 lg:px-0'>
+    <form class='w-screen flex flex-col items-center mt-8 lg:mt-5 box-border px-6 lg:px-0'>
 
         @csrf
 

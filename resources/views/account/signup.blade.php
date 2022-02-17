@@ -3,20 +3,20 @@
 @section('content')
 <title>{{ config('app.name', 'RanCh')}} | Sign Up</title>
 <div class="flex w-screen h-[85vh] justify-center items-center px-4">
-<form method="POST" action="auth/send-mail" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
+<form method="POST" action="/auth/signup" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
     <h1 class="font-medium text-4xl lg:text-5xl mb-8 p-4">Sign Up</h1>
     <div class="lg:px-5">
-
+        @csrf
     <div class="mb-4">
     <label for="email" class="block text-sm font-medium text-sky-500 mb-1 px-2">Email Address</label>
     <input type="email" name="email" placeholder="johndoe@gmail.com" id="email" class="block w-[95%] bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-500" required="required"/> 
-    <span class="text-xs font-medium text-red-500 pt-1 px-2" id="email_error"></span>
+    <span class="text-xs font-medium text-red-500 pt-1 px-2" id="email_error">{!! session()->get('emailError') !!}</span>
     </div>
 
     <div class="mb-4">
     <label for="username" class="block text-sm font-medium text-sky-500 mb-1">Preferred Username</label>
     <input type="text" name="username" placeholder="johndoe29" id="username" class="block w-5/6 mb-4 bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-500" required="required"/>
-    <span class="text-xs font-medium text-red-500 pt-1 px-2" id="user_error"></span>
+    <span class="text-xs font-medium text-red-500 pt-1 px-2" id="user_error">{!! session()->get('userError') !!}</span>
     </div>
 
 
@@ -67,6 +67,10 @@
             userError.innerText = "";
       
         }
+    })
+
+    Btn.addEventListener('click', () => {
+        Btn.innerText = "Loading...";
     })
 
 </script>
