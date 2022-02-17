@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Cookie;
 
 class auth extends Mailable
 {
@@ -29,16 +30,7 @@ class auth extends Mailable
     public function build()
     {
 
-    //generate numbers
-    $gen = uniqid(rand(), false);
-    $gen_c = substr($gen, 0, 3);
-    $gen_d = substr($gen, -2);
-    
-    //generate alphabets
-    $alph = array("a", "b", "c", "d", "e", "f", "g", "v", "z", "x", "m", "n", "p", "A", "Z", "V", "B", "C", "D", "E", "F", "G", "H", "M", "N", "K");
-    $rand_keys = array_rand($alph, 4);
-
-    $gen_code = $alph[$rand_keys[0]].$alph[$rand_keys[1]].$gen_c.$alph[$rand_keys[2]].$gen_d;
+        $gen_code = session()->get('gen_code');;
 
         return $this->from('auth@ran-ch.com', 'RanCh Auth Service')
                     ->view('mail.auth')->with('gen_code', $gen_code);

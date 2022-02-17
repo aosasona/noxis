@@ -36,7 +36,22 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //VARIABLES DECLARATION
+        $post_auth = $request->input('auth_code'); //The auth code the user entered
+        $auth_code = session()->get('gen_code'); //The current session's auth code sent to the user
+        $username =  session()->get('username'); //The current session's username
+        $email =  session()->get('email'); //The current session's email
+
+        if($auth_code === $post_auth){
+            $user = new Users; //Create new user from the model
+            $user->username = $username; 
+            $user->email = $email;
+            $user->save();
+
+            return "Registration successfully";
+        } else {
+            return redirect('/signup')->with('userError', 'We could not authorize your account, please try again!');
+        }
     }
 
     /**
