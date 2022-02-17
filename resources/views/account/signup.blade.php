@@ -6,7 +6,7 @@
 <form method="POST" action="/auth/signup" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
     <h1 class="font-medium text-4xl lg:text-5xl mb-8 p-4">Sign Up</h1>
     <div class="lg:px-5">
-        @csrf
+        {{ csrf_field() }}
     <div class="mb-4">
     <label for="email" class="block text-sm font-medium text-sky-500 mb-1 px-2">Email Address</label>
     <input type="email" name="email" placeholder="johndoe@gmail.com" id="email" class="block w-[95%] bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-500" required="required"/> 
