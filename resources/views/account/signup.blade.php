@@ -70,7 +70,14 @@
     })
 
     Btn.addEventListener('click', () => {
-        Btn.innerText = "Loading...";
+        const userInput = userField.value;
+        const emailInput = emailField.value;
+        if(userInput.length != 0 && emailInput.length != 0) {
+            Btn.innerText = "Loading...";
+        } else {
+            Btn.innerText = "Next";
+        }
+        
     })
 
 </script>
