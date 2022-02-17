@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Mail;
 
 use App\Models\Users;
 
+use App\Mail\auth;
+
 class AuthController extends Controller
 {
     //Send email
@@ -28,7 +30,7 @@ class AuthController extends Controller
         }
 
 
-        Mail::to($email)->send(new \app\Mail\Auth);
+        Mail::to($email)->send(new Auth);
         return view('account.auth.signup')->with('email', $email)
                                           ->with('username', $username);
     
