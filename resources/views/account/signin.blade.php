@@ -10,7 +10,7 @@
     <div class="mb-4">
     <label for="email" class="block text-sm font-medium text-sky-500 mb-1 px-2">Email Address</label>
     <input type="email" name="email" placeholder="johndoe@gmail.com" id="email" class="block w-[95%] bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-500" required="required"/> 
-    <span class="text-xs font-medium text-red-500 pt-1 px-2" id="email_error"></span>
+    <span class="text-xs font-medium text-red-500 pt-1 px-2" id="loginError">{{ $loginError }}</span>
     </div>
 
 
@@ -28,7 +28,7 @@
 <script type="text/javascript">
     const emailField = document.getElementById('email');
     const Btn = document.getElementById('signup_btn');
-    const emailError = document.getElementById('email_error');
+    const emailError = document.getElementById('loginError');
  
 
     emailField.addEventListener('keyup', () => {

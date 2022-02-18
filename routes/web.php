@@ -7,6 +7,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatsController;
+use App\Http\Middleware\LoggedIn;
 use Illuminate\Support\Facades\Cookie;
 
 use function PHPUnit\Framework\isTrue;
@@ -32,7 +33,7 @@ Route::get('/search', function () {
 Route::post('/auth/signup', [AuthController::class, 'sendmail']);
 Route::get('/search/result', [SearchController::class, 'result']);
 Route::resource('users', UsersController::class); //Users route for different methods
-Route::resource('chat', ChatsController::class); //Users route for different methods
+Route::resource('chat', ChatsController::class)->middleware(LoggedIn::class); //Users route for different methods
 
 
 //TEST ROUTE WITHOUT POSTMAN

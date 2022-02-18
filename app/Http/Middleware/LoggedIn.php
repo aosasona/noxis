@@ -25,7 +25,7 @@ class LoggedIn
             return $next($request);
         }
         else {
-            return view('account.signin');
+            return view('account.signin')->with('loginError', 'You need to be logged in!');
         }
     }
 }
