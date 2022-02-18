@@ -31,6 +31,8 @@ Route::get('/search', function () {
     return view('search.index');
 });
 Route::post('/auth/signup', [AuthController::class, 'sendmail']);
+Route::post('/auth/signin', [AuthController::class, 'signin']);
+Route::post('/signin-auth', [AuthController::class, 'signin_auth']);
 Route::get('/search/result', [SearchController::class, 'result']);
 Route::resource('users', UsersController::class); //Users route for different methods
 Route::resource('chat', ChatsController::class)->middleware(LoggedIn::class); //Users route for different methods

@@ -57,4 +57,65 @@ class AuthController extends Controller
             return back()->with('userError', 'Username or email field cannot be blank!');
         }
     }
+
+    //Login auth function 
+
+    public function signin(Request $request) {
+        
+        $email = strtolower($request->input('email'));
+        $emailFetch = Users::where('email', '=', $email)->get();
+        $username = $emailFetch[0]->username;
+
+        if($email != NULL) {
+
+            //Redirect if the user is not found
+             if(count($emailFetch) == 0 || count($emailFetch) < 1 || count($emailFetch) == NULL) {
+            return back()->with('loginError', 'User not found! Check the email address and try again');
+        }
+
+         //generate numbers
+         $gen = uniqid(rand(), false);
+         $gen_c = substr($gen, 0, 3);
+         $gen_d = substr($gen, -2);
+ 
+         //generate alphabets
+         $alph = array("a", "b", "c", "d", "e", "f", "g", "v", "z", "x", "m", "n", "p", "A", "Z", "V", "B", "C", "D", "E", "F", "G", "H", "M", "N", "K");
+         $rand_keys = array_rand($alph, 4);
+ 
+         $gen_code = $alph[$rand_keys[0]].$alph[$rand_keys[1]].$gen_c.$alph[$rand_keys[2]].$gen_d;
+ 
+         session(['gen_code' => $gen_code]);
+         session(['username' => $username]);
+         session(['email' => $email]);
+ 
+         Mail::to($email)->send(new Auth);
+ 
+         return view('account.auth.signin')->with('email', $email);
+
+        }
+        else {
+            return back()->with('loginError', 'No email address provided!');
+        }
+
+    }
+
+    public function signin_auth(Request $request) {
+        $post_auth = $request->input('auth_code'); //The auth code the user entered
+        $auth_code = session()->get('gen_code'); //The current session's auth code sent to the user
+        $username =  strtolower(session()->get('username')); //The current session's username
+
+        if($auth_code === $post_auth){
+
+            session(['gen_code' => '']); //remove the current auth code session
+            session(['loggedIn' => true]); //set the login boolean
+
+            return redirect("/users/$username");
+
+        } else {
+
+            return redirect('/signin')->with('loginError', 'We could not authorize your account, please try again!');
+
+        }
+
+    }
 }

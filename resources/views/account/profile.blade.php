@@ -14,7 +14,10 @@
 
 @if (session()->get('loggedIn') == true && session()->get('username') == $user[0]->username)
 <input value="https://ran-ch.com/chat/{{ session()->get('username') }}" class='py-3 px-3 w-5/6 lg:w-1/3 text-center text-white bg-zinc-800 font-medium rounded-lg mt-6' id='linkText' disabled/>
+<div class='flex flex-row items-center justify-around'>
     <button id='copyLink' class='text-white text-sm mt-3'>Copy Link</button>
+    <button id='editUsername' class='text-white text-sm mt-3'>Edit Username</button>
+</div>
 @endif
 
 </div>

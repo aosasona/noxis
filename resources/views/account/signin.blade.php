@@ -3,14 +3,15 @@
 @section('content')
 <title>{{ config('app.name', 'RanCh')}} | Sign In</title>
 <div class="flex w-screen h-[85vh] justify-center items-center px-4">
-<form method="POST" action="auth/send-mail" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
+<form method="POST" action="auth/signin" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
+    @csrf
     <h1 class="font-medium text-4xl lg:text-5xl mb-8 p-4">Sign In</h1>
     <div class="lg:px-5">
 
     <div class="mb-4">
     <label for="email" class="block text-sm font-medium text-sky-500 mb-1 px-2">Email Address</label>
     <input type="email" name="email" placeholder="johndoe@gmail.com" id="email" class="block w-[95%] bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-500" required="required"/> 
-    <span class="text-xs font-medium text-red-500 pt-1 px-2" id="loginError"></span>
+    <span class="text-xs font-medium text-red-500 pt-1 px-2" id="loginError">{!! session()->get('loginError') !!}</span>
     </div>
 
 
@@ -27,7 +28,7 @@
 
 <script type="text/javascript">
     const emailField = document.getElementById('email');
-    const Btn = document.getElementById('signup_btn');
+    const Btn = document.getElementById('signin_btn');
     const emailError = document.getElementById('loginError');
  
 
@@ -48,6 +49,16 @@
                 
                 }
         }
+    })
+
+    Btn.addEventListener('click', () => {
+        const emailInput = emailField.value;
+        if(emailInput.length != 0 && emailInput.length > 4) {
+            Btn.innerText = "Loading...";
+        } else {
+            Btn.innerText = "Sign In";
+        }
+        
     })
 
 </script>
