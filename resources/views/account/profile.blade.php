@@ -4,12 +4,19 @@
 
 @if (!$user->isEmpty())
     <title>{{ $user[0]->username }}'s Profile</title>
+    <div class='w-full text-center py-3 px-5 bg-green-200 border-2 border-green-800 text-green-800 font-semibold hidden' id='alertDiv'></div>
 <div class='flex flex-col h-[75vh] justify-center items-center mt-0'>
 <img src="{{asset('/img/user.png')}}" class='p-6 w-2/3 lg:w-1/3 h-auto border-0 object-cover' alt='profile image'/>
 <div class='text-sky-500 mt-2 w-[90%] lg:w-2/3 flex flex-row justify-around bg-zinc-700 py-5 rounded-2xl'>
     <h2 class='inline font-medium text-2xl'>{{ $user[0]->username }}</h2>
     <a href='/chats/{{ $user[0]->username }}' class='text-white text-xl' title='Text User'><i class="fa-solid fa-message"></i></a>
 </div>
+
+@if (session()->get('loggedIn') == true && session()->get('username') == $user[0]->username)
+<input value="https://ran-ch.com/chat/{{ session()->get('username') }}" class='py-3 px-3 w-full lg:w-1/3 text-center text-zinc-400 bg-zinc-800 font-medium rounded-lg mt-6' id='linkText' disabled/>
+    <button id='copyLink' class='text-white text-sm mt-3'>Copy Link</button>
+@endif
+
 <!-- <div class='blur-sm bg-zinc-500 text-zinc-900 px-6 p-2 mt-6' id='email'>It's a secret!</div>
 <button onclick='showemail()' class='text-xs font-medium mt-1' id="view">View email</button>
 </div>
@@ -40,5 +47,27 @@
 
 @endif
 
+<script type="text/javascript">
+    const linkText = document.getElementById('linkText')
+    const copyBtn = document.getElementById('copyLink')
+    const alertDiv = document.getElementById('alertDiv')
+
+    copyBtn.addEventListener('click', () => {
+        linkText.select();
+        linkText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        navigator.clipboard.writeText(linkText.value);
+
+        alertDiv.classList.remove('hidden')
+        alertDiv.innerText = 'Link copied to clipboard, share to chat chatting!'
+        setTimeout(() => {
+            alertDiv.classList.add('hidden')
+            alertDiv.innerText = ''
+        }, 2500);
+
+    })
+
+ 
+</script>
 
 @endsection

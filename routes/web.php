@@ -39,12 +39,8 @@ Route::resource('chat', ChatsController::class)->middleware(LoggedIn::class); //
 //TEST ROUTE WITHOUT POSTMAN
 Route::get('/test', function() {
 
-    $sess = session()->get('loggedIn');
+    $sess = session()->get('username');
 
-    if(isTrue($sess)) {
-        return "Logged in";
-    } else {
-        return "NOT LOGGED IN";
-    }
+    return $sess;
 
 });

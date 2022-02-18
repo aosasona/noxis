@@ -41,8 +41,8 @@ class UsersController extends Controller
         //VARIABLES DECLARATION
         $post_auth = $request->input('auth_code'); //The auth code the user entered
         $auth_code = session()->get('gen_code'); //The current session's auth code sent to the user
-        $username =  session()->get('username'); //The current session's username
-        $email =  session()->get('email'); //The current session's email
+        $username =  strtolower(session()->get('username')); //The current session's username
+        $email =  strtolower(session()->get('email')); //The current session's email
 
         if($auth_code === $post_auth){
 
@@ -73,8 +73,11 @@ class UsersController extends Controller
     public function show($username)
     {
         //Get user profile
+        $username = strtolower($username);
+        $sessionUser = session()->get('username');
         $user = Users::where('username', '=', $username)->get();
-        return view('account.profile')->with('user', $user);
+        return view('account.profile')->with('user', $user)
+                                      ->with('sessionUser', $sessionUser);
     }
 
     /**
