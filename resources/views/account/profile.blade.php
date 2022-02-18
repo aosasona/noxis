@@ -64,7 +64,7 @@
         setTimeout(() => {
             alertDiv.classList.add('hidden')
             alertDiv.innerText = ''
-        }, 2800);
+        }, 2500);
 
     })
 
