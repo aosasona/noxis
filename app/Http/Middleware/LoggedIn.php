@@ -20,7 +20,7 @@ class LoggedIn
     {
         $loginStatus = session()->get('loggedIn');
 
-        if(isTrue($loginStatus)) {
+        if(session()->get('loggedIn') == true) {
             return $next($request);
         }
         else {
