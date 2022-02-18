@@ -11,7 +11,7 @@
     <!-- Facebook Metadata -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ran-ch.com/">
-    <meta property="og:title" content="Ranch - Quick, Easy & Anonymous Conversations">
+    <meta property="og:title" content="Start An Anonymous Convo!">
     <meta property="og:description"
         content="RanCh is a quick, easy and anonymous messaging service for your professional & personal usage.">
     <meta property="og:image" content="{{ asset('img/favicon.jpeg') }}">
@@ -19,7 +19,7 @@
     <!-- Twitter Metadata -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ran-ch.com/">
-    <meta property="twitter:title" content="Ranch - Quick, Easy & Anonymous Conversations">
+    <meta property="twitter:title" content="Start An Anonymous Convo!">
     <meta property="twitter:description"
         content="RanCh is a quick, easy and anonymous messaging service for your professional & personal usage.">
     <meta property="twitter:image" content="{{ asset('img/favicon.jpeg') }}">
@@ -27,7 +27,7 @@
     <!--General Metadata-->
     <meta property="og:site_name" content="RanCh">
     <meta property="og:site" content="https://ran-ch.com">
-    <meta property="og:title" content="RanCh - Quick, Easy & Anonymous Conversations">
+    <meta property="og:title" content="Start An Anonymous Convo!">
     <meta property="og:description"
         content="RanCh is a quick, easy and anonymous messaging service for your professional & personal usage.">
     <meta property="og:image" content="{{ asset('img/favicon.jpeg') }}">
