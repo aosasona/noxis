@@ -6,7 +6,10 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChatsController;
 use Illuminate\Support\Facades\Cookie;
+
+use function PHPUnit\Framework\isTrue;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,12 +32,18 @@ Route::get('/search', function () {
 Route::post('/auth/signup', [AuthController::class, 'sendmail']);
 Route::get('/search/result', [SearchController::class, 'result']);
 Route::resource('users', UsersController::class); //Users route for different methods
+Route::resource('chat', ChatsController::class); //Users route for different methods
 
 
 //TEST ROUTE WITHOUT POSTMAN
 Route::get('/test', function() {
 
-    $sess = session()->get('gen_code');
+    $sess = Cookie::get('loggedIn');
 
-    return $sess;
+    if(isTrue($sess)) {
+        return "Logged in";
+    } else {
+        return "NOT LOGGED IN";
+    }
+
 });

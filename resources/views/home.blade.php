@@ -36,14 +36,14 @@
 <div class="mx-8 mt-16 mb-12 relative" data-aos="flip-left" data-aos-duration="1000">
  
 <h1 class="text-sky-500 text-3xl font-semibold">Getting Started</h1>
-<ul class="mt-10 p-5 py-6 bg-zinc-800 w-full lg:w-2/3 rounded-2xl text-sm text-left tiltDiv">
+<ul class="mt-10 p-5 py-6 bg-zinc-800 lw-full lg:w-2/3 rounded-2xl text-sm text-left tiltDiv">
     
     <div class="absolute top-[-10px] left-[-20px] w-2 h-2 p-4 rounded-[50%] bg-red-700"></div>
     <li><span class="text-white">Proceed to the sign-up page using the button below or in the navigation bar.</span></li>
     <li><span class="text-white">Enter a valid e-mail on the sign-up page.</span></li>
     <li><span class="text-white">You will be sent an OTP for login authentication every-time, we do <b class="text-sky-500">NOT</b> use fixed passwords for security
     reasons.</span></li>
-    <li><span class="text-white">Login data is only saved locally on your device until you close your browser (for safety), after which you'll need to sign in again - we know this might be inconvenient but security is important to us!</span></li>
+    <li><span class="text-white">Login data is only saved until the broswer is closed, after which you'll need to sign in again.</span></li>
     <li><span class="text-white"><b class="text-sky-500">Share</b> your RanCh link to start chatting! Guests do not need to sign up to chat with you.</span></li>
   </ul>
 </div>

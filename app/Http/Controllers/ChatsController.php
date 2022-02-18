@@ -4,11 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Users;
-
-use App\Http\Middleware\LoggedIn;
-
-class UsersController extends Controller
+class ChatsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +12,8 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        return view('error');
+    {
+        //
     }
 
     /**
@@ -38,43 +34,18 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //VARIABLES DECLARATION
-        $post_auth = $request->input('auth_code'); //The auth code the user entered
-        $auth_code = session()->get('gen_code'); //The current session's auth code sent to the user
-        $username =  session()->get('username'); //The current session's username
-        $email =  session()->get('email'); //The current session's email
-
-        if($auth_code === $post_auth){
-
-            $user = new Users; //Create new user from the model
-
-            $user->username = $username; 
-            $user->email = $email;
-            $user->save();
-
-            session(['gen_code' => '']); //remove the current auth code session
-            session(['loggedIn' => true]); //set the login boolean
-
-            return redirect("/users/$username");
-
-        } else {
-
-            return redirect('/signup')->with('userError', 'We could not authorize your account, please try again!');
-
-        }
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  string  $username
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($username)
+    public function show($id)
     {
-        //Get user profile
-        $user = Users::where('username', '=', $username)->get();
-        return view('account.profile')->with('user', $user);
+        //
     }
 
     /**
@@ -83,7 +54,7 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($username)
+    public function edit($id)
     {
         //
     }
@@ -110,5 +81,4 @@ class UsersController extends Controller
     {
         //
     }
-    
 }
