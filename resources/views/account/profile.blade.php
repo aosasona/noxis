@@ -13,10 +13,11 @@
 </div>
 
 @if (session()->get('loggedIn') == true && session()->get('username') == $user[0]->username)
-<input value="https://ran-ch.com/chat/{{ session()->get('username') }}" class='py-3 px-3 w-full lg:w-1/3 text-center text-zinc-400 bg-zinc-800 font-medium rounded-lg mt-6' id='linkText' disabled/>
+<input value="https://ran-ch.com/chat/{{ session()->get('username') }}" class='py-3 px-3 w-5/6 lg:w-1/3 text-center text-zinc-400 bg-zinc-800 font-medium rounded-lg mt-6' id='linkText' disabled/>
     <button id='copyLink' class='text-white text-sm mt-3'>Copy Link</button>
 @endif
 
+</div>
 <!-- <div class='blur-sm bg-zinc-500 text-zinc-900 px-6 p-2 mt-6' id='email'>It's a secret!</div>
 <button onclick='showemail()' class='text-xs font-medium mt-1' id="view">View email</button>
 </div>
