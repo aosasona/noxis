@@ -40,11 +40,11 @@
        
         <a href="/" class="no-underline h-2/3"><img src="{{ asset('img/favicon.jpeg') }}" alt="Logo" class="h-full"/></a>
         <div>
-        @if(!isset($_COOKIE["user"]))
+        @if(session()->get('loggedIn') != true)
         <a href="/signin" class="text-blue-500 hover:text-blue-700 text-sm font-medium px-3">Sign In</a>
         <a href="/signup" class="text-blue-500 hover:text-blue-700 text-sm font-medium px-3">Sign Up</a>
         @else
-        <a href="/profile/{{$_COOKIE["user"]}}" class="px-2">Profile</a>
+        <a href="/users/{{ session()->get('username') }}" class="text-blue-500 hover:text-blue-700 text-sm font-medium px-3">My Profile</a>
         @endif
         </div>
     
