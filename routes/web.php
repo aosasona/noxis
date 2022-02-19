@@ -22,9 +22,9 @@ use function PHPUnit\Framework\isTrue;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [GeneralController::class, 'home']); //Home route
-Route::get('/signin', [AccountController::class, 'signin']); //Sign-in route
-Route::get('/signup', [AccountController::class, 'signup']); //Sign-in route
+Route::get('/', [GeneralController::class, 'home'])->name('home'); //Home route
+Route::get('/signin', [AccountController::class, 'signin'])->name('signin'); //Sign-in route
+Route::get('/signup', [AccountController::class, 'signup'])->name('signup'); //Sign-in route
 //Route::post('/signup/auth', [AccountController::class, 'signup_auth']); //sign-up post form
 //Route::post('/signin/auth', [AccountController::class, 'signin_auth']); //sign-up post form
 Route::get('/search', function () {
@@ -41,8 +41,8 @@ Route::resource('chat', ChatsController::class)->middleware(LoggedIn::class); //
 //TEST ROUTE WITHOUT POSTMAN
 Route::get('/test', function() {
 
-    $sess = session()->get('username');
+    // $sess = session()->get('username');
 
-    return $sess;
+    // return $sess;
 
 });
