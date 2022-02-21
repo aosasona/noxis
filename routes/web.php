@@ -45,20 +45,6 @@ Route::get('/logout', function () {
 //TEST ROUTE WITHOUT POSTMAN
 Route::get('/test', function() {
 
-    // $sess = session()->get('username');
-
-    // return $sess;
-
-    Cookie::queue('username', 'TEST', 120, '/');
-    // Cookie::make('username', 'AYODEJI', 120);
-    $test2 = Cookie::get('username');
-    // $test = $_COOKIE['username'];
-
-    echo "The cookie is: ".$test2;
-
-    //Cookie::queue(Cookie::forget('username'));
-
-    echo "The cookie is: ".$test2;
-    // return redirect()->to('/signin');
+    return url()->current();
 
 });
