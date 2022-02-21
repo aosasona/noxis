@@ -8,7 +8,7 @@
         <div class='flex flex-col h-[75vh] justify-center items-center mt-0'>
             <img src="{{ asset('/img/user.png') }}" class='p-6 w-2/3 lg:w-1/3 h-auto border-0 object-cover'
                 alt='profile image' />
-            <div class='text-sky-500 mt-2 w-[90%] lg:w-2/3 flex flex-row justify-around bg-zinc-700 py-5 rounded-2xl'>
+            <div class='text-sky-500 mt-2 w-[90%] lg:w-2/3 flex flex-row justify-around py-5'>
                 <h2 class='inline font-medium text-2xl'>{{ $user[0]->username }}</h2>
                 <a href='/chats/{{ $user[0]->username }}' class='text-white text-xl' title='Text User'><i
                         class="fa-solid fa-message"></i></a>
@@ -20,7 +20,7 @@
                     id='linkText' disabled />
                 <div class='flex flex-row items-center w-2/3 justify-evenly'>
                     <button id='copyLink' class='text-white text-sm mt-3'>Copy Link</button>
-                    <button id='editProfile' class='text-white text-sm mt-3'>Edit Profile</button>
+
                 </div>
 
                 <a href="{{ route('logout') }}" class='text-red-500 text-sm font-medium mt-[7vh] bg-red-900 p-2 px-4 rounded-lg hover:bg-red-200'>Log Out</a>
