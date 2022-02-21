@@ -35,7 +35,7 @@ Route::post('/auth/signin', [AuthController::class, 'signin']);
 Route::post('/signin-auth', [AuthController::class, 'signin_auth']);
 Route::get('/search/result', [SearchController::class, 'result']);
 Route::resource('users', UsersController::class); //Users route for different methods
-Route::resource('chat', ChatsController::class)->middleware(LoggedIn::class); //Users route for different methods
+Route::resource('chats', ChatsController::class)->middleware(LoggedIn::class); //Users route for different methods
 Route::get('/logout', function () {
     Cookie::queue(Cookie::forget('username'));
     return redirect()->to('/signin');
@@ -44,7 +44,5 @@ Route::get('/logout', function () {
 
 //TEST ROUTE WITHOUT POSTMAN
 Route::get('/test', function() {
-
-    return url()->current();
 
 });

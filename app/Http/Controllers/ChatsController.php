@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use \App\Models\Chats;
+use Illuminate\Support\Facades\Cookie;
+
 class ChatsController extends Controller
 {
     /**
@@ -13,7 +16,12 @@ class ChatsController extends Controller
      */
     public function index()
     {
-        //
+        //Show all of the user's chats
+        $currentUser = Cookie::get('username');
+
+        $chats = Chats::where('from', $currentUser);
+
+        return view('chat.index')->with('chats', $chats);
     }
 
     /**
