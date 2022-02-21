@@ -1182,4 +1182,8 @@ Ensure the default browser behavior of the `hidden` attribute.
         margin-left: 20rem;
         margin-right: 20rem;
     }
+
+    .xl\:h-\[95vh\]{
+        height: 95vh;
+    }
 }

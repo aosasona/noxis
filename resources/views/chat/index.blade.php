@@ -6,7 +6,7 @@
 
 @if ($chats->count() == 0)
 
-    <div class='text-zinc-400 font-medium text-sm flex w-screen h-[95vh] justify-center items-center'>No conversations to display.</div>
+    <div class='text-zinc-400 font-medium text-sm flex w-screen h-[85vh] xl:h-[95vh] justify-center items-center'>No conversations to display.</div>
 
 @else
     
