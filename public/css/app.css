@@ -546,6 +546,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-2{
     margin-bottom: 0.5rem;
 }
+.mt-\[5vh\]{
+    margin-top: 5vh;
+}
+.mt-\[7vh\]{
+    margin-top: 7vh;
+}
 .box-border{
     box-sizing: border-box;
 }
@@ -970,6 +976,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-blue-700:hover{
     --tw-text-opacity: 1;
     color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+.hover\:text-red-800:hover{
+    --tw-text-opacity: 1;
+    color: rgb(153 27 27 / var(--tw-text-opacity));
+}
+.hover\:text-red-700:hover{
+    --tw-text-opacity: 1;
+    color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 .focus\:border-sky-500:focus{
     --tw-border-opacity: 1;

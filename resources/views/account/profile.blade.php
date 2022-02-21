@@ -14,14 +14,16 @@
                         class="fa-solid fa-message"></i></a>
             </div>
 
-            @if (session()->get('loggedIn') == true && session()->get('username') == $user[0]->username)
-                <input value="https://ran-ch.com/chat/{{ session()->get('username') }}"
+            @if (strtolower(Cookie::get('username')) === strtolower($user[0]->username))
+                <input value="https://ran-ch.com/chat/{{ Cookie::get('username') }}"
                     class='py-3 px-3 w-5/6 lg:w-1/3 text-center text-white bg-zinc-800 font-medium rounded-lg mt-6'
                     id='linkText' disabled />
                 <div class='flex flex-row items-center w-2/3 justify-evenly'>
                     <button id='copyLink' class='text-white text-sm mt-3'>Copy Link</button>
                     <button id='editProfile' class='text-white text-sm mt-3'>Edit Profile</button>
                 </div>
+
+                <a href="{{ route('logout') }}" class='text-red-600 text-sm font-medium mt-[7vh]'>Log Out</a>
             @endif
 
         </div>

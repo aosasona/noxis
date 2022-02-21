@@ -4,6 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
+
 use function PHPUnit\Framework\isTrue;
 
 
@@ -18,14 +20,14 @@ class LoggedIn
      */
     public function handle(Request $request, Closure $next)
     {
-        $loginStatus = session()->get('loggedIn');
+        $loginStatus = Cookie::get('username');
 
-        if(session()->get('loggedIn') == true) {
+        if($loginStatus !== null && $loginStatus !== '') {
             return $next($request);
         }
         else {
             //return view('account.signin')->with('loginError', 'You need to be logged in!');
-            return redirect('/signin');
+            return redirect()->to('/login');
         }
     }
 }

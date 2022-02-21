@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Cookie;
 use App\Models\Users;
 
 use App\Mail\auth;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -64,6 +65,11 @@ class AuthController extends Controller
         
         $email = strtolower($request->input('email'));
         $emailFetch = Users::where('email', '=', $email)->get();
+
+        if($emailFetch->count() === 0) {
+            return back()->with('loginError', 'No account found! Check the email address and try again.');
+        }
+
         $username = $emailFetch[0]->username;
 
         if($email != NULL) {
@@ -106,10 +112,11 @@ class AuthController extends Controller
 
         if($auth_code === $post_auth){
 
-            session(['gen_code' => '']); //remove the current auth code session
-            session(['loggedIn' => true]); //set the login boolean
+            Cookie::queue('username', $username, 7200, '/');
 
-            return redirect("/users/$username");
+            // session(['loggedIn' => true]); //set the login boolean
+
+            return redirect()->to("/users/$username");
 
         } else {
 

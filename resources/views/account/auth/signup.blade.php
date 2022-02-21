@@ -6,7 +6,7 @@
 
         <form method="POST" action="/users" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
             @csrf
-            <h1 class="font-medium text-4xl lg:text-5xl mb-8 p-4">Authorize Access</h1>
+            <h1 class="font-medium text-3xl lg:text-5xl mb-8 p-4">Authorize Access</h1>
 
             <div class="lg:px-5">
                

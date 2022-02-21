@@ -40,11 +40,12 @@
        
         <a href="/" class="no-underline h-2/3"><img src="{{ asset('img/favicon.jpeg') }}" alt="Logo" class="h-full"/></a>
         <div>
-        @if(session()->get('loggedIn') != true)
+        @if(Cookie::get('username') == null)
         <a href="/signin" class="text-blue-500 hover:text-blue-700 text-sm font-medium px-3">Sign In</a>
         <a href="/signup" class="text-blue-500 hover:text-blue-700 text-sm font-medium px-3">Sign Up</a>
         @else
-        <a href="/users/{{ session()->get('username') }}" class="text-blue-500 hover:text-blue-700 text-sm font-medium px-3">My Profile</a>
+        <a href="/users/{{ Cookie::get('username') }}" class="text-blue-500 hover:text-blue-700 text-sm font-medium px-3">My Profile</a>
+        <a href="{{ route('logout') }}" class='text-red-500 text-sm font-medium px-3 hover:text-red-700'>Log Out</a>
         @endif
         </div>
     

@@ -36,6 +36,10 @@ Route::post('/signin-auth', [AuthController::class, 'signin_auth']);
 Route::get('/search/result', [SearchController::class, 'result']);
 Route::resource('users', UsersController::class); //Users route for different methods
 Route::resource('chat', ChatsController::class)->middleware(LoggedIn::class); //Users route for different methods
+Route::get('/logout', function () {
+    Cookie::queue(Cookie::forget('username'));
+    return redirect()->to('/signin');
+})->name('logout');
 
 
 //TEST ROUTE WITHOUT POSTMAN
@@ -44,5 +48,17 @@ Route::get('/test', function() {
     // $sess = session()->get('username');
 
     // return $sess;
+
+    Cookie::queue('username', 'TEST', 120, '/');
+    // Cookie::make('username', 'AYODEJI', 120);
+    $test2 = Cookie::get('username');
+    // $test = $_COOKIE['username'];
+
+    echo "The cookie is: ".$test2;
+
+    //Cookie::queue(Cookie::forget('username'));
+
+    echo "The cookie is: ".$test2;
+    // return redirect()->to('/signin');
 
 });

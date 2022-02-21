@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Users;
 
-use App\Http\Middleware\LoggedIn;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Session;
 
 class UsersController extends Controller
 {
@@ -52,10 +53,12 @@ class UsersController extends Controller
             $user->email = $email;
             $user->save();
 
-            session(['gen_code' => '']); //remove the current auth code session
-            session(['loggedIn' => true]); //set the login boolean
+            Cookie::queue('username', $username, 7200, '/');
+            
+        
+            // session(['loggedIn' => true]); //set the login boolean
 
-            return redirect("/users/$username");
+            return redirect()->to("/users/$username");
 
         } else {
 
@@ -73,8 +76,11 @@ class UsersController extends Controller
     public function show($username)
     {
         //Get user profile
+
+        Session::flush(); //destroy the session data from login or signup
+
         $username = strtolower($username);
-        $sessionUser = session()->get('username');
+        $sessionUser = Cookie::get('username');
         $user = Users::where('username', '=', $username)->get();
         return view('account.profile')->with('user', $user)
                                       ->with('sessionUser', $sessionUser);
