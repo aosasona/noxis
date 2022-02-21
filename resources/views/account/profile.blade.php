@@ -23,7 +23,7 @@
                     <button id='editProfile' class='text-white text-sm mt-3'>Edit Profile</button>
                 </div>
 
-                <a href="{{ route('logout') }}" class='text-red-600 text-sm font-medium mt-[7vh]'>Log Out</a>
+                <a href="{{ route('logout') }}" class='text-red-500 text-sm font-medium mt-[7vh] bg-red-900 p-2 px-4 rounded-lg hover:bg-red-200'>Log Out</a>
             @endif
 
         </div>
