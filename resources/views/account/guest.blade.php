@@ -1,6 +1,7 @@
 @extends('layouts.chat')
 
 @section('content')
+<title>Guest Profile</title>
 <div class='flex flex-col w-screen h-screen justify-center items-center'>
     <h1 class='text-[8rem] text-red-600 font-extralight errorText'>🙃</h1>
     <h3 class='text-zinc-400'>You are a guest user!</h3>
