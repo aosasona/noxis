@@ -41,10 +41,10 @@ searchTerm.addEventListener('keyup',
 
                 results.forEach(result => {
                     
-                    const url = '<a href="/users/'+ result + '" class="text-sky-600 text-xl font-semibold px-8 py-3">' + result + '</a>'
+                    const url = '<a href="/users/'+ result + '" class="text-sky-600 text-xl font-semibold px-8">' + result + '</a>'
                     const lis = document.createElement('li')
                     lis.innerHTML = url
-                    lis.classList.add('flex', 'flex-col', 'h-auto', 'justify-center', 'pt-5')
+                    lis.setAttribute('class', 'flex flex-col h-auto justify-center mt-3') 
                     searchDiv.appendChild(lis)
                     // document.getElementById("result").innerHTML = url
                 })
