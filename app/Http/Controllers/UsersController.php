@@ -81,6 +81,11 @@ class UsersController extends Controller
 
         $username = strtolower($username);
         $sessionUser = Cookie::get('username');
+
+        if(strtolower(substr(Cookie::get('username'), 0, 5)) === "guest") {
+            return view('account.guest');
+        }
+
         $user = Users::where('username', '=', $username)->get();
         return view('account.profile')->with('user', $user)
                                       ->with('sessionUser', $sessionUser);
