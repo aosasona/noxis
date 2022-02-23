@@ -38,7 +38,7 @@
     <div class="sticky top-0 z-[1]">
     <nav class="flex flex-row w-screen justify-between items-center h-12 lg:h-14 p-1 px-3 lg:px-12 box-border bg-white">
        
-        <a href="/" class="no-underline h-2/3"><img src="{{ asset('img/favicon.jpeg') }}" alt="Logo" class="h-full"/></a>
+        <a href="/" class="no-underline h-2/3"><img src="{{ asset('img/ranch.png') }}" alt="Logo" class="h-full"/></a>
         <div>
         @if(Cookie::get('username') == null)
         <a href="/signin" class="text-blue-500 hover:text-blue-700 text-sm font-medium px-3">Sign In</a>

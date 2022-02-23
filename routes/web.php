@@ -9,6 +9,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatsController;
 use App\Http\Middleware\LoggedIn;
 use Illuminate\Support\Facades\Cookie;
+use \App\Models\Chats;
 
 use function PHPUnit\Framework\isTrue;
 
@@ -44,5 +45,10 @@ Route::get('/logout', function () {
 
 //TEST ROUTE WITHOUT POSTMAN
 Route::get('/test', function() {
+    $currentUser = Cookie::get('username');
+    $chats = Chats::where('from', $currentUser)->orWhere('to', $currentUser);
 
+    foreach ($chats as $ch) {
+        echo $ch->from;
+    }
 });
