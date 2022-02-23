@@ -50,7 +50,7 @@
         @yield('content')
     </div>
 
-    <div class="sticky bottom-0">
+    <div class="fixed bottom-0">
         <form method="POST" action="/chats" enctype="multipart/form-data" class="bg-zinc-800 flex flex-row w-screen h-auto justify-around items-center py-2 lg:py-2 m-0 text-lg lg:text-xl text-white">
         
                 @csrf

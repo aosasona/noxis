@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->String('user1');
             $table->String('user2');
+            $table->Integer('unread_count');
             $table->timestamps();
         });
     }

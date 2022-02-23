@@ -22,12 +22,22 @@ class LoggedIn
     {
         $loginStatus = Cookie::get('username');
 
+        //Check is the user is logged in
+
         if($loginStatus !== NULL && $loginStatus !== '') {
             return $next($request);
         }
         else {
             //return view('account.signin')->with('loginError', 'You need to be logged in!');
-            return redirect()->to('/signin');
+
+            //if user isn't logged in, generate random ID for user login
+            $prefix = "guest_";
+            $gen = uniqid(rand(), false);
+            $gen_trim = substr($gen, 0, 5);
+            $genericUser = $prefix.$gen_trim;
+
+            Cookie::queue('username', $genericUser, 262000, '/');
+            return $next($request);
         }
     }
 }

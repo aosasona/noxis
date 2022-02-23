@@ -45,10 +45,10 @@ Route::get('/logout', function () {
 
 //TEST ROUTE WITHOUT POSTMAN
 Route::get('/test', function() {
-    $currentUser = Cookie::get('username');
-    $chats = Chatslist::where('user1', $currentUser)->orwhere('user2', $currentUser)->get();
+    // $currentUser = Cookie::get('username');
+    // $chats = Chatslist::where('user1', $currentUser)->orwhere('user2', $currentUser)->get();
 
-    foreach ($chats as $ch) {
-        echo $ch->user1;
-    }
+    // foreach ($chats as $ch) {
+    //     echo $ch->user1;
+    // }
 });
