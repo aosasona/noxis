@@ -1,4 +1,5 @@
 const chat_content = document.getElementById('chat_content')
+const delBtn = document.getElementById('delBtn')
 
 chat_content.addEventListener('focus', () => {
     chat_content.setAttribute('rows', '3')

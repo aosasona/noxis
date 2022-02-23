@@ -11,7 +11,7 @@
 
         <a href='/users/{{ $user }}'>{{ $user }}</a>
 
-        <button class="text-lg text-white px-8" id="navBtn"><i class="fa-solid fa-ellipsis"></i></button>
+        <button class="text-lg text-red-500 px-8" id="delBtn"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <div class="mx-auto w-full xl:w-3/5 px-0">
         <div class="px-5 mb-[1vh] text-sm xl:text-lg">
@@ -63,5 +63,19 @@
                 @endif
             @endforeach
         </div>
+    </div>
+
+    <div id="confirm">
+        <div class="flex w-full h-[85vh] justify-center items-center">
+            <div class="w-4/5 xl:w-1/3 bg-zinc-800 px-6 lg:px-10 py-8 rounded-xl drop-shadow-lg">
+                <h1 class="text-red-600 font-semibold text-xl">Confirm Deletion</h1>
+                <p class="text-zinc-100 mt-6 text-sm">You are about to delete this <b>ENTIRE</b> conversation, are you sure you want to proceed with this action?</p>
+                <div class="flex flex-row w-full justify-between mt-9">
+                    <button class="font-semibold text-sm bg-zinc-700 text-zinc-400 p-2 px-4 rounded-lg hover:bg-zinc-900 hover:text-zinc-500">Cancel</button>
+                    <button class="font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500">Delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-0 w-screen h-screen bg-black opacity-60 z-[-1]" id="confirm__container"></div>
     </div>
 @endsection
