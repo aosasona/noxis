@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta name="description"
         content="RanCh is a quick, easy and anonymous message service for your professional & personal usage." />
     <meta name="keywords"
@@ -56,7 +56,9 @@
                 @csrf
                 <label for="attachment" class="px-2"><i class="fa-solid fa-link"></i></label>
                 <input type="file" name="attachment" class="hidden" id="attachment"/>
-                <input type="text" name="chat_content" id="chat_content" class="w-4/5 px-2 py-3 text-sm text-white bg-zinc-700 focus:outline-none"/>
+
+                <input type="text" name="chat_content" id="chat_content" class="w-[70%] xl:w-4/5 px-2 py-3 text-sm text-white bg-zinc-700 focus:outline-none"/>
+
                 <button type="submit" class="text-xl text-sky-600 px-2" id="send"><i class="fa-solid fa-paper-plane"></i></button>
                
           

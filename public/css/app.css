@@ -691,6 +691,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-1\/5{
     width: 20%;
 }
+.w-\[80\%\]{
+    width: 80%;
+}
+.w-\[70\%\]{
+    width: 70%;
+}
 .max-w-\[60vw\]{
     max-width: 60vw;
 }
@@ -1341,6 +1347,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
     .xl\:w-3\/5{
         width: 60%;
+    }
+
+    .xl\:w-4\/5{
+        width: 80%;
     }
 
     .xl\:max-w-\[55\%\]{
