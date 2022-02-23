@@ -66,6 +66,15 @@
     border-top : 4px solid rgb(1, 159, 238);
     border-radius: 50%;
 }
+.redloader {
+    animation : 600ms loader linear infinite;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: transparent;
+    border : 4px solid rgb(100, 100, 100);
+    border-top : 4px solid rgb(185, 0, 0);
+    border-radius: 50%;
+}
 @keyframes loader {
     0% {
         transform: rotate(0deg);

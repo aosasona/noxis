@@ -54,12 +54,12 @@
         <form method="POST" action="/chats" enctype="multipart/form-data" class="bg-zinc-800 flex flex-row w-screen h-auto justify-around items-center py-2 lg:py-2 m-0 text-lg lg:text-xl text-white">
         
                 @csrf
-                <label for="attachment" class="px-2"><i class="fa-solid fa-link"></i></label>
+                <label for="attachment" class="px-3"><i class="fa-solid fa-link"></i></label>
                 <input type="file" name="attachment" class="hidden" id="attachment"/>
 
                 <textarea type="text" name="chat_content" id="chat_content" class="font-light w-[70%] xl:w-4/5 px-3 py-3 text-sm text-white bg-zinc-700 focus:outline-none" rows="1" spellcheck="true" wrap="soft" style="resize: none;" placeholder="Type something here..."></textarea>
 
-                <button type="submit" class="text-xl text-sky-600 px-2" id="send"><i class="fa-solid fa-paper-plane" ></i></button>
+                <button type="submit" class="text-xl text-sky-600 px-3" id="send"><i class="fa-solid fa-paper-plane" ></i></button>
                
           
          </form>

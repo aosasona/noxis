@@ -65,17 +65,20 @@
         </div>
     </div>
 
-    <div id="confirm" class="fixed top-0 left-0 right-0 bottom-0">
+    <div id="confirm" class="fixed top-0 left-0 right-0 bottom-0 hidden">
         <div class="flex w-full h-[90vh] justify-center items-center">
-            <div class="w-4/5 xl:w-1/3 bg-zinc-800 px-6 lg:px-10 py-8 rounded-xl drop-shadow-xl">
+            <div class="w-4/5 xl:w-1/3 bg-zinc-800 px-6 lg:px-10 py-8 rounded-xl drop-shadow-xl z-0">
                 <h1 class="text-red-600 font-semibold text-xl">Confirm Deletion</h1>
                 <p class="text-zinc-100 mt-8 text-sm">You are about to delete this <b>ENTIRE</b> conversation, are you sure you want to proceed with this action?</p>
                 <div class="flex flex-row w-full justify-between mt-12">
-                    <button class="font-semibold text-sm bg-zinc-700 text-zinc-400 p-2 px-4 rounded-lg hover:bg-zinc-900 hover:text-zinc-500">Cancel</button>
-                    <button class="font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500">Delete</button>
+
+                    <button class="font-semibold text-sm bg-zinc-700 text-zinc-400 p-2 px-4 rounded-lg hover:bg-zinc-900 hover:text-zinc-500" id='cancel'>Cancel</button>
+                    
+                    <button class="font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500" id='delete'>Delete</button>
+
                 </div>
             </div>
         </div>
-        <div class="absolute top-0 left-0 right-0 bottom-0 w-screen h-screen bg-black opacity-70 z-[-1]" id="confirm__container"></div>
+        <div class="absolute top-0 left-0 right-0 bottom-0 w-screen h-screen bg-black opacity-70 z-[-1]" id="delContainer"></div>
     </div>
 @endsection
