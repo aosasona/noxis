@@ -13,7 +13,7 @@
         <button class="text-lg text-white px-8" id="navBtn"><i class="fa-solid fa-ellipsis"></i></button>
     </div>
 <div class="mx-auto w-full xl:w-3/5 px-0">
-    <div class="px-5 mb-[1vh]">
+    <div class="px-5 mb-[1vh] text-sm">
 
 @foreach ($chats as $chat)
 @if (strtolower($chat->from) === strtolower($currentUser))
