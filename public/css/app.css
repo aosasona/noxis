@@ -685,6 +685,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-\[75\%\]{
     max-width: 75%;
 }
+.max-w-\[75vw\]{
+    max-width: 75vw;
+}
 .list-none{
     list-style-type: none;
 }
