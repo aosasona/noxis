@@ -66,7 +66,7 @@
     </div>
 
     <div id="confirm" class="absolute top-0 left-0 right-0 bottom-0">
-        <div class="flex w-full h-[85vh] justify-center items-center">
+        <div class="flex w-full h-[90vh] justify-center items-center">
             <div class="w-4/5 xl:w-1/3 bg-zinc-800 px-6 lg:px-10 py-8 rounded-xl drop-shadow-lg">
                 <h1 class="text-red-600 font-semibold text-xl">Confirm Deletion</h1>
                 <p class="text-zinc-100 mt-6 text-sm">You are about to delete this <b>ENTIRE</b> conversation, are you sure you want to proceed with this action?</p>
@@ -76,6 +76,6 @@
                 </div>
             </div>
         </div>
-        <div class="absolute top-0 w-screen h-screen bg-black opacity-60 z-[-1]" id="confirm__container"></div>
+        <div class="absolute top-0 left-0 right-0 bottom-0 w-screen h-screen bg-black opacity-60 z-[-1]" id="confirm__container"></div>
     </div>
 @endsection
