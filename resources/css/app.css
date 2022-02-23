@@ -57,6 +57,23 @@
 .tiltDiv li {
     margin-bottom: 10px;
 }
+.loader {
+    animation : 1000ms loader linear infinite;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border : 4px solid white;
+    border-top : 4px solid rgb(1, 159, 238);
+    border-radius: 50%;
+}
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 @tailwind base;
 @tailwind components;

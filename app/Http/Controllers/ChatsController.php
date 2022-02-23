@@ -9,6 +9,7 @@ use \App\Models\Chatslist;
 use \App\Models\Chats;
 
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Redirect;
 
 class ChatsController extends Controller
 {
@@ -58,8 +59,12 @@ class ChatsController extends Controller
     public function show($user)
     {
           //Show current conversation
-     
+        
           $currentUser = Cookie::get('username');
+
+          if(strtolower($user) === strtolower($currentUser)){
+              return Redirect::back();
+          }
 
           $chats = Chats::where('from', '=', $currentUser, 'and', 'to', '=', $user)->orwhere('to', '=', $currentUser, 'and', 'from', '=', $user)->get();
 
