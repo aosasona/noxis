@@ -5,15 +5,21 @@
 <title>Chat  | {{ $user }}</title>
 
 <div class="mx-auto w-full xl:w-3/5 px-0">
-    <div class="sticky top-0 mx-auto w-full bg-zinc-800 text-center text-white py-7 mb-4 text-lg font-medium">{{ $user }}</div>
+    <div class="sticky top-0 mx-auto w-full bg-zinc-800 text-center text-white py-7 mb-4 text-lg font-medium flex justify-between">
+        <span class="px-8"><a href="{{ URL::previous() }}"><i class="fa-solid fa-angle-left font-white"></i></a></span>
 
-    <div class="px-5">
+        <a href='/users/{{ $user }}'>{{ $user }}</a>
+
+        <button class="text-lg text-white px-8" id="navBtn"><i class="fa-solid fa-ellipsis"></i></button>
+    </div>
+
+    <div class="px-5 mb-[10vh]">
 
 @foreach ($chats as $chat)
 @if (strtolower($chat->from) === strtolower($currentUser))
     <div class="flex w-full justify-end">
 
-        <div class="bg-sky-700 text-white w-auto max-w-[70%] py-2 px-5 rounded-2xl font-medium">
+        <div class="bg-sky-700 text-white w-auto max-w-[75%] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-3">
             
             {{ $chat->content }}
 
@@ -32,7 +38,7 @@
 
     <div class="flex w-full justify-start">
 
-        <div class="bg-zinc-700 text-white w-auto max-w-[70%] py-2 px-5 rounded-2xl font-medium">
+        <div class="bg-zinc-700 text-white w-auto max-w-[75%] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-3">
             
             {{ $chat->content }}
 
