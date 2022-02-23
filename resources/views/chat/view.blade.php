@@ -6,14 +6,14 @@
 
 
     <div class="sticky top-0 mx-auto w-full bg-zinc-800 text-center text-white py-4 xl:py-7 mb-4 text-lg font-medium flex justify-between">
-        <span class="px-8"><a href="{{ URL::previous() }}"><i class="fa-solid fa-angle-left font-white"></i></a></span>
+        <span class="px-8"><a href="{{ route('chats') }}"><i class="fa-solid fa-angle-left font-white"></i></a></span>
 
         <a href='/users/{{ $user }}'>{{ $user }}</a>
 
         <button class="text-lg text-white px-8" id="navBtn"><i class="fa-solid fa-ellipsis"></i></button>
     </div>
 <div class="mx-auto w-full xl:w-3/5 px-0">
-    <div class="px-5 mb-[1vh] text-sm">
+    <div class="px-5 mb-[1vh] text-sm xl:text-lg">
 
 @foreach ($chats as $chat)
 @if (strtolower($chat->from) === strtolower($currentUser))

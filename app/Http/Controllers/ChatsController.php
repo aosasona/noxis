@@ -64,8 +64,8 @@ class ChatsController extends Controller
           $chats = Chats::where('from', '=', $currentUser, 'and', 'to', '=', $user)->orwhere('to', '=', $currentUser, 'and', 'from', '=', $user)->get();
 
           return view('chat.view')->with('chats', $chats)
-                                    ->with('user', $user)
-                                    ->with('currentUser', $currentUser);
+                                ->with('user', $user)
+                                ->with('currentUser', $currentUser);
     }
 
     /**

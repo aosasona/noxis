@@ -22,12 +22,12 @@ class LoggedIn
     {
         $loginStatus = Cookie::get('username');
 
-        if($loginStatus !== null && $loginStatus !== '') {
+        if($loginStatus !== NULL && $loginStatus !== '') {
             return $next($request);
         }
         else {
             //return view('account.signin')->with('loginError', 'You need to be logged in!');
-            return redirect()->to('/login');
+            return redirect()->to('/signin');
         }
     }
 }

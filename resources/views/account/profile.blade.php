@@ -8,7 +8,7 @@
         <div class='flex flex-col h-[75vh] justify-center items-center mt-0'>
             <img src="{{ asset('/img/user.png') }}" class='p-6 w-2/3 lg:w-1/3 h-auto border-0 object-cover'
                 alt='profile image' />
-            <div class='text-sky-500 mt-2 w-[90%] lg:w-2/3 flex flex-row justify-around bg-zinc-700 py-5 rounded-xl'>
+            <div class='text-sky-600 mt-2 w-[90%] lg:w-2/3 flex flex-row justify-around bg-zinc-700 py-5 rounded-xl'>
                 <h2 class='inline font-medium text-2xl'>{{ $user[0]->username }}</h2>
                 <a href='/chats/{{ $user[0]->username }}' class='text-white text-xl' title='Text User'><i
                         class="fa-solid fa-message"></i></a>

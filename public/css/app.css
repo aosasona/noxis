@@ -794,6 +794,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-border-opacity: 1;
     border-color: rgb(82 82 91 / var(--tw-border-opacity));
 }
+.border-sky-600{
+    --tw-border-opacity: 1;
+    border-color: rgb(2 132 199 / var(--tw-border-opacity));
+}
 .bg-\[\#121212\]{
     --tw-bg-opacity: 1;
     background-color: rgb(18 18 18 / var(--tw-bg-opacity));
@@ -1161,9 +1165,17 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-text-opacity: 1;
     color: rgb(185 28 28 / var(--tw-text-opacity));
 }
+.hover\:text-sky-600:hover{
+    --tw-text-opacity: 1;
+    color: rgb(2 132 199 / var(--tw-text-opacity));
+}
 .focus\:border-sky-500:focus{
     --tw-border-opacity: 1;
     border-color: rgb(14 165 233 / var(--tw-border-opacity));
+}
+.focus\:border-sky-600:focus{
+    --tw-border-opacity: 1;
+    border-color: rgb(2 132 199 / var(--tw-border-opacity));
 }
 .focus\:outline-none:focus{
     outline: 2px solid transparent;
@@ -1369,5 +1381,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     .xl\:text-6xl{
         font-size: 3.75rem;
         line-height: 1;
+    }
+
+    .xl\:text-lg{
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+    .xl\:text-\[16px\]{
+        font-size: 16px;
     }
 }

@@ -12,7 +12,7 @@
 </div>
 
 
-<div class="w-full px-8 my-8 lg:mt-0 lg:my-20 text-left lg:text-center font-light lg:font-medium text-lg lg:text-2xl text-zinc-400" data-aos="fade-up" data-aos-duration="1000"><span class="text-sky-500 font-semibold">RanCh</span> is a web service aimed at giving you a platform to communicate quickly, easily & anonymously with whomever you want to chat with – without the distractions of setting passwords or filling long, boring forms. We don't have the standard registration process users usually go through, we don’t serve ads either, we serve you 😎
+<div class="w-full px-8 my-8 lg:mt-0 lg:my-20 text-left lg:text-center font-light lg:font-medium text-lg lg:text-2xl text-zinc-400" data-aos="fade-up" data-aos-duration="1000"><span class="text-sky-600 font-semibold">RanCh</span> is a web service aimed at giving you a platform to communicate quickly, easily & anonymously with whomever you want to chat with – without the distractions of setting passwords or filling long, boring forms. We don't have the standard registration process users usually go through, we don’t serve ads either, we serve you 😎
 </div>
 
 <div class="w-full px-4 pb-5 lg:px-4 lg:mx-0 flex flex-col lg:flex-row text-center mt-10 lg:mt-32 lg:justify-around" id="home__about">
@@ -35,20 +35,20 @@
 <center>
 <div class="mx-8 mt-16 mb-12 relative" data-aos="flip-left" data-aos-duration="1000">
  
-<h1 class="text-sky-500 text-3xl font-semibold">Getting Started</h1>
+<h1 class="text-sky-600 text-3xl font-semibold">Getting Started</h1>
 <ul class="mt-10 p-5 py-6 bg-zinc-800 lw-full lg:w-2/3 rounded-2xl text-sm text-left tiltDiv">
     
     <div class="absolute top-[-10px] left-[-20px] w-2 h-2 p-4 rounded-[50%] bg-red-700"></div>
     <li><span class="text-white">Proceed to the sign-up page using the button below or in the navigation bar.</span></li>
     <li><span class="text-white">Enter a valid e-mail on the sign-up page.</span></li>
-    <li><span class="text-white">You will be sent an OTP for login authentication every-time, we do <b class="text-sky-500">NOT</b> use fixed passwords for security
+    <li><span class="text-white">You will be sent an OTP for login authentication every-time, we do <b class="text-sky-600">NOT</b> use fixed passwords for security
     reasons.</span></li>
     <li><span class="text-white">Login data is only saved locally on your device for 5 days, after which you'll need to sign in again.</span></li>
-    <li><span class="text-white"><b class="text-sky-500">Share</b> your RanCh link to start chatting! Guests do not need to sign up to chat with you.</span></li>
+    <li><span class="text-white"><b class="text-sky-600">Share</b> your RanCh link to start chatting! Guests do not need to sign up to chat with you.</span></li>
   </ul>
 </div>
 
-<a href="/signup" class="border-2 border-sky-500 text-sky-500 px-6 p-3 rounded-xl hover:bg-sky-700 hover:text-white hover:border-none">Get Started</a>
+<a href="/signup" class="border-2 border-sky-600 text-sky-600 px-6 p-3 rounded-xl hover:bg-sky-700 hover:text-white hover:border-none">Get Started</a>
 </center>
 
 <footer class="flex flex-row-reverse justify-between lg:mt-16 mt-10 mx-3 items-center">

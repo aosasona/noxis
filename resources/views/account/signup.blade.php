@@ -8,20 +8,20 @@
     <div class="lg:px-5">
         @csrf
     <div class="mb-4">
-    <label for="email" class="block text-sm font-medium text-sky-500 mb-1 px-2">Email Address</label>
-    <input type="email" name="email" placeholder="johndoe@gmail.com" id="email" class="block w-[95%] bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-500" required="required"/> 
+    <label for="email" class="block text-sm font-medium text-sky-600 mb-1 px-2">Email Address</label>
+    <input type="email" name="email" placeholder="johndoe@gmail.com" id="email" class="block w-[95%] bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-600" required="required"/> 
     <span class="text-xs font-medium text-red-500 pt-1 px-2" id="email_error">{!! session()->get('emailError') !!}</span>
     </div>
 
     <div class="mb-4">
-    <label for="username" class="block text-sm font-medium text-sky-500 mb-1">Preferred Username</label>
-    <input type="text" name="username" placeholder="johndoe29" id="username" class="block w-5/6 mb-4 bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-500" required="required"/>
+    <label for="username" class="block text-sm font-medium text-sky-600 mb-1">Preferred Username</label>
+    <input type="text" name="username" placeholder="johndoe29" id="username" class="block w-5/6 mb-4 bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-600" required="required"/>
     <span class="text-xs font-medium text-red-500 pt-1 px-2" id="user_error">{!! session()->get('userError') !!}</span>
     </div>
 
 
     <div class="flex flex-row justify-between items-center mt-10">
-        <a href="/signin" class="underline hover:text-sky-500">Sign In Instead</a>
+        <a href="/signin" class="underline hover:text-sky-600">Sign In Instead</a>
     <button type="submit" name="signup" class="bg-sky-900 text-sky-400 px-5 py-2 rounded-lg text-lg hover:text-sky-900 hover:bg-sky-400 font-medium" id="signup_btn">Next</button>
     </div>
     </div>

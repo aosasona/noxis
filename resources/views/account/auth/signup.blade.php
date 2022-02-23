@@ -13,16 +13,16 @@
                 <div class="mb-2">
 
                     <div class='text-zinc-300 text-sm font-normal text-center pb-8 mt-3'>
-                        A code has been sent to <span class='font-semibold text-sky-500'>{{ $email }}</span>. Please check your spam folder if you haven't received it yet.
+                        A code has been sent to <span class='font-semibold text-sky-600'>{{ $email }}</span>. Please check your spam folder if you haven't received it yet.
                     </div>
 
                     <input type="text" name="auth_code" placeholder="X X X X X X X X" id="auth_code"
-                        class="block w-[95%] bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-500 text-3xl text-center" required="required" />
+                        class="block w-[95%] bg-transparent text-gray-300 font-normal px-4 py-3 rounded-xl border-2 border-gray-500 focus:outline-none focus:border-sky-600 text-3xl text-center" required="required" />
                     <span class="text-xs font-medium text-red-500 pt-1 px-2" id="auth_error">{!! session()->get('authError') !!}</span>
                 </div>
 
                 <div class="flex flex-row justify-between items-center mt-10">
-                    <a href="/signup" class="underline hover:text-sky-500">Go Back</a>
+                    <a href="/signup" class="underline hover:text-sky-600">Go Back</a>
                 <button type="submit" name="signup" class="bg-sky-900 text-sky-400 px-5 py-2 rounded-lg text-lg hover:text-sky-900 hover:bg-sky-400 font-medium" id="auth_btn">Authorize</button>
                 </div>
 
