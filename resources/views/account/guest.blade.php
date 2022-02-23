@@ -3,7 +3,7 @@
 @section('content')
 <div class='flex flex-col w-screen h-screen justify-center items-center'>
     <h1 class='text-[8rem] text-red-600 font-extralight errorText'>🙃</h1>
-    <h3 class='text-zinc-400'>You are a guest user! That is no problem but... we'd love to have you with us.</h3>
+    <h3 class='text-zinc-400'>You are a guest user!</h3>
     <a href='/signup' class='text-lg font-medium mt-10 text-sky-600 callTA'>Sign Up</a>
 </div>
 
