@@ -57,7 +57,7 @@
                 <label for="attachment" class="px-2"><i class="fa-solid fa-link"></i></label>
                 <input type="file" name="attachment" class="hidden" id="attachment"/>
 
-                <textarea type="text" name="chat_content" id="chat_content" class="w-[70%] xl:w-4/5 px-2 py-3 text-sm text-white bg-zinc-700 focus:outline-none" rows="1" spellcheck="true" wrap="soft" style="resize: none;"></textarea>
+                <textarea type="text" name="chat_content" id="chat_content" class="w-[70%] xl:w-4/5 px-2 py-3 text-sm text-white bg-zinc-700 focus:outline-none" rows="1" spellcheck="true" wrap="soft" style="resize: none;" placeholder="Type something here..."></textarea>
 
                 <button type="submit" class="text-xl text-sky-600 px-2" id="send"><i class="fa-solid fa-paper-plane" ></i></button>
                
