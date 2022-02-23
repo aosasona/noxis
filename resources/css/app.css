@@ -58,7 +58,7 @@
     margin-bottom: 10px;
 }
 .loader {
-    animation : 1000ms loader linear infinite;
+    animation : 800ms loader linear infinite;
     width: 2rem;
     height: 2rem;
     background-color: transparent;

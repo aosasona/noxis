@@ -54,7 +54,8 @@
     Btn.addEventListener('click', () => {
         const emailInput = emailField.value;
         if(emailInput.length != 0 && emailInput.length > 4) {
-            Btn.innerText = "Loading...";
+            Btn.innerText = "";
+            Btn.className = "loader"
         } else {
             Btn.innerText = "Sign In";
         }

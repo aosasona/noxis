@@ -73,7 +73,8 @@
         const userInput = userField.value;
         const emailInput = emailField.value;
         if(userInput.length != 0 && emailInput.length != 0) {
-            Btn.innerText = "Loading...";
+            Btn.innerText = "";
+            Btn.className = "loader"
         } else {
             Btn.innerText = "Next";
         }

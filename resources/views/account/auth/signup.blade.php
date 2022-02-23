@@ -48,7 +48,8 @@
             Btn.addEventListener('click', () => {
                 const authValue = auth.value;
                 if(authValue.length >= 8 && authValue.length != 0) { 
-                Btn.innerText = 'Authorizing...';
+                    Btn.innerText = "";
+                    Btn.className = "loader"
                 } else {
                     Btn.innerText = 'Authorize';
                 }

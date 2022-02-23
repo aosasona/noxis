@@ -92,8 +92,8 @@
     margin-bottom: 10px;
 }
 .loader {
-    -webkit-animation : 1000ms loader linear infinite;
-            animation : 1000ms loader linear infinite;
+    -webkit-animation : 800ms loader linear infinite;
+            animation : 800ms loader linear infinite;
     width: 2rem;
     height: 2rem;
     background-color: transparent;
@@ -591,11 +591,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-\[-1\]{
     z-index: -1;
 }
-.z-\[1\]{
-    z-index: 1;
-}
 .z-0{
     z-index: 0;
+}
+.z-\[1\]{
+    z-index: 1;
 }
 .m-0{
     margin: 0px;
