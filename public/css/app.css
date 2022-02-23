@@ -480,6 +480,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-\[1\]{
     z-index: 1;
 }
+.row-span-2{
+    grid-row: span 2 / span 2;
+}
 .float-left{
     float: left;
 }
@@ -589,6 +592,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-\[10vh\]{
     margin-bottom: 10vh;
 }
+.mb-\[3vh\]{
+    margin-bottom: 3vh;
+}
+.mb-\[2vh\]{
+    margin-bottom: 2vh;
+}
+.mb-\[1vh\]{
+    margin-bottom: 1vh;
+}
 .box-border{
     box-sizing: border-box;
 }
@@ -640,6 +652,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-full{
     height: 100%;
 }
+.h-6{
+    height: 1.5rem;
+}
 .w-screen{
     width: 100vw;
 }
@@ -669,6 +684,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-0{
     width: 0px;
+}
+.w-4\/5{
+    width: 80%;
+}
+.w-1\/5{
+    width: 20%;
 }
 .max-w-\[60vw\]{
     max-width: 60vw;
@@ -904,6 +925,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 0px;
     padding-right: 0px;
 }
+.py-1{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
 .pb-5{
     padding-bottom: 1.25rem;
 }
@@ -918,6 +943,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-3{
     padding-top: 0.75rem;
+}
+.pt-2{
+    padding-top: 0.5rem;
 }
 .text-left{
     text-align: left;
@@ -970,6 +998,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-5xl{
     font-size: 3rem;
     line-height: 1;
+}
+.text-\[0\.6rem\]{
+    font-size: 0.6rem;
+}
+.text-\[0\.7rem\]{
+    font-size: 0.7rem;
 }
 .font-extralight{
     font-weight: 200;
@@ -1249,6 +1283,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     .lg\:py-4{
         padding-top: 1rem;
         padding-bottom: 1rem;
+    }
+
+    .lg\:py-2{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 
     .lg\:text-center{

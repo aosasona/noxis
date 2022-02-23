@@ -1,19 +1,19 @@
-@extends('layouts.chat')
+@extends('layouts.conversation')
 
 @section('content')
 
-<title>Chat  | {{ $user }}</title>
+<title>{{ $user }} - Chat</title>
 
-<div class="mx-auto w-full xl:w-3/5 px-0">
-    <div class="sticky top-0 mx-auto w-full bg-zinc-800 text-center text-white py-5 xl:py-7 mb-4 text-lg font-medium flex justify-between">
+
+    <div class="sticky top-0 mx-auto w-full bg-zinc-800 text-center text-white py-4 xl:py-7 mb-4 text-lg font-medium flex justify-between">
         <span class="px-8"><a href="{{ URL::previous() }}"><i class="fa-solid fa-angle-left font-white"></i></a></span>
 
         <a href='/users/{{ $user }}'>{{ $user }}</a>
 
         <button class="text-lg text-white px-8" id="navBtn"><i class="fa-solid fa-ellipsis"></i></button>
     </div>
-
-    <div class="px-5 mb-[10vh]">
+<div class="mx-auto w-full xl:w-3/5 px-0">
+    <div class="px-5 mb-[1vh]">
 
 @foreach ($chats as $chat)
 @if (strtolower($chat->from) === strtolower($currentUser))
@@ -25,9 +25,9 @@
 
             <div class="text-xs text-right text-white">
             @if ($chat->status === "delivered")
-                    <i class='fa-solid fa-check'></i>
+                    <i class='fa-solid fa-check pt-2 text-[0.6rem]'><span class="font-semibold mx-1">{{ $chat->updated_at->diffForHumans() }}</span></i>
                 @else
-                <i class='fa-solid fa-check-double'></i>
+                <i class='fa-solid fa-check-double pt-2 text-[0.6rem]'><span class="font-semibold mx-1">{{ $chat->updated_at->diffForHumans() }}</span></i>
                 @endif
             </div>
 
@@ -42,10 +42,12 @@
             
             {{ $chat->content }}
 
+            <div class="pt-2 text-[0.6rem] font-semibold mx-1">{{ $chat->updated_at->diffForHumans() }}</div>
+
         </div>
 
     </div>
-
+    
 @endif
    
 @endforeach
