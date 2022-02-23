@@ -507,6 +507,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
 .mt-10{
     margin-top: 2.5rem;
 }
@@ -552,8 +556,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-\[7vh\]{
     margin-top: 7vh;
 }
+.mt-4{
+    margin-top: 1rem;
+}
+.ml-3{
+    margin-left: 0.75rem;
+}
+.mr-3{
+    margin-right: 0.75rem;
+}
+.mr-6{
+    margin-right: 1.5rem;
+}
 .box-border{
     box-sizing: border-box;
+}
+.box-content{
+    box-sizing: content-box;
 }
 .block{
     display: block;
@@ -624,6 +643,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[80vh\]{
     width: 80vh;
 }
+.w-auto{
+    width: auto;
+}
+.w-0{
+    width: 0px;
+}
+.max-w-\[60vw\]{
+    max-width: 60vw;
+}
+.max-w-\[70\%\]{
+    max-width: 70%;
+}
 .list-none{
     list-style-type: none;
 }
@@ -636,8 +667,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex-col{
     flex-direction: column;
 }
+.items-start{
+    align-items: flex-start;
+}
+.items-end{
+    align-items: flex-end;
+}
 .items-center{
     align-items: center;
+}
+.justify-start{
+    justify-content: flex-start;
+}
+.justify-end{
+    justify-content: flex-end;
 }
 .justify-center{
     justify-content: center;
@@ -739,6 +782,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-bg-opacity: 1;
     background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
+.bg-zinc-900{
+    --tw-bg-opacity: 1;
+    background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+.bg-sky-600{
+    --tw-bg-opacity: 1;
+    background-color: rgb(2 132 199 / var(--tw-bg-opacity));
+}
 .object-cover{
     -o-object-fit: cover;
        object-fit: cover;
@@ -805,6 +856,18 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 1.75rem;
     padding-right: 1.75rem;
 }
+.py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.py-7{
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+}
+.px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+}
 .pb-5{
     padding-bottom: 1.25rem;
 }
@@ -817,11 +880,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-8{
     padding-bottom: 2rem;
 }
+.pt-3{
+    padding-top: 0.75rem;
+}
 .text-left{
     text-align: left;
 }
 .text-center{
     text-align: center;
+}
+.text-right{
+    text-align: right;
 }
 .text-\[8rem\]{
     font-size: 8rem;
@@ -861,6 +930,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+}
+.text-5xl{
+    font-size: 3rem;
+    line-height: 1;
 }
 .font-extralight{
     font-weight: 200;
@@ -948,6 +1021,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-zinc-600{
     --tw-text-opacity: 1;
     color: rgb(82 82 91 / var(--tw-text-opacity));
+}
+.text-zinc-200{
+    --tw-text-opacity: 1;
+    color: rgb(228 228 231 / var(--tw-text-opacity));
 }
 .underline{
     -webkit-text-decoration-line: underline;
@@ -1185,5 +1262,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
     .xl\:h-\[95vh\]{
         height: 95vh;
+    }
+
+    .xl\:w-3\/5{
+        width: 60%;
+    }
+
+    .xl\:items-center{
+        align-items: center;
+    }
+
+    .xl\:text-6xl{
+        font-size: 3.75rem;
+        line-height: 1;
     }
 }

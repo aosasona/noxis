@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use \App\Models\Chatslist;
+
 use \App\Models\Chats;
 
 use Illuminate\Support\Facades\Cookie;
@@ -20,9 +22,10 @@ class ChatsController extends Controller
         //Show all of the user's chats
         $currentUser = Cookie::get('username');
 
-        $chats = Chats::where('from', $currentUser)->orwhere('to', $currentUser);
+        $chats = Chatslist::where('user1', $currentUser)->orwhere('user2', $currentUser)->get();
 
-        return view('chat.index')->with('chats', $chats);
+        return view('chat.index')->with('chats', $chats)
+                                ->with('currentUser', $currentUser);
     }
 
     /**
@@ -52,9 +55,17 @@ class ChatsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($user)
     {
-        //
+          //Show current conversation
+     
+          $currentUser = Cookie::get('username');
+
+          $chats = Chats::where('from', '=', $currentUser, 'and', 'to', '=', $user)->orwhere('to', '=', $currentUser, 'and', 'from', '=', $user)->get();
+
+          return view('chat.view')->with('chats', $chats)
+                                    ->with('user', $user)
+                                    ->with('currentUser', $currentUser);
     }
 
     /**
@@ -65,7 +76,9 @@ class ChatsController extends Controller
      */
     public function edit($id)
     {
-        //
+      
+
+
     }
 
     /**
