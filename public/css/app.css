@@ -572,6 +572,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bottom-0{
     bottom: 0px;
 }
+.left-0{
+    left: 0px;
+}
+.right-0{
+    right: 0px;
+}
 .z-\[-1\]{
     z-index: -1;
 }
