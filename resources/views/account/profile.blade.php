@@ -15,7 +15,7 @@
             </div>
 
             @if (strtolower(Cookie::get('username')) === strtolower($user[0]->username))
-                <input value="https://ran-ch.com/chat/{{ Cookie::get('username') }}"
+                <input value="https://ran-ch.com/chats/{{ Cookie::get('username') }}"
                     class='py-3 px-3 w-5/6 lg:w-1/3 text-center text-white bg-zinc-800 font-medium rounded-lg mt-6'
                     id='linkText' disabled />
                 <div class='flex flex-row items-center w-2/3 justify-evenly'>
