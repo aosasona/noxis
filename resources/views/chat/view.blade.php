@@ -45,7 +45,7 @@
                     </div>
                 @else
                     <!-- Received by user -->
-                    <div class="flex w-full justify-start">
+                    <div class="flex w-full mb-[1vh] justify-start">
 
                         <div
                             class="bg-zinc-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4">
