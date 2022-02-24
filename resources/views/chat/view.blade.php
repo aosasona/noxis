@@ -6,7 +6,7 @@
     <!-- Top menu with username and buttons -->
     <div
         class="sticky top-0 mx-auto w-full bg-zinc-800 text-center text-white py-4 xl:py-7 mb-4 text-lg font-medium flex justify-between">
-        <span class="px-8"><a href="{{ route('chats') }}"><i
+        <span class="px-8"><a href="/chats"><i
                     class="fa-solid fa-angle-left font-white"></i></a></span>
 
         <a href='/users/{{ $user }}'>{{ $user }}</a>
