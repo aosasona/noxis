@@ -23,7 +23,7 @@ class ChatsController extends Controller
         //Show all of the user's chats
         $currentUser = Cookie::get('username');
 
-        $chats = Chatslist::where('user1', $currentUser)->orwhere('user2', $currentUser)->get();
+        $chats = Chatslist::where('user1', $currentUser)->orwhere('user2', $currentUser)->orderBy('unread_count', 'DESC')->get();
 
         return view('chat.index')->with('chats', $chats)
                                 ->with('currentUser', $currentUser);
