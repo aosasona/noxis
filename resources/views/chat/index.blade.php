@@ -12,7 +12,7 @@ body {
     background-blend-mode: screen;
 }
 .navFixed {
-    background-color: #131313; 
+    background-color: #141414; 
 }
 </style>
 
