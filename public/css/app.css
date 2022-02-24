@@ -676,6 +676,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-2{
     margin-bottom: 0.5rem;
 }
+.mb-\[2vh\]{
+    margin-bottom: 2vh;
+}
+.mb-\[5vh\]{
+    margin-bottom: 5vh;
+}
+.mb-\[7vh\]{
+    margin-bottom: 7vh;
+}
 .box-border{
     box-sizing: border-box;
 }

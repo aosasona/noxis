@@ -36,5 +36,5 @@ confirmBtn.addEventListener('click', () => {
     confirmBtn.className = 'redloader'
 
     const AjaxReq = new XMLHttpRequest
-    
+     
 })

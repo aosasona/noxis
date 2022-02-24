@@ -14,7 +14,7 @@
         <button class="text-lg text-red-500 px-8" id="delBtn"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <div class="mx-auto w-full xl:w-3/5 px-0">
-        <div class="px-5 mb-[1vh] text-sm xl:text-lg">
+        <div class="px-5 mb-[7vh] text-sm xl:text-lg">
 
             <!-- Conversation display (loop) -->
             @foreach ($chats as $chat)
@@ -45,7 +45,7 @@
                     </div>
                 @else
                     <!-- Received by user -->
-                    <div class="flex w-full mb-[1vh] justify-start">
+                    <div class="flex w-full justify-start">
 
                         <div
                             class="bg-zinc-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4">
