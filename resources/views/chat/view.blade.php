@@ -26,7 +26,7 @@
 
                             {{ $chat->content }}
 
-                            <div class="text-xs text-right text-white">
+                            <div class="text-xs text-right">
 
                                 <!-- Timestamp and read receipt -->
                                 @if ($chat->status === 'delivered')
