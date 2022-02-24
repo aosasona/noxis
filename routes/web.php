@@ -7,6 +7,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatsController;
+use App\Http\Controllers\TestController;
 use App\Http\Middleware\LoggedIn;
 use App\Models\Chats;
 use Illuminate\Support\Facades\Cookie;
@@ -36,6 +37,7 @@ Route::post('/auth/signup', [AuthController::class, 'sendmail']);
 Route::post('/auth/signin', [AuthController::class, 'signin']);
 Route::post('/signin-auth', [AuthController::class, 'signin_auth']);
 Route::get('/search/result', [SearchController::class, 'result']);
+Route::post('/chats/{username}', [ChatsController::class, 'deleteConvo']); //Delete conversation
 Route::resource('users', UsersController::class); //Users route for different methods
 Route::resource('chats', ChatsController::class)->middleware(LoggedIn::class)->name('index', 'chats'); //Users route for different methods
 Route::get('/logout', function () {
@@ -44,29 +46,33 @@ Route::get('/logout', function () {
 })->name('logout');
 
 
-//TEST ROUTE WITHOUT POSTMAN
+/*TEST ROUTE WITHOUT POSTMAN
 Route::get('/test', function() {
     //Getting user data in view
-    // $currentUser = Cookie::get('username');
-    // $chats = Chatslist::where('user1', $currentUser)->orwhere('user2', $currentUser)->get();
+     $currentUser = Cookie::get('username');
+     $chats = Chatslist::where('user1', $currentUser)->orwhere('user2', $currentUser)->get();
 
-    // foreach ($chats as $ch) {
-    //     echo $ch->user1;
-    // }
+     foreach ($chats as $ch) {
+         echo $ch->user1;
+     }
 
     
 
     //GETTING CONVERSATIONS IN CHATLIST
-    // $user = "realao";
-    // $currentUser = "syntax";
-    // $chats = Chats::where(function($query_a) use($user, $currentUser) {
-    //                 $query_a->where('from', $user)
-    //                         ->where('to', $currentUser);
-    //                 })
-    //                 ->orwhere(function($query_b) use($user, $currentUser) {
-    //                     $query_b->where('to', $user)
-    //                             ->where('from', $currentUser);
-    //                     })
-    //                 ->get();
-    //dd($chats);
+     $user = "realao";
+     $currentUser = "syntax";
+     $chats = Chats::where(function($query_a) use($user, $currentUser) {
+                     $query_a->where('from', $user)
+                             ->where('to', $currentUser);
+                     })
+                     ->orwhere(function($query_b) use($user, $currentUser) {
+                         $query_b->where('to', $user)
+                                 ->where('from', $currentUser);
+                         })
+                     ->get();
+    dd($chats);
 });
+Route::get('/csrf', [TestController::class, 'index']);
+Route::delete('/csrf/{username}/{currentUser}', [TestController::class, 'test']);*/
+
+?>

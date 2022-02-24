@@ -9,12 +9,12 @@
         <span class="px-8"><a href="/chats"><i
                     class="fa-solid fa-angle-left font-white"></i></a></span>
 
-        <a href='/users/{{ $user }}'>{{ $user }}</a>
+        <a href='/users/{{ $user }}' id="chat_user">{{ $user }}</a>
 
         <button class="text-lg text-red-500 px-8" id="delBtn"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <div class="mx-auto w-full xl:w-3/5 px-0">
-        <div class="px-5 mb-[9vh] text-sm xl:text-lg">
+        <div class="px-5 mb-[9vh] text-sm xl:text-lg" id="chatcontent">
 
             <!-- Conversation display (loop) -->
             @foreach ($chats as $chat)
@@ -70,15 +70,17 @@
             <div class="w-4/5 xl:w-1/3 bg-zinc-800 px-6 lg:px-10 py-8 rounded-xl drop-shadow-xl z-0">
                 <h1 class="text-red-600 font-semibold text-xl">Confirm Deletion</h1>
                 <p class="text-zinc-100 mt-8 text-sm">You are about to delete this <b>ENTIRE</b> conversation, are you sure you want to proceed with this action?</p>
-                <div class="flex flex-row w-full justify-between mt-12">
-
+    
+                 <form onsubmit="return false" class="flex flex-row w-full justify-between mt-12">  
+                    @csrf 
                     <button class="font-semibold text-sm bg-zinc-700 text-zinc-400 p-2 px-4 rounded-lg hover:bg-zinc-900 hover:text-zinc-500" id='cancel'>Cancel</button>
                     
                     <button class="font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500" id='delete'>Delete</button>
-
-                </div>
+                 </form>
             </div>
         </div>
         <div class="absolute top-0 left-0 right-0 bottom-0 w-screen h-screen bg-black opacity-70 z-[-1]" id="delContainer"></div>
+
     </div>
+
 @endsection

@@ -25,8 +25,12 @@ delBtn.addEventListener("click", () => {
         confirm.classList.add("hidden");
     }
 });
+
+const AjaxReq = new XMLHttpRequest();
+
 //Cancel button effect
 cancelBtn.addEventListener("click", () => {
+    AjaxReq.abort();
     confirm.classList.add("hidden");
     confirmBtn.innerText = "Delete";
     confirmBtn.className =
@@ -35,11 +39,51 @@ cancelBtn.addEventListener("click", () => {
 
 //Confirm button action with AJAX
 confirmBtn.addEventListener("click", () => {
-    confirmBtn.innerText = "";
-    confirmBtn.className = "redloader";
+    
+    const user = document.getElementById('chat_user').innerText
+    const csrfToken = document.getElementsByName('_token').item(0)
 
-    const AjaxReq = new XMLHttpRequest();
+    const Token = csrfToken.getAttribute('value')
+
+    AjaxReq.open('POST', '/chats/' + user, true)
+
+    AjaxReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+
+    AjaxReq.onprogress = () => {
+        confirmBtn.innerText = ""
+        confirmBtn.className = "redloader"
+    }
+
+    AjaxReq.onload = () => {
+        confirmBtn.innerText = "Deleted!";
+        confirmBtn.className =
+        "font-semibold text-sm bg-green-800 text-green-400 p-2 px-4 rounded-lg";
+        console.log(AjaxReq.responseText)
+         setTimeout(()=> {
+            confirm.classList.add("hidden");
+            confirmBtn.innerText = "Delete";
+            confirmBtn.className = "font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500";
+         }, 1500)
+    }
+
+    AjaxReq.onerror = () => {
+        AjaxReq.abort();
+        confirmBtn.innerText = "Failed";
+        confirmBtn.className =
+        "font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500";
+    }
+   
+    AjaxReq.send(`_token=${Token}`)
+
+    // if(AjaxReq.status !== 200) {
+    //     AjaxReq.abort();
+    //     confirmBtn.innerText = "Failed!";
+    //     confirmBtn.className =
+    //     "font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500";
+    // }
 });
+
+
 
 /*-------------------- Bubble color change events --------------------*/
 
