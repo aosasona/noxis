@@ -53,12 +53,12 @@
     <div class="fixed bottom-0">
     <div class="h-[3vh] w-screen flex flex-row justify-evenly items-center bg-zinc-800 p-1">
         <div id="red" class="bg-red-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5 bubble-color" title="Change Chat Bubble Color"></div>
-        <div id="blue" class="bg-sky-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5 bubble-color" title="Change Chat Bubble Color"></div>
+        <div id="sky" class="bg-sky-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5 bubble-color" title="Change Chat Bubble Color"></div>
         <div id="green" class="bg-green-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5 bubble-color" title="Change Chat Bubble Color"></div>
         <div id="orange" class="bg-orange-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5 bubble-color" title="Change Chat Bubble Color"></div>
         <div id="purple" class="bg-purple-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5 bubble-color" title="Change Chat Bubble Color"></div>
         <div id="yellow" class="bg-yellow-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5 bubble-color" title="Change Chat Bubble Color"></div>
-        <div id="yellow" class="bg-white w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5 bubble-color" title="Change Chat Bubble Color"></div>
+        <div id="white" class="bg-white w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5 bubble-color" title="Change Chat Bubble Color"></div>
     </div>
         <form method="POST" action="/chats" enctype="multipart/form-data" class="bg-zinc-800 flex flex-row w-screen h-auto justify-evenly items-center pb-2 lg:pb-2 m-0 text-lg lg:text-xl text-white">
         

@@ -4,7 +4,7 @@ const delContainer = document.getElementById("delContainer");
 const confirm = document.getElementById("confirm");
 const cancelBtn = document.getElementById("cancel");
 const confirmBtn = document.getElementById("delete");
-const [red, blue, green, orange, purple, yellow, white] =
+const [red, sky, green, orange, purple, yellow, white] =
     document.querySelectorAll(".bubble-color");
 var bubbles = document.getElementsByClassName("bubble");
 
@@ -44,9 +44,27 @@ confirmBtn.addEventListener("click", () => {
 /*-------------------- Bubble color change events --------------------*/
 
 //Set the bubble color on page loaded
-wiindow.onload = () => {
-    currentBubbleColor = localStorage.getItem('bubble_color')
-}
+window.onload = () => {
+    currentBubbleColor = localStorage.getItem("bubble_color"); //Get current bubble color
+
+    for (var i = 0; i < bubbles.length; i++) {
+        if(currentBubbleColor !== 'white') {
+        bubbles[i].className =
+            "bg-" +
+            currentBubbleColor +
+            "-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble";
+        } else {
+            bubbles[i].className =
+            "bg-" +
+            currentBubbleColor +
+            " text-black w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble";
+        }
+    }
+
+    const SelectedBubbleColor = document.getElementById(currentBubbleColor);
+
+    SelectedBubbleColor.classList.add("py-2"); //Indicate the current bubble color
+};
 
 //Red bubble
 red.addEventListener("click", () => {
@@ -59,13 +77,13 @@ red.addEventListener("click", () => {
 });
 
 //Blue bubble
-blue.addEventListener("click", () => {
+sky.addEventListener("click", () => {
     for (var i = 0; i < bubbles.length; i++) {
         bubbles[i].className =
             "bg-sky-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble";
     }
     blue.classList.add("py-2");
-    localStorage.setItem("bubble_color", "blue");
+    localStorage.setItem("bubble_color", "sky");
 });
 
 //Green bubble
