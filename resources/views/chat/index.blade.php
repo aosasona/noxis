@@ -27,7 +27,7 @@ body {
     @foreach ($chats as $chat)
         <div class="text-zinc-200 bg-zinc-900 w-full p-4 mt-2 px-7 rounded-lg flex justify-between">
         <a href="/chats/{{ strtolower($chat->user1) === strtolower($currentUser) ? $chat->user2 : $chat->user1 }}" class="text-lg font-medium hover:text-sky-500">{{ $chat->user1 == $currentUser ? $chat->user2 : $chat->user1 }}</a>
-        <div class="inline bg-zinc-700 p-[0.15rem] px-[0.5rem] rounded-md font-semibold {{ $chat->unread_count == 0 ? 'text-white' : 'text-red-500' }}">
+        <div class="inline p-[0.1rem] px-[0.5rem] rounded-md font-semibold {{ $chat->unread_count == 0 ? 'text-white bg-zinc-700' : 'bg-red-500 text-white' }}">
             {{ $chat->unread_count }}
         </div>
         </div>
