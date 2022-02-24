@@ -51,7 +51,14 @@
     </div>
 
     <div class="fixed bottom-0">
-        <form method="POST" action="/chats" enctype="multipart/form-data" class="bg-zinc-800 flex flex-row w-screen h-auto justify-evenly items-center py-2 lg:py-2 m-0 text-lg lg:text-xl text-white">
+    <div class="h-[3vh] w-screen flex flex-row justify-evenly items-center bg-zinc-800 p-1">
+        <div id="red" class="bg-red-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5" title="Change Chat Bubble Color"></div>
+        <div id="red" class="bg-sky-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5" title="Change Chat Bubble Color"></div>
+        <div id="red" class="bg-green-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5" title="Change Chat Bubble Color"></div>
+        <div id="red" class="bg-orange-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5" title="Change Chat Bubble Color"></div>
+        <div id="red" class="bg-purple-700 w-8 h-2 p-1 rounded-lg hover:h-5 focus:h-5" title="Change Chat Bubble Color"></div>
+    </div>
+        <form method="POST" action="/chats" enctype="multipart/form-data" class="bg-zinc-800 flex flex-row w-screen h-auto justify-evenly items-center pb-2 lg:pb-2 m-0 text-lg lg:text-xl text-white">
         
                 @csrf
                 <label for="attachment" class="px-3"><i class="fa-solid fa-link"></i></label>

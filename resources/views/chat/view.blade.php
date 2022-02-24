@@ -14,7 +14,7 @@
         <button class="text-lg text-red-500 px-8" id="delBtn"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <div class="mx-auto w-full xl:w-3/5 px-0">
-        <div class="px-5 mb-[7vh] text-sm xl:text-lg">
+        <div class="px-5 mb-[9vh] text-sm xl:text-lg">
 
             <!-- Conversation display (loop) -->
             @foreach ($chats as $chat)
