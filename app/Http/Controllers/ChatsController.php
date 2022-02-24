@@ -66,7 +66,15 @@ class ChatsController extends Controller
               return Redirect::back();
           }
 
-          $chats = Chats::where('from', '=', $currentUser, 'and', 'to', '=', $user)->orwhere('to', '=', $currentUser, 'and', 'from', '=', $user)->get();
+          $chats = Chats::where(function($query_a) use($user, $currentUser) {
+            $query_a->where('from', $user)
+                    ->where('to', $currentUser);
+            })
+            ->orwhere(function($query_b) use($user, $currentUser) {
+                $query_b->where('to', $user)
+                        ->where('from', $currentUser);
+                })
+            ->get();
 
           return view('chat.view')->with('chats', $chats)
                                 ->with('user', $user)
