@@ -4,6 +4,8 @@ const delContainer = document.getElementById('delContainer')
 const confirm = document.getElementById('confirm')
 const cancelBtn = document.getElementById('cancel')
 const confirmBtn = document.getElementById('delete')
+const [ red, blue, green, orange, purple, yellow, white ] = document.querySelectorAll('.bubble-color')
+var bubbles = document.getElementsByClassName('bubble')
 
 chat_content.addEventListener('focus', () => {
     chat_content.setAttribute('rows', '3')
@@ -37,4 +39,41 @@ confirmBtn.addEventListener('click', () => {
 
     const AjaxReq = new XMLHttpRequest
      
+})
+
+//Bubble color change events
+red.addEventListener('click', () => {
+    for(var i = 0; i < bubbles.length; i++) {
+        bubbles[i].className = 'bg-red-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble'
+    }
+})
+blue.addEventListener('click', () => {
+    for(var i = 0; i < bubbles.length; i++) {
+        bubbles[i].className = 'bg-sky-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble'
+    }
+})
+green.addEventListener('click', () => {
+    for(var i = 0; i < bubbles.length; i++) {
+        bubbles[i].className = 'bg-green-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble'
+    }
+})
+orange.addEventListener('click', () => {
+    for(var i = 0; i < bubbles.length; i++) {
+        bubbles[i].className = 'bg-orange-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble'
+    }
+})
+purple.addEventListener('click', () => {
+    for(var i = 0; i < bubbles.length; i++) {
+        bubbles[i].className = 'bg-purple-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble'
+    }
+})
+yellow.addEventListener('click', () => {
+    for(var i = 0; i < bubbles.length; i++) {
+        bubbles[i].className = 'bg-yellow-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble'
+    }
+})
+white.addEventListener('click', () => {
+    for(var i = 0; i < bubbles.length; i++) {
+        bubbles[i].className = 'bg-white text-black w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble'
+    }
 })

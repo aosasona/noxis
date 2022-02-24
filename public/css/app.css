@@ -939,6 +939,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-bg-opacity: 1;
     background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
+.bg-yellow-700{
+    --tw-bg-opacity: 1;
+    background-color: rgb(161 98 7 / var(--tw-bg-opacity));
+}
 .object-cover{
     -o-object-fit: cover;
        object-fit: cover;
