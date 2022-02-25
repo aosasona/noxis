@@ -179,3 +179,4 @@ white.addEventListener("click", () => {
     white.classList.add("py-2");
     localStorage.setItem("bubble_color", "white");
 });
+

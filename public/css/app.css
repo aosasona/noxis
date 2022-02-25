@@ -751,6 +751,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[3vh\]{
     height: 3vh;
 }
+.h-4\/5{
+    height: 80%;
+}
 .w-screen{
     width: 100vw;
 }

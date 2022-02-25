@@ -11,7 +11,7 @@
 <body class="bg-white mx-2">
  
 <center>
-    <span class="text-zinc-700 font-normal text-xs mt-10">USE THIS OTP TO AUTHORIZE ACCESS TO YOUR RANCH ACCOUNT.</span>
+    <span class="text-zinc-700 font-normal text-xs mt-10">USE THIS OTP TO AUTHORIZE ACCESS TO YOUR NOXIS ACCOUNT.</span>
     <h1 class="text-black py-3 bg-gray-300 px-4 rounded-md text-3xl mt-3 font-medium">{{ $gen_code }}</h1>
 <br/>
     <div class="text-red-600 text-xs font-normal mt-8">Do not share this code or email with ANYONE.</div>
