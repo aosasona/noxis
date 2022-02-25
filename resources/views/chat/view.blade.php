@@ -38,7 +38,7 @@
                                 @else
                                     <!-- Read indicator -->
                                     <i class='fa-solid fa-check-double pt-2 text-[0.6rem]'><span
-                                            class="font-semibold mx-1">{{ $chat->updated_at->diffForHumans() }}</span></i>
+                                            class="font-semibold mx-1">{{ $chat->created_at->diffForHumans() }}</span></i>
                                 @endif
                             </div>
 
@@ -56,7 +56,7 @@
 
                             <!-- Timestamp -->
 
-                            <div class="pt-2 text-[0.6rem] font-semibold mx-1">{{ $chat->updated_at->diffForHumans() }}
+                            <div class="pt-2 text-[0.6rem] font-semibold mx-1">{{ $chat->created_at->diffForHumans() }}
                             </div>
 
                         </div>
