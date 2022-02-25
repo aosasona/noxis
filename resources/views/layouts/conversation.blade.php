@@ -75,7 +75,7 @@
             </div>
 
           <script type="text/javascript" src="{{ asset('js/chat.js') }}"></script>  
-          <script type="text/javascript" src="{{ asset('js/online.js') }}"></script>  
+          <!-- <script type="text/javascript" src="{{ asset('js/online.js') }}"></script>  -->
 </body>
 
 </html>

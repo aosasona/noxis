@@ -38,7 +38,7 @@ Route::post('/auth/signin', [AuthController::class, 'signin']);
 Route::post('/signin-auth', [AuthController::class, 'signin_auth']);
 Route::get('/search/result', [SearchController::class, 'result']);
 Route::post('/chats/{username}', [ChatsController::class, 'deleteConvo']); //Delete conversation
-Route::get('/online', [UsersController::class, 'updateStatus']);
+Route::get('/online', [UsersController::class, 'updateStatus'])->middleware(LoggedIn::class);
 Route::resource('users', UsersController::class); //Users route for different methods
 Route::resource('chats', ChatsController::class)->middleware(LoggedIn::class)->name('index', 'chats'); //Users route for different methods
 Route::get('/logout', function () {

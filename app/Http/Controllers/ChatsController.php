@@ -26,7 +26,7 @@ class ChatsController extends Controller
         $chats = Chatslist::where('user1', $currentUser)->orwhere('user2', $currentUser)->orderBy('unread_count', 'DESC')->get();
 
         return view('chat.index')->with('chats', $chats)
-                                ->with('currentUser', $currentUser);
+            ->with('currentUser', $currentUser);
     }
 
     /**
@@ -37,6 +37,7 @@ class ChatsController extends Controller
     public function create()
     {
         //
+        return view('error');
     }
 
     /**
@@ -48,6 +49,7 @@ class ChatsController extends Controller
     public function store(Request $request)
     {
         //
+        return view('error');
     }
 
     /**
@@ -58,28 +60,28 @@ class ChatsController extends Controller
      */
     public function show($user)
     {
-          //Show current conversation
-        
-          $currentUser = Cookie::get('username');
+        //Show current conversation
 
-          if(strtolower($user) === strtolower($currentUser)){
-              return Redirect::back();
-          }
+        $currentUser = Cookie::get('username');
 
-          $chats = Chats::where(function($query_a) use($user, $currentUser) {
+        if (strtolower($user) === strtolower($currentUser)) {
+            return Redirect::back();
+        }
+
+        $chats = Chats::where(function ($query_a) use ($user, $currentUser) {
             $query_a->where('from', $user)
-                    ->where('to', $currentUser);
-            })
-            ->orwhere(function($query_b) use($user, $currentUser) {
+                ->where('to', $currentUser);
+        })
+            ->orwhere(function ($query_b) use ($user, $currentUser) {
                 $query_b->where('to', $user)
-                        ->where('from', $currentUser);
-                })
+                    ->where('from', $currentUser);
+            })
             ->get();
 
 
-          return view('chat.view')->with('chats', $chats)
-                                ->with('user', $user)
-                                ->with('currentUser', $currentUser);
+        return view('chat.view')->with('chats', $chats)
+            ->with('user', $user)
+            ->with('currentUser', $currentUser);
     }
 
     /**
@@ -90,9 +92,7 @@ class ChatsController extends Controller
      */
     public function edit($id)
     {
-      
-
-
+        return view('error');
     }
 
     /**
@@ -105,6 +105,7 @@ class ChatsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        return view('error');
     }
 
     /**
@@ -115,10 +116,33 @@ class ChatsController extends Controller
      */
     public function destroy($username)
     {
-  
+        //
+        return view('error');
     }
 
-    public function deleteConvo($username) {
-        return $username;
+    /**
+     * Delete the entire conversation
+     */
+    public function deleteConvo($username)
+    {
+        $currentUser = Cookie::get('username');
+        $user = $username;
+
+        if ($currentUser && $user) {
+
+            Chats::where(function ($query_a) use ($user, $currentUser) {
+                $query_a->where('from', $user)
+                    ->where('to', $currentUser);
+            })
+                ->orwhere(function ($query_b) use ($user, $currentUser) {
+                    $query_b->where('to', $user)
+                        ->where('from', $currentUser);
+                })
+                ->delete();
+
+                return response('Deleted', 200);
+        } else {
+            return response('Lol, you can not do that.', 406);
+        }
     }
 }

@@ -1,3 +1,6 @@
+/* JavaScript for private chat page */
+
+//VARIABLE DECLARATION
 const chat_content = document.getElementById("chat_content");
 const delBtn = document.getElementById("delBtn");
 const delContainer = document.getElementById("delContainer");
@@ -7,6 +10,9 @@ const confirmBtn = document.getElementById("delete");
 const [red, sky, green, orange, purple, yellow, white] =
     document.querySelectorAll(".bubble-color");
 var bubbles = document.getElementsByClassName("bubble");
+const chatcontent = document.getElementById("chatcontent")
+
+
 
 chat_content.addEventListener("focus", () => {
     chat_content.setAttribute("rows", "3");
@@ -51,6 +57,11 @@ confirmBtn.addEventListener("click", () => {
         "application/x-www-form-urlencoded"
     );
 
+    AjaxReq.onloadstart = () => {
+        confirmBtn.innerText = "";
+        confirmBtn.className = "redloader";
+    }
+
     AjaxReq.onprogress = () => {
         confirmBtn.innerText = "";
         confirmBtn.className = "redloader";
@@ -60,6 +71,7 @@ confirmBtn.addEventListener("click", () => {
         confirmBtn.innerText = "Deleted!";
         confirmBtn.className =
             "font-semibold text-sm bg-green-800 text-green-400 p-2 px-4 rounded-lg";
+        chatcontent.innerHTML = ''
         setTimeout(() => {
             confirm.classList.add("hidden");
             confirmBtn.innerText = "Delete";

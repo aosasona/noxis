@@ -30,6 +30,7 @@ class UsersController extends Controller
     public function create()
     {
         //
+        return view('error');
     }
 
     /**
@@ -113,6 +114,7 @@ class UsersController extends Controller
     public function edit($username)
     {
         //
+        return view('error');
     }
 
     /**
@@ -124,7 +126,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        return view('error');
     }
 
     /**
