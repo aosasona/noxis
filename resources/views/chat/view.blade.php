@@ -68,7 +68,7 @@
     <div id="confirm" class="fixed top-0 left-0 right-0 bottom-0 hidden">
         <div class="flex w-full h-[90vh] justify-center items-center">
             <div class="w-4/5 xl:w-1/3 bg-zinc-800 px-6 lg:px-10 py-8 rounded-xl drop-shadow-xl z-0">
-                <h1 class="text-red-600 font-semibold text-xl">Confirm Deletion</h1>
+                <h1 class="text-red-600 font-semibold text-xl">Confirm Action</h1>
                 <p class="text-zinc-100 mt-8 text-sm">You are about to delete this <b>ENTIRE</b> conversation, are you sure you want to proceed with this action?</p>
     
                  <form onsubmit="return false" class="flex flex-row w-full justify-between mt-12">  

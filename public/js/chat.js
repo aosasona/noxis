@@ -39,41 +39,43 @@ cancelBtn.addEventListener("click", () => {
 
 //Confirm button action with AJAX
 confirmBtn.addEventListener("click", () => {
-    
-    const user = document.getElementById('chat_user').innerText
-    const csrfToken = document.getElementsByName('_token').item(0)
+    const user = document.getElementById("chat_user").innerText;
+    const csrfToken = document.getElementsByName("_token").item(0);
 
-    const Token = csrfToken.getAttribute('value')
+    const Token = csrfToken.getAttribute("value");
 
-    AjaxReq.open('POST', '/chats/' + user, true)
+    AjaxReq.open("POST", "/chats/" + user, true);
 
-    AjaxReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+    AjaxReq.setRequestHeader(
+        "Content-Type",
+        "application/x-www-form-urlencoded"
+    );
 
     AjaxReq.onprogress = () => {
-        confirmBtn.innerText = ""
-        confirmBtn.className = "redloader"
-    }
+        confirmBtn.innerText = "";
+        confirmBtn.className = "redloader";
+    };
 
     AjaxReq.onload = () => {
         confirmBtn.innerText = "Deleted!";
         confirmBtn.className =
-        "font-semibold text-sm bg-green-800 text-green-400 p-2 px-4 rounded-lg";
-        console.log(AjaxReq.responseText)
-         setTimeout(()=> {
+            "font-semibold text-sm bg-green-800 text-green-400 p-2 px-4 rounded-lg";
+        setTimeout(() => {
             confirm.classList.add("hidden");
             confirmBtn.innerText = "Delete";
-            confirmBtn.className = "font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500";
-         }, 1500)
-    }
+            confirmBtn.className =
+                "font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500";
+        }, 1500);
+    };
 
     AjaxReq.onerror = () => {
         AjaxReq.abort();
         confirmBtn.innerText = "Failed";
         confirmBtn.className =
-        "font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500";
-    }
-   
-    AjaxReq.send(`_token=${Token}`)
+            "font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500";
+    };
+
+    AjaxReq.send(`_token=${Token}`);
 
     // if(AjaxReq.status !== 200) {
     //     AjaxReq.abort();
@@ -83,8 +85,6 @@ confirmBtn.addEventListener("click", () => {
     // }
 });
 
-
-
 /*-------------------- Bubble color change events --------------------*/
 
 //Set the bubble color on page loaded
@@ -92,16 +92,16 @@ window.onload = () => {
     currentBubbleColor = localStorage.getItem("bubble_color"); //Get current bubble color
 
     for (var i = 0; i < bubbles.length; i++) {
-        if(currentBubbleColor !== 'white') {
-        bubbles[i].className =
-            "bg-" +
-            currentBubbleColor +
-            "-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble";
+        if (currentBubbleColor !== "white") {
+            bubbles[i].className =
+                "bg-" +
+                currentBubbleColor +
+                "-700 text-white w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble";
         } else {
             bubbles[i].className =
-            "bg-" +
-            currentBubbleColor +
-            " text-black w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble";
+                "bg-" +
+                currentBubbleColor +
+                " text-black w-auto max-w-[75vw] xl:max-w-[55%] py-2 px-5 rounded-2xl font-medium break-words mb-4 bubble";
         }
     }
 
