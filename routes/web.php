@@ -9,9 +9,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatsController;
 use App\Http\Controllers\TestController;
 use App\Http\Middleware\LoggedIn;
-use App\Models\Chats;
 use Illuminate\Support\Facades\Cookie;
-use \App\Models\Chatslist;
+use App\Models\User_status;
+use Carbon\Carbon;
 
 use function PHPUnit\Framework\isTrue;
 
@@ -38,6 +38,7 @@ Route::post('/auth/signin', [AuthController::class, 'signin']);
 Route::post('/signin-auth', [AuthController::class, 'signin_auth']);
 Route::get('/search/result', [SearchController::class, 'result']);
 Route::post('/chats/{username}', [ChatsController::class, 'deleteConvo']); //Delete conversation
+Route::get('/online', [UsersController::class, 'updateStatus']);
 Route::resource('users', UsersController::class); //Users route for different methods
 Route::resource('chats', ChatsController::class)->middleware(LoggedIn::class)->name('index', 'chats'); //Users route for different methods
 Route::get('/logout', function () {
@@ -75,4 +76,7 @@ Route::get('/test', function() {
 Route::get('/csrf', [TestController::class, 'index']);
 Route::delete('/csrf/{username}/{currentUser}', [TestController::class, 'test']);*/
 
+Route::get('/test', function () {
+  return "Test";
+});
 ?>

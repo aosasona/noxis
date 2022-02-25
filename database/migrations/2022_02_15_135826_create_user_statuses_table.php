@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_status', function (Blueprint $table) {
+        Schema::create('user_statuses', function (Blueprint $table) {
             $table->id();
             $table->string('username');
-            $table->date('last_seen');
+            $table->string('last_seen');
             $table->timestamps();
         });
     }

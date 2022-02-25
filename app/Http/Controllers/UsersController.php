@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User_status;
 use Illuminate\Http\Request;
 
 use App\Models\Users;
-
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
 
@@ -53,7 +54,19 @@ class UsersController extends Controller
             $user->email = $email;
             $user->save();
 
-            Cookie::queue('username', $username, 10080, '/');
+            $active = User_status::where('username', $username)->count();
+
+            if($active < 1){ 
+                //Create an instance of User in the users status table
+                $currentDate = Carbon::now()->toDateTimeString();
+                $status = new User_status;
+                $status->username = $username;
+                $status->last_seen = $currentDate;
+
+                $status->save(); //Save the specified data
+            }
+
+            Cookie::queue('username', $username, 45000, '/');
             
         
             // session(['loggedIn' => true]); //set the login boolean
@@ -86,7 +99,7 @@ class UsersController extends Controller
             return view('account.guest');
         }
 
-        $user = Users::where('username', '=', $username)->get();
+        $user = Users::where('username', $username)->get();
         return view('account.profile')->with('user', $user)
                                       ->with('sessionUser', $sessionUser);
     }
@@ -111,7 +124,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
@@ -124,5 +137,32 @@ class UsersController extends Controller
     {
         //
     }
-    
+
+    /**
+     * Update the current user's status in storage.
+     */
+    public function updateStatus(Request $request) {
+        $status = $request->input('status');
+        $username = Cookie::get('username'); //Get logged in user 
+        $currentDate = Carbon::now()->toDateTimeString(); //Get the current date
+
+        if($username){
+
+        //Check if the user has been instantiated
+        $checkStatus = User_status::where('username', $username)->count();
+        if($checkStatus === 0){
+            //Create an instance of User in the users status table
+            $currentDate = Carbon::now()->toDateTimeString();
+            $status = new User_status;
+            $status->username = $username;
+            $status->last_seen = $currentDate;
+
+            $status->save(); //Save the specified data
+        }
+         else {
+            User_status::where('username', $username)->update(["last_seen" => $currentDate]);
+        }
+
+    }
+    }
 }

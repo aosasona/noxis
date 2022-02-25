@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<title>{{ config('app.name', 'RanCh')}} | Sign In</title>
+<title>{{ config('app.name', 'Noxis')}} | Sign In</title>
 <div class="flex w-screen h-[85vh] justify-center items-center px-4">
 <form method="POST" action="auth/signin" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
     @csrf

@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('public_datas', function (Blueprint $table) {
             $table->id();
-            $table->String('username');
-            $table->String('short_link');
-            $table->String('qr_code');
+            $table->string('username');
+            $table->string('short_link');
+            $table->string('qr_code');
             $table->timestamps();
         });
     }

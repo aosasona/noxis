@@ -45,8 +45,7 @@
     <li><span class="text-white">Enter a valid e-mail on the sign-up page.</span></li>
     <li><span class="text-white">You will be sent an OTP for login authentication every-time, we do <b class="text-sky-600">NOT</b> use fixed passwords for security
     reasons.</span></li>
-    <li><span class="text-white">Login data is only saved locally on your device for 5 days, after which you'll need to sign in again.</span></li>
-    <li><span class="text-white"><b class="text-sky-600">Share</b> your Noxis link to start chatting! Guests do not need to sign up to chat with you.</span></li>
+    <li><span class="text-white"><b class="text-sky-600">Share</b> your Noxis link or QR code to start chatting! Guests do not need to sign up to chat with you.</span></li>
   </ul>
 </div>
 

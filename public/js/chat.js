@@ -180,3 +180,12 @@ white.addEventListener("click", () => {
     localStorage.setItem("bubble_color", "white");
 });
 
+
+
+//Continually send AJAX calls to update user's status
+
+setInterval(() => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("GET",)
+}, 10000)
