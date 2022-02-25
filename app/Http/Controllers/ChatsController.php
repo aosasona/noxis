@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use \App\Models\Chatslist;
 
 use \App\Models\Chats;
-
+use App\Models\User_status;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Redirect;
 
@@ -75,6 +75,7 @@ class ChatsController extends Controller
                         ->where('from', $currentUser);
                 })
             ->get();
+
 
           return view('chat.view')->with('chats', $chats)
                                 ->with('user', $user)

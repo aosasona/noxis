@@ -5,11 +5,13 @@
 
     <!-- Top menu with username and buttons -->
     <div
-        class="sticky top-0 mx-auto w-full bg-zinc-800 text-center text-white py-4 xl:py-7 mb-4 text-lg font-medium flex justify-between">
+        class="sticky top-0 mx-auto w-full bg-zinc-800 text-center text-white py-3 xl:py-3 mb-4 text-lg font-medium flex justify-between items-center">
         <span class="px-8"><a href="/chats"><i
                     class="fa-solid fa-angle-left font-white"></i></a></span>
-
-        <a href='/users/{{ $user }}' id="chat_user">{{ $user }}</a>
+        <div class='flex flex-col'>
+        <a href='/users/{{ $user }}' class="hover:text-sky-600"><span id="chat_user">{{ $user }}</span></a>
+        <span id="last_seen" class="text-sky-500 text-xs font-normal">Loading...</span>
+        </div>
 
         <button class="text-lg text-red-500 px-8" id="delBtn"><i class="fa-solid fa-trash-can"></i></button>
     </div>

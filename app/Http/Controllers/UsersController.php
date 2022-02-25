@@ -142,7 +142,7 @@ class UsersController extends Controller
      * Update the current user's status in storage.
      */
     public function updateStatus(Request $request) {
-        $status = $request->input('status');
+        $user = $request->input('user');
         $username = Cookie::get('username'); //Get logged in user 
         $currentDate = Carbon::now()->toDateTimeString(); //Get the current date
 
@@ -162,7 +162,14 @@ class UsersController extends Controller
          else {
             User_status::where('username', $username)->update(["last_seen" => $currentDate]);
         }
+        if($user){
+              $getActiveStatus = User_status::where('username', $user)->get();
 
+            foreach($getActiveStatus as $status) {
+                echo $status->updated_at->diffForHumans();
+            }
+        }
+      
     }
     }
 }
