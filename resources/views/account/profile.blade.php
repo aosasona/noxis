@@ -2,7 +2,7 @@
 
 @section('content')
     @if (!$user->isEmpty())
-        <title>{{ $user[0]->username }}'s Profile</title>
+        <title>{{ ucFirst($user[0]->username) }}'s Profile</title>
         <div class='w-full text-center py-3 px-5 bg-green-200 border-2 border-green-800 text-green-800 font-semibold hidden'
             id='alertDiv'></div>
         <div class='flex flex-col h-[75vh] justify-center items-center mt-0'>

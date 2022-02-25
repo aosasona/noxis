@@ -1,7 +1,7 @@
 @extends('layouts.conversation')
 
 @section('content')
-    <title>{{ $user }} - Chat</title>
+    <title>{{ ucFirst($user) }}</title>
 
     <!-- Top menu with username and buttons -->
     <div
