@@ -10,7 +10,7 @@
                     class="fa-solid fa-angle-left font-white"></i></a></span>
         <div class='flex flex-col'>
         <a href='/users/{{ $user }}' class="hover:text-sky-600"><span id="chat_user">{{ $user }}</span></a>
-        <span id="last_seen" class="text-sky-500 text-xs font-normal">Loading...</span>
+        <span id="last_seen" class="text-sky-500 text-xs font-normal"></span>
         </div>
 
         <button class="text-lg text-red-500 px-8" id="delBtn"><i class="fa-solid fa-trash-can"></i></button>

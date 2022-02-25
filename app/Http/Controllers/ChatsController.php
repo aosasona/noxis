@@ -79,15 +79,34 @@ class ChatsController extends Controller
             })
             ->get();
 
+
         //UPDATE THE READ RECEIPT FOR THE CONVERSATION
         Chats::where(function ($query_a) use ($user, $currentUser) {
-            $query_a->where('from', $user)
-                ->where('to', $currentUser);
+            $query_a
+                ->where('from', $user)
+                ->where('to', $currentUser)
+                ->where('status', 'delivered');
         })
             ->orwhere(function ($query_b) use ($user, $currentUser) {
-                $query_b->where('to', $user)
-                    ->where('from', $currentUser);
-            })->update(['status' => 'read']);    
+                $query_b
+                    ->where('to', $user)
+                    ->where('from', $currentUser)
+                    ->where('status', 'delivered');
+            })->update(['status' => 'read']);
+
+
+        //UPDATE THE UNREAD COUNTERS FOR THE CONVERSATION
+        Chatslist::where(function ($query_a) use ($user, $currentUser) {
+            $query_a->where('user1', $user)
+                ->where('user2', $currentUser)
+                ->where('unread_count', '>', '0');
+        })
+            ->orwhere(function ($query_b) use ($user, $currentUser) {
+                $query_b->where('user2', $user)
+                    ->where('user1', $currentUser)
+                    ->where('unread_count', '>', '0');
+            })->update(['unread_count' => '0']);
+
 
 
         return view('chat.view')->with('chats', $chats)
@@ -141,7 +160,7 @@ class ChatsController extends Controller
 
         if ($currentUser && $user) {
 
-            Chats::where(function ($query_a) use ($user, $currentUser) {
+            $checkChat = Chats::where(function ($query_a) use ($user, $currentUser) {
                 $query_a->where('from', $user)
                     ->where('to', $currentUser);
             })
@@ -149,9 +168,24 @@ class ChatsController extends Controller
                     $query_b->where('to', $user)
                         ->where('from', $currentUser);
                 })
-                ->delete();
+                ->count();
+
+            if ($checkChat !== 0) {
+
+                Chats::where(function ($query_a) use ($user, $currentUser) {
+                    $query_a->where('from', $user)
+                        ->where('to', $currentUser);
+                    })
+                    ->orwhere(function ($query_b) use ($user, $currentUser) {
+                        $query_b->where('to', $user)
+                            ->where('from', $currentUser);
+                    })
+                    ->delete();
 
                 return response('Deleted', 200);
+            } else {
+                return response('Nothing to delete mate', 400);
+            }
         } else {
             return response('Lol, you can not do that.', 406);
         }

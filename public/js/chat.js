@@ -88,13 +88,6 @@ confirmBtn.addEventListener("click", () => {
     };
 
     AjaxReq.send(`_token=${Token}`);
-
-    // if(AjaxReq.status !== 200) {
-    //     AjaxReq.abort();
-    //     confirmBtn.innerText = "Failed!";
-    //     confirmBtn.className =
-    //     "font-semibold text-sm bg-red-800 text-red-400 p-2 px-4 rounded-lg hover:bg-red-900 hover:text-red-500";
-    // }
 });
 
 /*-------------------- Bubble color change events --------------------*/
