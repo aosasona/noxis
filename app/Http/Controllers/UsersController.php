@@ -53,7 +53,7 @@ class UsersController extends Controller
             $user->email = $email;
             $user->save();
 
-            Cookie::queue('username', $username, 7200, '/');
+            Cookie::queue('username', $username, 10080, '/');
             
         
             // session(['loggedIn' => true]); //set the login boolean

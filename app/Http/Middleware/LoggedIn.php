@@ -36,7 +36,7 @@ class LoggedIn
             $gen_trim = substr($gen, 0, 5);
             $genericUser = $prefix.$gen_trim;
 
-            Cookie::queue('username', $genericUser, 262000, '/');
+            Cookie::queue('username', $genericUser, 480000, '/');
             return $next($request);
         }
     }

@@ -20,14 +20,11 @@
 <vectornator:setting key="WDSnapToPoints" value="false"/>
 <vectornator:setting key="WDUnits" value="Pixels"/>
 </metadata>
-<defs>
-<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="3065.63" id="Filter" width="2937.46" x="0" y="0">
-<feDropShadow dx="-3.6732e-05" dy="10" flood-color="#000000" flood-opacity="0.333" height="3065.63" stdDeviation="5" width="2937.46"/>
-</filter>
-</defs>
+<defs/>
 <g id="Layer-1" vectornator:layerName="Layer 1">
-<path d="M169.758 55.5029L171.116 55.5029C232.485 55.5029 282.235 105.253 282.235 166.622L282.235 920.116C282.235 981.485 232.485 1031.23 171.116 1031.23L169.758 1031.23C108.388 1031.23 58.6386 981.485 58.6386 920.116L58.6386 166.622C58.6386 105.253 108.388 55.5029 169.758 55.5029Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
-<path d="M904.334 55.5029L905.693 55.5029C967.062 55.5029 1016.81 105.253 1016.81 166.622L1016.81 920.116C1016.81 981.485 967.062 1031.23 905.693 1031.23L904.334 1031.23C842.965 1031.23 793.215 981.485 793.215 920.116L793.215 166.622C793.215 105.253 842.965 55.5029 904.334 55.5029Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
-<path d="M94.4653 73.6064L94.4653 73.6064C150.369 20.9426 238.381 23.5693 291.045 79.4733L985.402 816.552C1038.07 872.456 1035.44 960.468 979.535 1013.13L979.535 1013.13C923.631 1065.8 835.62 1063.17 782.956 1007.26L88.5984 270.186C35.9346 214.282 38.5613 126.27 94.4653 73.6064Z" fill="#ffffff" fill-rule="evenodd" filter="url(#Filter)" opacity="1" stroke="none" vectornator:shadowAngle="1.5708" vectornator:shadowColor="#000000" vectornator:shadowOffset="10" vectornator:shadowOpacity="0.333" vectornator:shadowRadius="10"/>
+<g opacity="1">
+<path d="M236.893 178.873L390.022 361.037L390.022 901.732L236.893 897.094L236.893 178.873Z" fill="none" fill-rule="evenodd" opacity="1" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="22"/>
+<path d="M236.878 178.86L696.939 729.141L696.939 729.141L843.122 901.732L843.122 490.219L843.122 178.953L696.939 178.953L696.939 537.474L400.294 178.268L236.878 178.86Z" fill="none" fill-rule="evenodd" opacity="1" stroke="#fcfcfc" stroke-linecap="round" stroke-linejoin="round" stroke-width="22"/>
+</g>
 </g>
 </svg>
