@@ -77,14 +77,6 @@ Route::get('/csrf', [TestController::class, 'index']);
 Route::delete('/csrf/{username}/{currentUser}', [TestController::class, 'test']);*/
 
 Route::get('/test', function () {
-  $user = "realao";
-
-  $getActiveStatus = User_status::where('username', $user)->get();
-  $current = Carbon::now()->toDateTimeString();
-
-            foreach($getActiveStatus as $last_seen) {
-                $last_seen_user = $last_seen->updated_at;
-            }
 
 });
 ?>

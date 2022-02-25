@@ -65,9 +65,10 @@ class ChatsController extends Controller
         $currentUser = Cookie::get('username');
 
         if (strtolower($user) === strtolower($currentUser)) {
-            return Redirect::back();
+            return Redirect::back(); //GO BACK IF THE USER IS THE OWNER OF THE CONVO
         }
 
+        //GET THE ENTIRE CONVERSATION
         $chats = Chats::where(function ($query_a) use ($user, $currentUser) {
             $query_a->where('from', $user)
                 ->where('to', $currentUser);
@@ -77,6 +78,16 @@ class ChatsController extends Controller
                     ->where('from', $currentUser);
             })
             ->get();
+
+        //UPDATE THE READ RECEIPT FOR THE CONVERSATION
+        Chats::where(function ($query_a) use ($user, $currentUser) {
+            $query_a->where('from', $user)
+                ->where('to', $currentUser);
+        })
+            ->orwhere(function ($query_b) use ($user, $currentUser) {
+                $query_b->where('to', $user)
+                    ->where('from', $currentUser);
+            })->update(['status' => 'read']);    
 
 
         return view('chat.view')->with('chats', $chats)
