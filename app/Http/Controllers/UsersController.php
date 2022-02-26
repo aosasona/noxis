@@ -123,10 +123,13 @@ class UsersController extends Controller
             return view('account.guest');
         }
 
+        $shortUrls = public_data::where('username', $username)->get();
+
         $user = Users::where('username', $username)->get();
         return view('account.profile')->with('user', $user)
                                     ->with('fetchedUser', $username)
-                                      ->with('sessionUser', $sessionUser);
+                                    ->with('shortUrls', $shortUrls)
+                                    ->with('sessionUser', $sessionUser);
     }
 
     /**

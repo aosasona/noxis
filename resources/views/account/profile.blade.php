@@ -17,12 +17,14 @@
 
             @if (strtolower(Cookie::get('username')) === strtolower($user[0]->username))
                 <div class='flex flex-row w-[90%] h-auto items-center justify-center bg-zinc-800 lg:w-1/3 py-2'>
+                    @foreach ($shortUrls as $shortUrl)
+                    <input value="https://noxis.app/u/{{ $shortUrl->short_link }}"
+                    class='py-3 px-3 w-4/5 text-left text-white bg-transparent  font-medium' id='linkText' disabled />
 
-                    <input value="https://noxis.app/chats/{{ Cookie::get('username') }}"
-                        class='py-3 px-3 w-4/5 text-left text-white bg-transparent  font-medium' id='linkText' disabled />
+                <button id='copyLink' class='text-white text-lg '><i class="fa-solid fa-copy"></i></button>
 
-                    <button id='copyLink' class='text-white text-lg '><i class="fa-solid fa-copy"></i></button>
-
+                    @endforeach
+                   
                 </div>
 
                 <a href="{{ route('logout') }}"
