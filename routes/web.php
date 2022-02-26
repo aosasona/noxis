@@ -7,6 +7,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatsController;
 use App\Http\Controllers\PublicDatas;
+use App\Http\Controllers\VideoController;
 use App\Http\Middleware\LoggedIn;
 use Illuminate\Support\Facades\Cookie;
 
@@ -35,6 +36,7 @@ Route::post('/signin-auth', [AuthController::class, 'signin_auth']);
 Route::get('/search/result', [SearchController::class, 'result']);
 Route::post('/chats/{username}', [ChatsController::class, 'deleteConvo']); //Delete conversation
 Route::get('/online', [UsersController::class, 'updateStatus'])->middleware(LoggedIn::class);
+Route::get('/video/{creator}/{client}', [VideoController::class, 'index'])->middleware(LoggedIn::class);
 Route::get('/u/{shortLink}', [PublicDatas::class, 'index']);
 Route::resource('users', UsersController::class); //Users route for different methods
 Route::resource('chats', ChatsController::class)->middleware(LoggedIn::class)->name('index', 'chats'); //Users route for different methods
@@ -42,7 +44,7 @@ Route::get('/logout', function () {
     Cookie::queue(Cookie::forget('username'));
     return redirect()->to('/signin');
 })->name('logout');
-Route::get('/video', function () { return view('video.index'); })->middleware(LoggedIn::class);
+
 
 
 /*TEST ROUTE WITHOUT POSTMAN

@@ -73,8 +73,8 @@
 
             @csrf
             <input type="hidden" name="receiver" value="{{ $user }}" id="chatReceiver" />
-            <label for="attachment" class="px-3"><i class="fa-solid fa-link"></i></label>
-            <input type="file" name="attachment" class="hidden" id="attachment" />
+           
+            <a href="/video/{{ $currentUser }}/{{ $user }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-video hover:text-green-500"></i></a>
 
             <textarea type="text" name="chat_content" id="chat_content"
                 class="font-light w-[70%] xl:w-4/5 px-3 py-3 text-sm text-white bg-zinc-700 focus:outline-none" rows="1"
