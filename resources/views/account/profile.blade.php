@@ -27,7 +27,7 @@
                 </div>
 
                 <a href="{{ route('logout') }}"
-                    class='text-red-500 text-sm font-medium mt-[10vh] bg-red-900 p-2 px-4 rounded-lg hover:bg-red-200'>Log
+                    class='text-red-500 text-sm font-medium mt-[5vh] lg:mt-[10vh] bg-red-900 p-2 px-4 rounded-lg hover:bg-red-200'>Log
                     Out</a>
             @endif
 
