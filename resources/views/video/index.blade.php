@@ -10,7 +10,7 @@
         apiKey: "6ee4eb88-6b1e-4ce9-9dff-94cb6cc98f89", 
         meetingId: "NOXIS_GROUP_CHAT", 
         
-        redirectOnLeave: "https://www.videosdk.live/",
+        redirectOnLeave: "/chats",
   
         micEnabled: true,
         webcamEnabled: true,
