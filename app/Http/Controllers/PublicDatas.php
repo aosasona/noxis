@@ -9,6 +9,10 @@ class PublicDatas extends Controller
 {
     public function index($shortLink) {
 
-        $shortUrl = public_data::where('short_link', $shortLink)->get();
+        $shortUrls = public_data::where('short_link', $shortLink)->get();
+
+        foreach ($shortUrls as $url) {
+            return $url->username;
+        }
     }
 }
