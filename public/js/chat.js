@@ -25,7 +25,6 @@ formBody.addEventListener("submit", (e) => {
         const csrfToken = document.getElementsByName("_token").item(1);
         const _token = csrfToken.getAttribute("value"); //csrfToken
         const messageContent = messageBody[0].value; //message body
-        const attachmentFile = document.getElementById('attachment'); //Get the attached file
 
         const ChatReq = new XMLHttpRequest(); //Initialize new AJAX Request object
 
