@@ -14,7 +14,7 @@
     <meta property="og:title" content="Start An Anonymous Convo!">
     <meta property="og:description"
         content="Noxis is a quick, easy and anonymous messaging service for your professional & personal usage.">
-    <meta property="og:image" content="{{ asset('img/favicon.svg') }}">
+    <meta property="og:image" content="{{ asset('img/favicon.png') }}">
 
     <!-- Twitter Metadata -->
     <meta property="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
     <meta property="twitter:title" content="Start An Anonymous Convo!">
     <meta property="twitter:description"
         content="Noxis is a quick, easy and anonymous messaging service for your professional & personal usage.">
-    <meta property="twitter:image" content="{{ asset('img/favicon.svg') }}">
+    <meta property="twitter:image" content="{{ asset('img/favicon.png') }}">
 
     <!--General Metadata-->
     <meta property="og:site_name" content="Noxis">
@@ -30,7 +30,7 @@
     <meta property="og:title" content="Start An Anonymous Convo!">
     <meta property="og:description"
         content="Noxis is a quick, easy and anonymous messaging service for your professional & personal usage.">
-    <meta property="og:image" content="{{ asset('img/favicon.svg') }}">
+    <meta property="og:image" content="{{ asset('img/favicon.png') }}">
     <meta property="og:url" content="https://noxis.chat">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
