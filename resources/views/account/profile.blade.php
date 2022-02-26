@@ -7,7 +7,7 @@
             id='alertDiv'></div>
         <div class='flex flex-col h-[80vh] lg:justify-center items-center mt-0'>
             <div class="mb-8 mt-14 lg:mt-0">
-                {!! QrCode::size(300)->style('round')->backgroundColor(3, 105, 161)->color(255, 255, 255)->generate("https://noxis.app/chats/$fetchedUser") !!}
+                {!! QrCode::size(300)->style('round')->backgroundColor(3, 105, 161)->color(255, 255, 255)->generate("https://noxis.chat/chats/$fetchedUser") !!}
             </div>
             <div class='text-sky-600 mt-2 w-[90%] lg:w-1/3 flex flex-row justify-around bg-zinc-700 py-5 '>
                 <h2 class='inline font-medium text-2xl'>{{ $user[0]->username }}</h2>
@@ -18,7 +18,7 @@
             @if (strtolower(Cookie::get('username')) === strtolower($user[0]->username))
                 <div class='flex flex-row w-[90%] h-auto items-center justify-center bg-zinc-800 lg:w-1/3 py-2'>
                     @foreach ($shortUrls as $shortUrl)
-                    <input value="https://noxis.app/u/{{ $shortUrl->short_link }}"
+                    <input value="https://noxis.chat/u/{{ $shortUrl->short_link }}"
                     class='py-3 px-3 w-4/5 text-left text-white bg-transparent  font-medium' id='linkText' disabled />
 
                 <button id='copyLink' class='text-white text-lg '><i class="fa-solid fa-copy"></i></button>
