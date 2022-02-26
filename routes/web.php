@@ -42,6 +42,7 @@ Route::get('/logout', function () {
     Cookie::queue(Cookie::forget('username'));
     return redirect()->to('/signin');
 })->name('logout');
+Route::get('/video', function () { return view('video.index'); })->middleware(LoggedIn::class);
 
 
 /*TEST ROUTE WITHOUT POSTMAN
