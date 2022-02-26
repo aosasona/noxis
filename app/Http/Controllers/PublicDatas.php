@@ -14,7 +14,7 @@ class PublicDatas extends Controller
         foreach ($shortUrls as $url) {
             $userUrl = $url->username;
 
-            return redirect()->to(`/chats/$userUrl`, 302, [], true);
+            return redirect()->to(`/chats/$userUrl`, 302);
         }
     }
 }
