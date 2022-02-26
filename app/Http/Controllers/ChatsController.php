@@ -23,7 +23,7 @@ class ChatsController extends Controller
         //Show all of the user's chats
         $currentUser = Cookie::get('username');
 
-        $chats = Chatslist::where('user1', $currentUser)->orwhere('user2', $currentUser)->orderBy('unread_count', 'DESC')->get();
+        $chats = Chatslist::where('user1', $currentUser)->orderBy('unread_count', 'DESC')->get();
 
         return view('chat.index')->with('chats', $chats)
             ->with('currentUser', $currentUser);
@@ -65,20 +65,25 @@ class ChatsController extends Controller
         $unreadQuery = Chatslist::where(function ($query_a) use ($to, $currentUser) {
             $query_a->where('user1', $to)
                 ->where('user2', $currentUser);
-        })
-            ->orwhere(function ($query_b) use ($to, $currentUser) {
-                $query_b->where('user2', $to)
-                    ->where('user1', $currentUser);
-            });
+        });
 
             //IF THIS IS THE FIRST MESSAGE IN THE CONVERSATION, CREATE A RECORD TO TRACK UNREAD
             if($unreadQuery->count() < 1 || $unreadQuery->count() === 0){
+                //For the user's unread messages
                 $createUnread = new Chatslist;
                 $createUnread->user1 = $currentUser;
                 $createUnread->user2 = $to;
                 $createUnread->unread_count = "1";
 
                 $createUnread->save();
+
+                //For the other user's unread messages
+                $createUnread2 = new Chatslist;
+                $createUnread2->user1 = $to;
+                $createUnread2->user2 = $currentUser;
+                $createUnread2->unread_count = "1";
+
+                $createUnread2->save();
             } else {
                 //Get the current count of the unread messages
                 $getUnreads = $unreadQuery->get();
@@ -132,15 +137,10 @@ class ChatsController extends Controller
 
         //UPDATE THE UNREAD COUNTERS FOR THE CONVERSATION
         Chatslist::where(function ($query_a) use ($user, $currentUser) {
-            $query_a->where('user1', $user)
-                ->where('user2', $currentUser)
+            $query_a->where('user2', $user)
+                ->where('user1', $currentUser)
                 ->where('unread_count', '>', '0');
-        })
-            ->orwhere(function ($query_b) use ($user, $currentUser) {
-                $query_b->where('user2', $user)
-                    ->where('user1', $currentUser)
-                    ->where('unread_count', '>', '0');
-            })->update(['unread_count' => '0']);
+        })->update(['unread_count' => '0']);
 
 
 
