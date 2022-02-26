@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Noxis is a quick, easy and anonymous message service for your professional & personal usage."/>
-  <meta name="keywords" content="Noxis, ran-ch, anonymous, Noxis web, Noxis twitter, Noxis group, message, messaging, quick registration, chat, Noxis chat, link chat, anon, quick convo, quick messaging, influencer medium, easy chat"/>
+  <meta name="keywords" content="Noxis, noxis, anonymous, Noxis web, Noxis twitter, Noxis group, message, messaging, quick registration, chat, Noxis chat, link chat, anon, quick convo, quick messaging, influencer medium, easy chat"/>
 
     <!-- Facebook Metadata -->
      <meta property="og:type" content="website">

@@ -4,16 +4,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="RanCh is a quick, easy and anonymous message service for your professional & personal usage." />
+        content="Noxis is a quick, easy and anonymous message service for your professional & personal usage." />
     <meta name="keywords"
-        content="RanCh, ran-ch, anonymous, ranch web, ranch twitter, ranch group, message, messaging, quick registration, chat, ranch chat, link chat, anon, quick convo, quick messaging, influencer medium, easy chat" />
+        content="Noxis, noxis, anonymous, ranch web, ranch twitter, ranch group, message, messaging, quick registration, chat, ranch chat, link chat, anon, quick convo, quick messaging, influencer medium, easy chat" />
 
     <!-- Facebook Metadata -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://noxis.app/">
     <meta property="og:title" content="Start An Anonymous Convo!">
     <meta property="og:description"
-        content="RanCh is a quick, easy and anonymous messaging service for your professional & personal usage.">
+        content="Noxis is a quick, easy and anonymous messaging service for your professional & personal usage.">
     <meta property="og:image" content="{{ asset('img/favicon.svg') }}">
 
     <!-- Twitter Metadata -->
@@ -21,15 +21,15 @@
     <meta property="twitter:url" content="https://noxis.app/">
     <meta property="twitter:title" content="Start An Anonymous Convo!">
     <meta property="twitter:description"
-        content="RanCh is a quick, easy and anonymous messaging service for your professional & personal usage.">
+        content="Noxis is a quick, easy and anonymous messaging service for your professional & personal usage.">
     <meta property="twitter:image" content="{{ asset('img/favicon.svg') }}">
 
     <!--General Metadata-->
-    <meta property="og:site_name" content="RanCh">
+    <meta property="og:site_name" content="Noxis">
     <meta property="og:site" content="https://noxis.app">
     <meta property="og:title" content="Start An Anonymous Convo!">
     <meta property="og:description"
-        content="RanCh is a quick, easy and anonymous messaging service for your professional & personal usage.">
+        content="Noxis is a quick, easy and anonymous messaging service for your professional & personal usage.">
     <meta property="og:image" content="{{ asset('img/favicon.svg') }}">
     <meta property="og:url" content="https://noxis.app">
 
