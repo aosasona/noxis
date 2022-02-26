@@ -72,7 +72,7 @@ class ChatsController extends Controller
             });
 
             //IF THIS IS THE FIRST MESSAGE IN THE CONVERSATION, CREATE A RECORD TO TRACK UNREAD
-            if($unreadQuery->count() < 1){
+            if($unreadQuery->count() < 1 || $unreadQuery->count() === 0){
                 $createUnread = new Chatslist;
                 $createUnread->user1 = $currentUser;
                 $createUnread->user2 = $to;
@@ -87,7 +87,7 @@ class ChatsController extends Controller
                     $current_unread_count = $getUnread->unread_count;
                     $new_unread_count = $current_unread_count + 1;
 
-                    $unreadQuery->update(['unread_count' => $new_unread_count]);
+                    $unreadQuery->update(['unread_count' => "$new_unread_count"]);
                 }
 
             }
