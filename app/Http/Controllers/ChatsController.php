@@ -127,13 +127,7 @@ class ChatsController extends Controller
                 ->where('from', $user)
                 ->where('to', $currentUser)
                 ->where('status', 'delivered');
-        })
-            ->orwhere(function ($query_b) use ($user, $currentUser) {
-                $query_b
-                    ->where('to', $user)
-                    ->where('from', $currentUser)
-                    ->where('status', 'delivered');
-            })->update(['status' => 'read']);
+        })->update(['status' => 'read']);
 
 
         //UPDATE THE UNREAD COUNTERS FOR THE CONVERSATION
