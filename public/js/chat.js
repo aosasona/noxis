@@ -114,7 +114,7 @@ window.onload = () => {
     const SelectedBubbleColor = document.getElementById(currentBubbleColor);
 
     SelectedBubbleColor.classList.add("py-2"); //Indicate the current bubble color
-    
+
 //This block gets the user status before interval starts
     const xhr = new XMLHttpRequest();
     const chatUser = document.getElementById("chat_user").innerText

@@ -41,7 +41,7 @@ class ChatsController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Send a message and update the read count
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -76,7 +76,7 @@ class ChatsController extends Controller
                 $createUnread = new Chatslist;
                 $createUnread->user1 = $currentUser;
                 $createUnread->user2 = $to;
-                $createUnread->unread_count = "0";
+                $createUnread->unread_count = "1";
 
                 $createUnread->save();
             } else {
