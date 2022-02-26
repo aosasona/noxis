@@ -23,8 +23,8 @@
 <defs/>
 <g id="Layer-1" vectornator:layerName="Layer 1">
 <g opacity="1">
-<path d="M236.893 178.873L390.022 361.037L390.022 901.732L236.893 897.094L236.893 178.873Z" fill="none" fill-rule="evenodd" opacity="1" stroke="#4374d3" stroke-linecap="round" stroke-linejoin="round" stroke-width="22"/>
-<path d="M236.878 178.86L696.939 729.141L696.939 729.141L843.122 901.732L843.122 490.219L843.122 178.953L696.939 178.953L696.939 537.474L400.294 178.268L236.878 178.86Z" fill="none" fill-rule="evenodd" opacity="1" stroke="#4374d3" stroke-linecap="round" stroke-linejoin="round" stroke-width="22"/>
+<path d="M236.893 178.873L390.022 361.037L390.022 901.732L236.893 897.094L236.893 178.873Z" fill="none" fill-rule="evenodd" opacity="1" stroke="#4374d3" stroke-linecap="round" stroke-linejoin="round" stroke-width="65"/>
+<path d="M236.878 178.86L696.939 729.141L696.939 729.141L843.122 901.732L843.122 490.219L843.122 178.953L696.939 178.953L696.939 537.474L400.294 178.268L236.878 178.86Z" fill="none" fill-rule="evenodd" opacity="1" stroke="#4374d3" stroke-linecap="round" stroke-linejoin="round" stroke-width="65"/>
 </g>
 </g>
 </svg>
