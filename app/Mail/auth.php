@@ -30,7 +30,7 @@ class auth extends Mailable
 
         $gen_code = session()->get('gen_code');;
 
-        return $this->from('auth@noxis.com', 'Noxis')
+        return $this->from('auth@noxis.chat', 'Noxis Auth Service')
                     ->view('mail.auth')->with('gen_code', $gen_code);
 
     }
