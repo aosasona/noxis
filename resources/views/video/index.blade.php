@@ -18,7 +18,7 @@
         participantCanToggleSelfMic: true,
   
         joinScreen: {
-          visible: true, // Show the join screen ?
+          visible: false, // Show the join screen ?
           title: "Noxis Meet-Up", // Meeting title
           meetingUrl: window.location.href, // Meeting joining url
         },
