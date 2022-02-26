@@ -9,23 +9,25 @@
             <div class="mb-8 mt-12 lg:mt-0">
                 {!! QrCode::size(250)->style('round')->backgroundColor(3, 105, 161)->color(255, 255, 255)->generate("https://noxis.app/chats/$fetchedUser") !!}
             </div>
-            <div class='text-sky-600 mt-2 w-[90%] lg:w-2/3 flex flex-row justify-around bg-zinc-700 py-5 rounded-xl'>
+            <div class='text-sky-600 mt-2 w-[90%] lg:w-1/3 flex flex-row justify-around bg-zinc-700 py-5 '>
                 <h2 class='inline font-medium text-2xl'>{{ $user[0]->username }}</h2>
                 <a href='/chats/{{ $user[0]->username }}' class='text-white text-xl' title='Text User'><i
                         class="fa-solid fa-message"></i></a>
             </div>
 
             @if (strtolower(Cookie::get('username')) === strtolower($user[0]->username))
+            <div class='flex flex-row w-2/3 h-auto items-center justify-center bg-zinc-800 lg:w-1/3 py-2'>
+
                 <input value="https://noxis.app/chats/{{ Cookie::get('username') }}"
-                    class='py-3 px-3 w-5/6 lg:w-1/3 text-center text-white bg-zinc-800 font-medium rounded-lg mt-6'
+                    class='py-3 px-3 w-4/5 text-left text-white bg-transparent  font-medium'
                     id='linkText' disabled />
-                <div class='flex flex-row items-center w-2/3 justify-evenly'>
-                    <button id='copyLink' class='text-white text-sm mt-3'>Copy Link</button>
+                
+                    <button id='copyLink' class='text-white text-lg '><i class="fa-solid fa-copy"></i></button>
 
                 </div>
 
                 <a href="{{ route('logout') }}"
-                    class='text-red-500 text-sm font-medium mt-[7vh] bg-red-900 p-2 px-4 rounded-lg hover:bg-red-200'>Log
+                    class='text-red-500 text-sm font-medium mt-[10vh] bg-red-900 p-2 px-4 rounded-lg hover:bg-red-200'>Log
                     Out</a>
             @endif
 
