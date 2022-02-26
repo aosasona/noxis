@@ -21,11 +21,13 @@
     <div class="w-full mt-8 lg:mt-0 lg:w-1/3 bg-zinc-800 p-4 py-6 rounded-xl lg:mx-4" data-aos="zoom-in" data-aos-duration="1000">
         <img src="{{ asset('img/chat.svg') }}" alt="Main SVG 1" class="w-full lg:w-auto lg:h-3/4 p-4"/>
         <h1 class="text-2xl font-semibold ">Quick Setup</h1>
+        <p class="text-xs text-left p-3 font-semibold text-zinc-400"><b class="text-sky-600">Noxis</b> is very easy to setup, you could chat on Noxis without EVER having an account and we'll never prompt you to create one before chatting with someone. And if you do decide to sign up, it takes less than 3 minutes with stable internet.</p>
     </div>
 
     <div class="w-full mt-8 lg:mt-0 lg:w-1/3 bg-zinc-800 p-4 py-6 rounded-xl lg:mx-4" data-aos="zoom-in" data-aos-duration="1000">
         <img src="{{ asset('img/fast.svg') }}" alt="Main SVG 2" class="w-full lg:w-auto lg:h-3/4 p-4"/>
         <h1 class="text-2xl font-semibold ">Text Anonymously</h1>
+        <p class="text-xs text-left p-3 font-medium text-zinc-400"><b class="text-sky-600">No one</b> needs to know who you are, not even us because we don't log anything either. Now, you can finally tell your crush how you feel... as soon as you can make them sign up without giving yourself up (good luck with that lol).</p>
     </div>
 
     <div class="w-full mt-8 lg:mt-0 lg:w-1/3 bg-zinc-800 p-4 py-6 rounded-xl lg:mx-4" data-aos="zoom-in" data-aos-duration="1000">
@@ -38,7 +40,7 @@
 <div class="mx-8 mt-16 mb-12 relative" data-aos="flip-left" data-aos-duration="1000">
  
 <h1 class="text-sky-600 text-3xl font-semibold">Getting Started</h1>
-<ul class="mt-10 p-5 py-6 bg-zinc-800 lw-full lg:w-3/5 rounded-2xl text-sm text-left tiltDiv">
+<ul class="mt-10 p-5 py-8 bg-zinc-800 lw-full lg:w-3/5 rounded-2xl text-sm text-left tiltDiv">
     
     <div class="absolute top-[-10px] left-[-20px] w-2 h-2 p-4 rounded-[50%] bg-red-700"></div>
     <li><span class="text-white">Proceed to the sign-up page using the button below or in the navigation bar.</span></li>

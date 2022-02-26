@@ -13,7 +13,7 @@
         script.addEventListener("load", function(event) {
             const meeting = new VideoSDKMeeting();
             var userFetched = document.getElementById("user").innerText;
-            var userFetched = document.getElementById("meetId").innerText;
+            var meetId = document.getElementById("meetId").innerText;
 
             const config = {
                 name: userFetched,
@@ -35,7 +35,7 @@
                 brandingEnabled: true,
                 brandLogoURL: "https://ranch-beta.herokuapp.com/img/logo.svg",
                 brandName: "Noxis",
-                poweredBy: true,
+                poweredBy: false,
 
                 joinScreen: {
                     visible: false, // Show the join screen ?
