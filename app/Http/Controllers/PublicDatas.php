@@ -12,7 +12,9 @@ class PublicDatas extends Controller
         $shortUrls = public_data::where('short_link', $shortLink)->get();
 
         foreach ($shortUrls as $url) {
-            return $url->username;
+            $userUrl = $url->username;
+
+            return redirect()->to(`/chats/$userUrl`, 302, [], true);
         }
     }
 }
