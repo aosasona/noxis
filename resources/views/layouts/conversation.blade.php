@@ -63,6 +63,7 @@
         <form method="POST" action="/chats" enctype="multipart/form-data" class="bg-zinc-800 flex flex-row w-screen h-auto justify-evenly items-center pb-2 lg:pb-2 pt-1 m-0 text-lg lg:text-xl text-white">
         
                 @csrf
+                <input type="hidden" name="receiver" value="{{ $user }}"/>
                 <label for="attachment" class="px-3"><i class="fa-solid fa-link"></i></label>
                 <input type="file" name="attachment" class="hidden" id="attachment"/>
 

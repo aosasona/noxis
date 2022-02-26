@@ -74,12 +74,6 @@ Route::get('/csrf', [TestController::class, 'index']);
 Route::delete('/csrf/{username}/{currentUser}', [TestController::class, 'test']);*/
 
 Route::get('/test', function () {
-    $alph = array("a", "b", "c", "d", "e", "f", "i", "j", "g", "v", "z", "x", "m", "n", "p", "A", "I", "Z", "V", "B", "C", "D", "E", "F", "G", "H", "M", "N", "K", "U", "S", "q", "Q", "h", "k", "r", "R");
-
-    $rand_keys = array_rand($alph, 8);
-
-    $generatedLink = $alph[$rand_keys[0]].$alph[$rand_keys[1]].$alph[$rand_keys[2]].$alph[$rand_keys[3]].$alph[$rand_keys[4]].$alph[$rand_keys[5]];
-
-    return $generatedLink;
+   
 });
 ?>

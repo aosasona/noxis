@@ -48,8 +48,49 @@ class ChatsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        return view('error');
+        //Get the data passed in from the textbox
+        $currentUser = Cookie::get('username');
+        $content = $request->input('chat_content');
+        $to = $request->input('receiver');
+        $attachmentFile = $request->input('attachment');
+
+        $chat = new Chats;
+        $chat->from = $currentUser;
+        $chat->to = $to;
+        $chat->content = $content;
+        $chat->status = "delivered";
+        $chat->save();
+
+        //UPDATE THE UNREAD COUNTERS FOR THE CONVERSATION
+        $unreadQuery = Chatslist::where(function ($query_a) use ($to, $currentUser) {
+            $query_a->where('user1', $to)
+                ->where('user2', $currentUser);
+        })
+            ->orwhere(function ($query_b) use ($to, $currentUser) {
+                $query_b->where('user2', $to)
+                    ->where('user1', $currentUser);
+            });
+
+            //IF THIS IS THE FIRST MESSAGE IN THE CONVERSATION, CREATE A RECORD TO TRACK UNREAD
+            if($unreadQuery->count() < 1){
+                $createUnread = new Chatslist;
+                $createUnread->user1 = $currentUser;
+                $createUnread->user2 = $to;
+                $createUnread->unread_count = "0";
+
+                $createUnread->save();
+            } else {
+                //Get the current count of the unread messages
+                $getUnreads = $unreadQuery->get();
+
+                foreach($getUnreads as $getUnread) {
+                    $current_unread_count = $getUnread->unread_count;
+                    $new_unread_count = $current_unread_count + 1;
+
+                    $unreadQuery->update(['unread_count' => $new_unread_count]);
+                }
+
+            }
     }
 
     /**
