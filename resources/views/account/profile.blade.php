@@ -6,9 +6,9 @@
         <div class='w-full text-center py-3 px-5 bg-green-200 border-2 border-green-800 text-green-800 font-semibold hidden'
             id='alertDiv'></div>
         <div class='flex flex-col h-[80vh] lg:justify-center items-center mt-0'>
-                <div class="my-8">
-                {!! QrCode::size(250)->style('round')->backgroundColor(3,105,161)->color(255,255,255)->generate("https://noxis.app/chats/$fetchedUser") !!}
-                </div>
+            <div class="mb-8 mt-12 lg:mt-0">
+                {!! QrCode::size(250)->style('round')->backgroundColor(3, 105, 161)->color(255, 255, 255)->generate("https://noxis.app/chats/$fetchedUser") !!}
+            </div>
             <div class='text-sky-600 mt-2 w-[90%] lg:w-2/3 flex flex-row justify-around bg-zinc-700 py-5 rounded-xl'>
                 <h2 class='inline font-medium text-2xl'>{{ $user[0]->username }}</h2>
                 <a href='/chats/{{ $user[0]->username }}' class='text-white text-xl' title='Text User'><i
@@ -24,21 +24,22 @@
 
                 </div>
 
-                <a href="{{ route('logout') }}" class='text-red-500 text-sm font-medium mt-[7vh] bg-red-900 p-2 px-4 rounded-lg hover:bg-red-200'>Log Out</a>
+                <a href="{{ route('logout') }}"
+                    class='text-red-500 text-sm font-medium mt-[7vh] bg-red-900 p-2 px-4 rounded-lg hover:bg-red-200'>Log
+                    Out</a>
             @endif
 
         </div>
         <!-- <div class='blur-sm bg-zinc-500 text-zinc-900 px-6 p-2 mt-6' id='email'>It's a secret!</div>
-                        <button onclick='showemail()' class='text-xs font-medium mt-1' id="view">View email</button>
-                        </div>
+                            <button onclick='showemail()' class='text-xs font-medium mt-1' id="view">View email</button>
+                            </div>
 
-                        <script type="text/javascript">
-                            function showemail() {
-                                const email = document.getElementById('email')
-                                email.classList.remove('blur-sm')
-                            }
-                        </script> -->
-
+                            <script type="text/javascript">
+                                function showemail() {
+                                    const email = document.getElementById('email')
+                                    email.classList.remove('blur-sm')
+                                }
+                            </script> -->
     @else
 
         <head>
