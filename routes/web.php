@@ -73,7 +73,7 @@ Route::get('/test', function() {
 Route::get('/csrf', [TestController::class, 'index']);
 Route::delete('/csrf/{username}/{currentUser}', [TestController::class, 'test']);*/
 
-Route::get('/test', function () {
+Route::post('/test', function () {
    
 });
 ?>

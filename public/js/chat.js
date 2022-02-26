@@ -11,7 +11,50 @@ const [red, sky, green, orange, purple, yellow, white] =
     document.querySelectorAll(".bubble-color");
 var bubbles = document.getElementsByClassName("bubble");
 const chatcontent = document.getElementById("chatcontent")
+const sendBtn = document.getElementById("send")
+const messageBody = document.getElementsByName('chat_content')
+const formBody = document.getElementById("formBody")
 
+//SEND MESSAGE WITH AJAX
+formBody.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if(messageBody[0].value.trim() !== '') {
+
+        //VARIABLES DECLARATION
+        const chatReceiver = document.getElementById("chatReceiver").value;
+        const csrfToken = document.getElementsByName("_token").item(1);
+        const _token = csrfToken.getAttribute("value"); //csrfToken
+        const messageContent = messageBody[0].value; //message body
+        const attachmentFile = document.getElementById('attachment'); //Get the attached file
+
+        const ChatReq = new XMLHttpRequest(); //Initialize new AJAX Request object
+
+        ChatReq.open('POST', '/chats', false); //Open the server connection
+
+        ChatReq.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        ChatReq.onloadstart = () => {
+            sendBtn.disabled = true;
+        }
+
+        ChatReq.onprogress = () => {
+            sendBtn.disabled = true;
+        }
+
+        ChatReq.onload = () => {
+            sendBtn.disabled = false;
+            document.getElementById('chat_content').value = '';
+            location.reload();
+        }
+        
+        console.log(ChatReq.status);
+
+        ChatReq.send(`_token=${_token}&chat_content=${messageContent}&receiver=${chatReceiver}`);
+        
+    } else (
+        console.warn('Empty')
+    )
+})
 
 
 chat_content.addEventListener("focus", () => {
