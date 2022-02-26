@@ -1414,6 +1414,10 @@ Ensure the default browser behavior of the `hidden` attribute.
         margin-top: 10vh;
     }
 
+    .lg\:mb-\[5vh\]{
+        margin-bottom: 5vh;
+    }
+
     .lg\:hidden{
         display: none;
     }
