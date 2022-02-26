@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\AccountController;
@@ -7,13 +6,9 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatsController;
-use App\Http\Controllers\TestController;
 use App\Http\Middleware\LoggedIn;
 use Illuminate\Support\Facades\Cookie;
-use App\Models\User_status;
-use Carbon\Carbon;
 
-use function PHPUnit\Framework\isTrue;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +72,6 @@ Route::get('/csrf', [TestController::class, 'index']);
 Route::delete('/csrf/{username}/{currentUser}', [TestController::class, 'test']);*/
 
 Route::get('/test', function () {
-
+    
 });
 ?>

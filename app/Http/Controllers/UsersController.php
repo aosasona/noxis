@@ -102,6 +102,7 @@ class UsersController extends Controller
 
         $user = Users::where('username', $username)->get();
         return view('account.profile')->with('user', $user)
+                                    ->with('fetchedUser', $username)
                                       ->with('sessionUser', $sessionUser);
     }
 

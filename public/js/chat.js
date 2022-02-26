@@ -90,6 +90,7 @@ confirmBtn.addEventListener("click", () => {
     AjaxReq.send(`_token=${Token}`);
 });
 
+
 /*-------------------- Bubble color change events --------------------*/
 
 //Set the bubble color on page loaded
