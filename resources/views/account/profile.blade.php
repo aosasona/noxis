@@ -5,9 +5,9 @@
         <title>{{ ucFirst($user[0]->username) }}'s Profile</title>
         <div class='w-full text-center py-3 px-5 bg-green-200 border-2 border-green-800 text-green-800 font-semibold hidden'
             id='alertDiv'></div>
-        <div class='flex flex-col h-[80vh] justify-center items-center mt-0'>
-                <div class="mb-8">
-                {!! QrCode::size(300)->style('round')->backgroundColor(3,105,161)->color(255,255,255)->generate("https://noxis.app/chats/$fetchedUser") !!}
+        <div class='flex flex-col h-[80vh] lg:justify-center items-center mt-0'>
+                <div class="my-8">
+                {!! QrCode::size(250)->style('round')->backgroundColor(3,105,161)->color(255,255,255)->generate("https://noxis.app/chats/$fetchedUser") !!}
                 </div>
             <div class='text-sky-600 mt-2 w-[90%] lg:w-2/3 flex flex-row justify-around bg-zinc-700 py-5 rounded-xl'>
                 <h2 class='inline font-medium text-2xl'>{{ $user[0]->username }}</h2>
