@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('username');
             $table->string('short_link');
-            $table->string('qr_code');
             $table->timestamps();
         });
     }

@@ -16,32 +16,30 @@
             </div>
 
             @if (strtolower(Cookie::get('username')) === strtolower($user[0]->username))
-            <div class='flex flex-row w-[90%] h-auto items-center justify-center bg-zinc-800 lg:w-1/3 py-2'>
+                <div class='flex flex-row w-[90%] h-auto items-center justify-center bg-zinc-800 lg:w-1/3 py-2'>
 
-                <input value="https://noxis.app/chats/{{ Cookie::get('username') }}"
-                    class='py-3 px-3 w-4/5 text-left text-white bg-transparent  font-medium'
-                    id='linkText' disabled />
-                
+                    <input value="https://noxis.app/chats/{{ Cookie::get('username') }}"
+                        class='py-3 px-3 w-4/5 text-left text-white bg-transparent  font-medium' id='linkText' disabled />
+
                     <button id='copyLink' class='text-white text-lg '><i class="fa-solid fa-copy"></i></button>
 
                 </div>
 
                 <a href="{{ route('logout') }}"
-                    class='text-red-500 text-sm font-medium mt-[5vh] mb-[5vh] lg:mb-[5vh] lg:mt-[10vh] bg-red-900 p-2 px-4 rounded-lg hover:bg-red-200'>Log
-                    Out</a>
+                    class='text-red-500 text-sm font-medium mt-[5vh] mb-[5vh] lg:mb-[5vh] lg:mt-[10vh] bg-red-900 p-2 px-4 rounded-lg hover:bg-red-200'>Log Out</a>
             @endif
 
         </div>
         <!-- <div class='blur-sm bg-zinc-500 text-zinc-900 px-6 p-2 mt-6' id='email'>It's a secret!</div>
-                            <button onclick='showemail()' class='text-xs font-medium mt-1' id="view">View email</button>
-                            </div>
+                                <button onclick='showemail()' class='text-xs font-medium mt-1' id="view">View email</button>
+                                </div>
 
-                            <script type="text/javascript">
-                                function showemail() {
-                                    const email = document.getElementById('email')
-                                    email.classList.remove('blur-sm')
-                                }
-                            </script> -->
+                                <script type="text/javascript">
+                                    function showemail() {
+                                        const email = document.getElementById('email')
+                                        email.classList.remove('blur-sm')
+                                    }
+                                </script> -->
     @else
 
         <head>

@@ -6,6 +6,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatsController;
+use App\Http\Controllers\PublicDatas;
 use App\Http\Middleware\LoggedIn;
 use Illuminate\Support\Facades\Cookie;
 
@@ -34,6 +35,7 @@ Route::post('/signin-auth', [AuthController::class, 'signin_auth']);
 Route::get('/search/result', [SearchController::class, 'result']);
 Route::post('/chats/{username}', [ChatsController::class, 'deleteConvo']); //Delete conversation
 Route::get('/online', [UsersController::class, 'updateStatus'])->middleware(LoggedIn::class);
+Route::get('/u/{shortLink}', [PublicDatas::class, 'index']);
 Route::resource('users', UsersController::class); //Users route for different methods
 Route::resource('chats', ChatsController::class)->middleware(LoggedIn::class)->name('index', 'chats'); //Users route for different methods
 Route::get('/logout', function () {
@@ -72,6 +74,12 @@ Route::get('/csrf', [TestController::class, 'index']);
 Route::delete('/csrf/{username}/{currentUser}', [TestController::class, 'test']);*/
 
 Route::get('/test', function () {
-    
+    $alph = array("a", "b", "c", "d", "e", "f", "i", "j", "g", "v", "z", "x", "m", "n", "p", "A", "I", "Z", "V", "B", "C", "D", "E", "F", "G", "H", "M", "N", "K", "U", "S", "q", "Q", "h", "k", "r", "R");
+
+    $rand_keys = array_rand($alph, 8);
+
+    $generatedLink = $alph[$rand_keys[0]].$alph[$rand_keys[1]].$alph[$rand_keys[2]].$alph[$rand_keys[3]].$alph[$rand_keys[4]].$alph[$rand_keys[5]];
+
+    return $generatedLink;
 });
 ?>
