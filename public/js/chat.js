@@ -137,8 +137,12 @@ confirmBtn.addEventListener("click", () => {
 /*-------------------- Bubble color change events --------------------*/
 
 //Set the bubble color on page loaded
-window.onload = () => {
-    currentBubbleColor = localStorage.getItem("bubble_color"); //Get current bubble color
+window.onload = () => { 
+    var currentBubbleColor = 'sky';
+    
+    if(localStorage.getItem("bubble_color") !== null){
+    var currentBubbleColor = localStorage.getItem("bubble_color"); //Get current bubble color
+    }
 
     for (var i = 0; i < bubbles.length; i++) {
         if (currentBubbleColor !== "white") {
