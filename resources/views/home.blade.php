@@ -32,15 +32,16 @@
 
     <div class="w-full mt-8 lg:mt-0 lg:w-1/3 bg-zinc-800 p-4 py-6 rounded-xl lg:mx-4" data-aos="zoom-in" data-aos-duration="1000">
         <img src="{{ asset('img/secure.svg') }}" alt="Main SVG 3" class="w-full lg:w-auto lg:h-3/4 p-4"/>
-        <h1 class="text-2xl font-semibold ">Chat Securely</h1>
+        <h1 class="text-2xl font-semibold ">Chat Easily</h1>
+        <p class="text-xs text-left p-3 font-medium text-zinc-400"><b class="text-sky-600">Noxis</b> was built to be convenient, fun and secure. We're not perfect, but we tried to make the experience fun and easy for you with our minimal straight-to-the-point UI, fun and convenience features like scan-to-chat QR codes & bubble colors.</p>
     </div>
 </div>
 
 <center>
 <div class="mx-8 mt-16 mb-12 relative" data-aos="flip-left" data-aos-duration="1000">
  
-<h1 class="text-sky-600 text-3xl font-semibold">Getting Started</h1>
-<ul class="mt-10 p-5 py-8 bg-zinc-800 lw-full lg:w-3/5 rounded-2xl text-sm text-left tiltDiv">
+<h1 class="text-sky-600 text-4xl font-semibold">Getting Started</h1>
+<ul class="mt-10 p-5 py-5 bg-zinc-800 lw-full lg:w-3/5 rounded-2xl text-sm text-left tiltDiv">
     
     <div class="absolute top-[-10px] left-[-20px] w-2 h-2 p-4 rounded-[50%] bg-red-700"></div>
     <li><span class="text-white">Proceed to the sign-up page using the button below or in the navigation bar.</span></li>
@@ -49,6 +50,8 @@
     reasons.</span></li>
     <li><span class="text-white"><b class="text-sky-600">Share</b> your Noxis link or QR code to start chatting! Guests do not need to sign up to chat with you.</span></li>
     <li><span class="text-white">Report issues to <b class="text-sky-600">@NoxisApp</b></span></li>
+
+    <li><span class="text-gray-300 text-xs pt-10">Tip : If you can't remember your short link, using <b class="text-sky-600">https://noxis.chat/users/YOUR_USERNAME</b> would also take people to your profile.</li>
   </ul>
 </div>
 
