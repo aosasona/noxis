@@ -123,7 +123,9 @@ class ChatsController extends Controller
                     ->where('from', $currentUser);
             });
 
-        if ($chatsQuery->count() == 0 || $chatsQuery->count() < 1) {
+        $checkUserExists = PublicDatas::where('username', $user)->count();
+
+        if ($checkUserExists == 0 || $checkUserExists->count() < 1) {
             return view('errors.404');
         }
 
