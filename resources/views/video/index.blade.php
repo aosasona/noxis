@@ -13,12 +13,11 @@
         script.addEventListener("load", function(event) {
             const meeting = new VideoSDKMeeting();
             var userFetched = document.getElementById("user").innerText;
-            var meetId = document.getElementById("meetId").innerText;
 
             const config = {
                 name: userFetched,
                 apiKey: "6ee4eb88-6b1e-4ce9-9dff-94cb6cc98f89",
-                meetingId: meetId,
+                meetingId: "NOXIS_VIDEO_MEETING",
                 maxResolution: "hd",
                 screenShareEnabled: true,
                 chatEnabled: false,
