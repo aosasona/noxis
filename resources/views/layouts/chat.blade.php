@@ -51,7 +51,7 @@
         <a href='/search'><i class="fa-solid fa-magnifying-glass hover:text-sky-600"></i></a>
         <a href='/users/{{ Cookie::get('username') }}'><i class="fa-solid fa-user hover:text-sky-600"></i></a>
 
-        @if (strtolower(substr(Cookie::get('username'), 0, 5)) === "guest")
+        @if (strtolower(substr(Cookie::get('username'), 0, 4)) === "anon")
              <a href='{{ route('logout') }}'><i class="fa-solid fa-arrow-right-from-bracket text-red-600"></i></a>
         @endif
        
