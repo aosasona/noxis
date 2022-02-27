@@ -209,33 +209,27 @@ class ChatsController extends Controller
                 ->orwhere(function ($query_b) use ($user, $currentUser) {
                     $query_b->where('to', $user)
                         ->where('from', $currentUser);
-                })
-                ->count();
+                });
 
-            if ($checkChat !== 0) {
+            $checkList = Chatslist::where(function ($query_c) use ($username, $currentUser) {
+                $query_c->where('user1', $username)
+                    ->where('user2', $currentUser);
+            })
+                ->orWhere(function ($query_d) use ($username, $currentUser) {
+                    $query_d->where('user2', $username)
+                        ->where('user1', $currentUser);
+                });
 
-                Chats::where(function ($query_a) use ($user, $currentUser) {
-                    $query_a->where('from', $user)
-                            ->where('to', $currentUser);
-                    })
-                    ->orwhere(function ($query_b) use ($user, $currentUser) {
-                        $query_b->where('to', $user)
-                                ->where('from', $currentUser);
-                    })
-                    ->delete();
+            if ($checkList->count() !== 0) {
+                $checkList->delete();
+                return response('List Deleted', 200);
+            }
 
-                Chatslist::where(function ($query_c) use ($user, $currentUser) {
-                    $query_c->where('user1', $user)
-                            ->where('user2', $currentUser);
-                })
-                    ->where(function ($query_d) use ($user, $currentUser) {
-                        $query_d->where('user1', $user)
-                                ->where('user2', $currentUser);
-                    })
-                    ->delete();
+            if ($checkChat->count() !== 0) {
+
+                $checkChat->delete();
 
                 return response('Deleted', 200);
-
             } else {
                 return response('Nothing to delete mate', 400);
             }
