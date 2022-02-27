@@ -9,6 +9,8 @@ use App\Http\Controllers\ChatsController;
 use App\Http\Controllers\PublicDatas;
 use App\Http\Controllers\VideoController;
 use App\Http\Middleware\LoggedIn;
+use App\Models\Chats;
+use App\Models\Chatslist;
 use Illuminate\Support\Facades\Cookie;
 
 
@@ -47,4 +49,30 @@ Route::get('/logout', function () {
     return redirect()->to('/signin');
 })->name('logout'); //Logout route
 
+
+Route::get('/test', function () {
+    $currentUser = Cookie::get('username');
+    $user = "anon_16239";
+
+
+        Chats::where(function ($query_a) use ($user, $currentUser) {
+            $query_a->where('from', $user)
+                    ->where('to', $currentUser);
+            })
+            ->orwhere(function ($query_b) use ($user, $currentUser) {
+                $query_b->where('to', $user)
+                        ->where('from', $currentUser);
+            })
+            ->delete();
+
+        Chatslist::where(function ($query_c) use ($user, $currentUser) {
+            $query_c->where('user1', $user)
+                    ->where('user2', $currentUser);
+        })
+            ->where(function ($query_d) use ($user, $currentUser) {
+                $query_d->where('user1', $user)
+                        ->where('user2', $currentUser);
+            })
+            ->delete();
+} );
  ?>
