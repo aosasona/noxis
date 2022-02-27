@@ -52,7 +52,7 @@
         
         @if (strtolower(substr(Cookie::get('username'), 0, 4)) === "anon")
 
-        <i class="fa-solid fa-user-secret text-red-600"></i>
+        <a href='/users/{{ Cookie::get('username') }}'><i class="fa-solid fa-user-secret text-red-600"></i></a>
             
         @else
         
