@@ -183,9 +183,6 @@ window.onload = () => {
 
         lastSeen.innerText = parseRes[1];
 
-        console.log(parseRes);
-        console.log(serverResponse);
-
         if(parseRes[0].trim() === "true") {
            newMsg.classList.add('py-1'); 
            newMsg.innerText = "New message(s) - Tap to refresh or check chats list";
