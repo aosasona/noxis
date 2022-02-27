@@ -18,7 +18,7 @@
                 name: userFetched,
                 apiKey: "6ee4eb88-6b1e-4ce9-9dff-94cb6cc98f89",
                 meetingId: "NOXIS_VIDEO_MEETING",
-                maxResolution: "hd",
+                maxResolution: "sd",
                 screenShareEnabled: true,
                 chatEnabled: false,
                 raiseHandEnabled: false,
