@@ -228,7 +228,7 @@ class ChatsController extends Controller
                     $query_c->where('user1', $user)
                             ->where('user2', $currentUser);
                 })
-                    ->orwhere(function ($query_d) use ($user, $currentUser) {
+                    ->where(function ($query_d) use ($user, $currentUser) {
                         $query_d->where('user1', $user)
                                 ->where('user2', $currentUser);
                     })
