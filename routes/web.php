@@ -49,30 +49,4 @@ Route::get('/logout', function () {
     return redirect()->to('/signin');
 })->name('logout'); //Logout route
 
-
-Route::get('/test', function () {
-    $currentUser = "drealayodeji";
-    $user = "frokesjr1";
-
-
-        Chats::where(function ($query_a) use ($user, $currentUser) {
-            $query_a->where('from', $user)
-                    ->where('to', $currentUser);
-            })
-            ->orwhere(function ($query_b) use ($user, $currentUser) {
-                $query_b->where('to', $user)
-                        ->where('from', $currentUser);
-            })
-            ->delete();
-
-            Chatslist::where(function ($query_c) use ($user, $currentUser) {
-            $query_c->where('user1', $user)
-                    ->where('user2', $currentUser);
-            })->delete();
-            Chatslist::where(function ($query_d) use ($user, $currentUser) {
-                $query_d->where('user2', $user)
-                        ->where('user1', $currentUser);
-            })
-            ->delete();
-} );
  ?>

@@ -120,11 +120,14 @@ class UsersController extends Controller
         $username = strtolower($username);
         $sessionUser = Cookie::get('username');
 
-        if(strtolower(substr(Cookie::get('username'), 0, 4)) === "anon") {
-            return view('account.guest');
-        }
-
         $shortUrls = public_data::where('username', $username)->get();
+
+        if(strtolower(substr(Cookie::get('username'), 0, 4)) === "anon") {
+            return view('account.guest')->with('user', $username)
+            ->with('fetchedUser', $username)
+            ->with('shortUrls', $shortUrls)
+            ->with('sessionUser', $sessionUser);
+        }
 
         $user = Users::where('username', $username)->get();
         return view('account.profile')->with('user', $user)

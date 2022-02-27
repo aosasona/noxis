@@ -32,16 +32,7 @@
             @endif
 
         </div>
-        <!-- <div class='blur-sm bg-zinc-500 text-zinc-900 px-6 p-2 mt-6' id='email'>It's a secret!</div>
-                                <button onclick='showemail()' class='text-xs font-medium mt-1' id="view">View email</button>
-                                </div>
-
-                                <script type="text/javascript">
-                                    function showemail() {
-                                        const email = document.getElementById('email')
-                                        email.classList.remove('blur-sm')
-                                    }
-                                </script> -->
+   
     @else
 
         <head>
