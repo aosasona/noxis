@@ -25,7 +25,7 @@
                 raiseHandEnabled: false,
                 recordingEnabled: false,
 
-                redirectOnLeave: "https://noxis.chat/chats",
+                redirectOnLeave: "https://noxis.app/chats",
 
                 micEnabled: true,
                 webcamEnabled: true,

@@ -17,6 +17,6 @@ class VideoController extends Controller
         }
 
         $meeting_id = strToUpper($creator).'_'.strToUpper($client);
-        return view('video.index')->with('meetId', $meeting_id)->with('video_id', $user)->with('client', $client);
+        return view('video.index')->with('meetId', $meeting_id)->with('video_id', $creator)->with('client', $client);
     }
 }
