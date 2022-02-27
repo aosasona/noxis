@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use \App\Models\Chatslist;
 
 use \App\Models\Chats;
+use App\Models\public_data;
 use App\Models\User_status;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Redirect;
@@ -123,9 +124,9 @@ class ChatsController extends Controller
                     ->where('from', $currentUser);
             });
 
-        $checkUserExists = PublicDatas::where('username', $user)->count();
+        $checkUserExists = public_data::where('username', $user)->count();
 
-        if ($checkUserExists == 0 || $checkUserExists->count() < 1) {
+        if ($checkUserExists == 0 || $checkUserExists < 1) {
             return view('errors.404');
         }
 
