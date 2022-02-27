@@ -178,10 +178,13 @@ window.onload = () => {
     }
 
     xhr.onload = () => {
-        const serverResponse = xhr.responseText
+        const serverResponse = xhr.responseText;
         const parseRes = serverResponse.split(',');
 
         lastSeen.innerText = parseRes[1];
+
+        console.log(parseRes);
+        console.log(serverResponse);
 
         if(parseRes[0].trim() === "true") {
            newMsg.classList.add('py-1'); 
