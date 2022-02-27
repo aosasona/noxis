@@ -80,7 +80,7 @@
                 class="font-light w-[70%] xl:w-4/5 px-3 py-3 text-sm text-white bg-zinc-700 focus:outline-none" rows="1"
                 spellcheck="true" wrap="soft" style="resize: none;" placeholder="Type something here..."></textarea>
 
-            <button type="submit" class="text-xl text-sky-600 px-3" id="send"><i
+            <button type="submit" class="text-xl text-sky-600 hover:text-white px-3" id="send"><i
                     class="fa-solid fa-paper-plane"></i></button>
 
 
