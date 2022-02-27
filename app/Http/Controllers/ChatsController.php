@@ -67,35 +67,34 @@ class ChatsController extends Controller
                 ->where('user2', $currentUser);
         });
 
-            //IF THIS IS THE FIRST MESSAGE IN THE CONVERSATION, CREATE A RECORD TO TRACK UNREAD
-            if($unreadQuery->count() < 1 || $unreadQuery->count() === 0){
-                //For the user's unread messages
-                $createUnread = new Chatslist;
-                $createUnread->user1 = $currentUser;
-                $createUnread->user2 = $to;
-                $createUnread->unread_count = "1";
+        //IF THIS IS THE FIRST MESSAGE IN THE CONVERSATION, CREATE A RECORD TO TRACK UNREAD
+        if ($unreadQuery->count() < 1 || $unreadQuery->count() === 0) {
+            //For the user's unread messages
+            $createUnread = new Chatslist;
+            $createUnread->user1 = $currentUser;
+            $createUnread->user2 = $to;
+            $createUnread->unread_count = "1";
 
-                $createUnread->save();
+            $createUnread->save();
 
-                //For the other user's unread messages
-                $createUnread2 = new Chatslist;
-                $createUnread2->user1 = $to;
-                $createUnread2->user2 = $currentUser;
-                $createUnread2->unread_count = "1";
+            //For the other user's unread messages
+            $createUnread2 = new Chatslist;
+            $createUnread2->user1 = $to;
+            $createUnread2->user2 = $currentUser;
+            $createUnread2->unread_count = "1";
 
-                $createUnread2->save();
-            } else {
-                //Get the current count of the unread messages
-                $getUnreads = $unreadQuery->get();
+            $createUnread2->save();
+        } else {
+            //Get the current count of the unread messages
+            $getUnreads = $unreadQuery->get();
 
-                foreach($getUnreads as $getUnread) {
-                    $current_unread_count = $getUnread->unread_count;
-                    $new_unread_count = $current_unread_count + 1;
+            foreach ($getUnreads as $getUnread) {
+                $current_unread_count = $getUnread->unread_count;
+                $new_unread_count = $current_unread_count + 1;
 
-                    $unreadQuery->update(['unread_count' => "$new_unread_count"]);
-                }
-
+                $unreadQuery->update(['unread_count' => "$new_unread_count"]);
             }
+        }
     }
 
     /**
@@ -124,11 +123,11 @@ class ChatsController extends Controller
                     ->where('from', $currentUser);
             });
 
-            if($chatsQuery->count() == 0 || $chatsQuery->count() < 1){
-                return view('errors.404');
-            }
+        if ($chatsQuery->count() == 0 || $chatsQuery->count() < 1) {
+            return view('errors.404');
+        }
 
-            $chats = $chatsQuery->get();
+        $chats = $chatsQuery->get();
 
 
         //UPDATE THE READ RECEIPT FOR THE CONVERSATION
@@ -214,20 +213,31 @@ class ChatsController extends Controller
 
                 Chats::where(function ($query_a) use ($user, $currentUser) {
                     $query_a->where('from', $user)
-                        ->where('to', $currentUser);
+                            ->where('to', $currentUser);
                     })
                     ->orwhere(function ($query_b) use ($user, $currentUser) {
                         $query_b->where('to', $user)
-                            ->where('from', $currentUser);
+                                ->where('from', $currentUser);
+                    })
+                    ->delete();
+
+                Chatslist::where(function ($query_c) use ($user, $currentUser) {
+                    $query_c->where('user1', $user)
+                            ->where('user2', $currentUser);
+                })
+                    ->orwhere(function ($query_d) use ($user, $currentUser) {
+                        $query_d->where('user1', $user)
+                                ->where('user2', $currentUser);
                     })
                     ->delete();
 
                 return response('Deleted', 200);
+
             } else {
                 return response('Nothing to delete mate', 400);
             }
         } else {
-            return response('Lol, you can not do that.', 406);
+            return response("Lol, you can't not do that.", 406);
         }
     }
 }

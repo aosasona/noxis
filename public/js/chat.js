@@ -185,7 +185,7 @@ window.onload = () => {
 
         if(parseRes[0].trim() === "true") {
            newMsg.classList.add('py-1'); 
-           newMsg.innerText = "New message(s) - Refresh or check chats list page";
+           newMsg.innerText = "New message(s) - Tap to refresh or check chats list";
         } else {
             if(newMsg.classList.contains("py-1")) {
                 newMsg.classList.remove("py-1");

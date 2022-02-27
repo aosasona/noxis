@@ -16,7 +16,7 @@
 
         <button class="text-lg text-red-500 px-8" id="delBtn"><i class="fa-solid fa-trash-can"></i></button>
     </div>
-    <div class="bg-green-600 flex justify-center items-center fixed top w-full text-xs text-white font-medium" id="newMsgIndicator"></div>
+    <a href={{ URL::current() }} class="bg-green-600 flex justify-center items-center fixed top w-full text-xs text-white font-medium" id="newMsgIndicator"></a>
 
 
     <div class="mx-auto w-full xl:w-3/5 px-0 mt-7">
