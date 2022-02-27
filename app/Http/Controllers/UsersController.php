@@ -119,7 +119,7 @@ class UsersController extends Controller
         $username = strtolower($username);
         $sessionUser = Cookie::get('username');
 
-        if(strtolower(substr(Cookie::get('username'), 0, 5)) === "guest") {
+        if(strtolower(substr(Cookie::get('username'), 0, 4)) === "anon") {
             return view('account.guest');
         }
 

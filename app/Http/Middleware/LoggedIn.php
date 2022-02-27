@@ -54,7 +54,7 @@ class LoggedIn
             //return view('account.signin')->with('loginError', 'You need to be logged in!');
 
             //if user isn't logged in, generate random ID for user login
-            $prefix = "guest_";
+            $prefix = "anon_";
             $gen = uniqid(rand(), false);
             $gen_trim = substr($gen, 0, 5);
             $genericUser = $prefix.$gen_trim;
