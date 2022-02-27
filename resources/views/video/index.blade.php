@@ -24,7 +24,7 @@
                 name: userFetched,
                 apiKey: "6ee4eb88-6b1e-4ce9-9dff-94cb6cc98f89",
                 meetingId: currentVideoId,
-                maxResolution: "sd",
+                maxResolution: "hd",
                 screenShareEnabled: true,
                 chatEnabled: false,
                 raiseHandEnabled: false,

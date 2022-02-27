@@ -115,15 +115,20 @@ class ChatsController extends Controller
         }
 
         //GET THE ENTIRE CONVERSATION
-        $chats = Chats::where(function ($query_a) use ($user, $currentUser) {
+        $chatsQuery = Chats::where(function ($query_a) use ($user, $currentUser) {
             $query_a->where('from', $user)
                 ->where('to', $currentUser);
         })
             ->orwhere(function ($query_b) use ($user, $currentUser) {
                 $query_b->where('to', $user)
                     ->where('from', $currentUser);
-            })
-            ->get();
+            });
+
+            if($chatsQuery->count() == 0 || $chatsQuery->count() < 1){
+                return view('errors.404');
+            }
+
+            $chats = $chatsQuery->get();
 
 
         //UPDATE THE READ RECEIPT FOR THE CONVERSATION
