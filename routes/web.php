@@ -76,7 +76,13 @@ Route::get('/test', function() {
 Route::get('/csrf', [TestController::class, 'index']);
 Route::delete('/csrf/{username}/{currentUser}', [TestController::class, 'test']);*/
 
-Route::post('/test', function () {
-   
+Route::get('/test', function () {
+    // $meetingIdArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+    // $RandId = array_rand($meetingIdArray, 12);
+
+    // $generatedMeetingId = $meetingIdArray[$RandId[0]].$meetingIdArray[$RandId[10]].$meetingIdArray[$RandId[2]].$meetingIdArray[$RandId[3]].$meetingIdArray[$RandId[4]].$meetingIdArray[$RandId[5]].$meetingIdArray[$RandId[6]].$meetingIdArray[$RandId[7]];
+
+    // return $generatedMeetingId;
 });
 ?>

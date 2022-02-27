@@ -1,8 +1,12 @@
 @extends('layouts.chat')
 
 @section('content')
-    <div id="user">{{ $video_id }}</div>
-    <div id="meetId">{{ $meetId }}</div>
+    <div id="user" class="hidden">{{ $video_id }}</div>
+    <div id="client" class="hidden">{{ $client }}</div>
+    @foreach ($fetchedId as $meetId)
+    <div id="meetId" class="hidden">{{ $meetId->meeting_id }}</div>
+    @endforeach
+  
 
     <title>{{ ucFirst($client) }} | Video Call</title>
 
@@ -13,18 +17,20 @@
         script.addEventListener("load", function(event) {
             const meeting = new VideoSDKMeeting();
             var userFetched = document.getElementById("user").innerText;
+            var currentClient = document.getElementById("client").innerText;
+            var currentVideoId = document.getElementById("meetId").innerText;
 
             const config = {
                 name: userFetched,
                 apiKey: "6ee4eb88-6b1e-4ce9-9dff-94cb6cc98f89",
-                meetingId: "NOXIS_VIDEO_MEETING",
+                meetingId: currentVideoId,
                 maxResolution: "sd",
                 screenShareEnabled: true,
                 chatEnabled: false,
                 raiseHandEnabled: false,
                 recordingEnabled: false,
 
-                redirectOnLeave: "https://noxis.chat/chats",
+                redirectOnLeave: `https://noxis.chat/chats/${currentClient}`,
 
                 micEnabled: true,
                 webcamEnabled: true,
@@ -32,7 +38,7 @@
                 participantCanToggleSelfMic: true,
 
                 brandingEnabled: true,
-                brandLogoURL: "https://ranch-beta.herokuapp.com/img/logo.svg",
+                brandLogoURL: "https://noxis.chat/img/logo.svg",
                 brandName: "Noxis",
                 poweredBy: false,
 
