@@ -10,7 +10,7 @@ setInterval(() => {
 
     xhr.onload = () => {
         const serverResponse = xhr.responseText
-        const parseRes = serverResponse.split(",");
+        const parseRes = serverResponse.split(',');
 
         lastSeen.innerText = parseRes[1];
 
