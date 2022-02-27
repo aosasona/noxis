@@ -209,30 +209,40 @@ class ChatsController extends Controller
                 ->orwhere(function ($query_b) use ($user, $currentUser) {
                     $query_b->where('to', $user)
                         ->where('from', $currentUser);
-                });
+                })
+                ->count();
 
             $checkList = Chatslist::where(function ($query_c) use ($username, $currentUser) {
                 $query_c->where('user1', $username)
                     ->where('user2', $currentUser);
             })
-                ->orWhere(function ($query_d) use ($username, $currentUser) {
+                ->orwhere(function ($query_d) use ($username, $currentUser) {
                     $query_d->where('user2', $username)
                         ->where('user1', $currentUser);
                 });
 
-            if ($checkList->count() !== 0) {
-                $checkList->delete();
-                return response('List Deleted', 200);
-            }
 
-            if ($checkChat->count() !== 0) {
 
-                $checkChat->delete();
+            if ($checkChat !== 0) {
 
-                return response('Deleted', 200);
+                Chats::where(function ($query_a) use ($user, $currentUser) {
+                    $query_a->where('from', $user)
+                        ->where('to', $currentUser);
+                })
+                    ->orwhere(function ($query_b) use ($user, $currentUser) {
+                        $query_b->where('to', $user)
+                            ->where('from', $currentUser);
+                    })
+                    ->delete();
+
             } else {
                 return response('Nothing to delete mate', 400);
             }
+
+            if ($checkList->count() !== 0) {
+                $checkList->delete();
+            }
+            
         } else {
             return response("Lol, you can't not do that.", 406);
         }
