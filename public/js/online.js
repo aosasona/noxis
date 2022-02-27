@@ -3,11 +3,28 @@ setInterval(() => {
     const xhr = new XMLHttpRequest();
     const chatUser = document.getElementById("chat_user").innerText;
     const lastSeen = document.getElementById("last_seen");
+    const newMsg = document.getElementById("newMsgIndicator");
+
 
     xhr.open("GET", `/online?user=${chatUser}`, true);
 
     xhr.onload = () => {
-        lastSeen.innerText = xhr.responseText;
+        const serverResponse = xhr.responseText
+        const parseRes = serverResponse.split(",");
+
+        lastSeen.innerText = parseRes[1];
+
+        if(parseRes[0].trim() === "true") {
+           newMsg.classList.add('py-1'); 
+           newMsg.innerText = "New message(s) - Refresh or check chats page";
+        } else {
+            if(newMsg.classList.contains("py-1")) {
+                newMsg.classList.remove("py-1");
+                newMsg.innerText = "";
+            } else {
+                newMsg.innerText = "";
+            }
+        }
     };
 
     xhr.send();

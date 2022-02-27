@@ -631,6 +631,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
+.my-1{
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
 .mt-10{
     margin-top: 2.5rem;
 }
@@ -708,6 +712,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-3{
     margin-bottom: 0.75rem;
+}
+.mt-5{
+    margin-top: 1.25rem;
+}
+.mb-\[10vh\]{
+    margin-bottom: 10vh;
+}
+.mt-7{
+    margin-top: 1.75rem;
 }
 .box-border{
     box-sizing: border-box;
@@ -994,6 +1007,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-bg-opacity: 1;
     background-color: rgb(22 101 52 / var(--tw-bg-opacity));
 }
+.bg-green-600{
+    --tw-bg-opacity: 1;
+    background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
 .object-cover{
     -o-object-fit: cover;
        object-fit: cover;
@@ -1096,6 +1113,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-\[0\.5rem\]{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+.px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
 .pb-5{
     padding-bottom: 1.25rem;
@@ -1608,6 +1629,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     .xl\:mx-80{
         margin-left: 20rem;
         margin-right: 20rem;
+    }
+
+    .xl\:mt-7{
+        margin-top: 1.75rem;
     }
 
     .xl\:h-\[95vh\]{

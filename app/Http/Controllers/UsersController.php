@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chatslist;
 use App\Models\public_data;
 use App\Models\User_status;
 use Illuminate\Http\Request;
@@ -193,6 +194,18 @@ class UsersController extends Controller
         }
         if($user){
               $getActiveStatus = User_status::where('username', $user)->get();
+
+              $checkNewMsg = Chatslist::where( function ($query_a) use ($username) {
+                $query_a->where('user1', $username)
+                        ->where('unread_count', '>', 0);
+              })->count();
+
+              if($checkNewMsg > 0){
+                  echo 'true,';
+              } else {
+                  echo 'false,';
+              }
+                  
 
             foreach($getActiveStatus as $status) {
                 echo $status->updated_at->diffForHumans();

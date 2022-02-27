@@ -13,7 +13,7 @@
   </head>
   
   <body class="antialiased bg-[#121212]"> 
-    <div class='flex flex-col w-[90vw] h-screen justify-center items-center'>
+    <div class='flex flex-col w-screen h-screen justify-center items-center px-10'>
         <h1 class='text-[8rem] text-red-600 font-extralight'>500</h1>
         <h3 class='text-zinc-400'>😔 &nbsp; It's not you, it's us</h3>
         <a href='/' class='text-sm mt-10 text-green-600'><i class='fa-solid fa-house'></i> Go Back Home</a>
