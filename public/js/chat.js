@@ -194,7 +194,7 @@ window.onload = () => {
                 newMsg.innerText = "";
             }
         }
-    }
+    };
 
     xhr.onerror = () => {
         lastSeen.innerText = "Something went wrong...";
