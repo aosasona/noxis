@@ -1165,6 +1165,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-size: 1rem;
     line-height: 1.5rem;
 }
+.text-\[15px\]{
+    font-size: 15px;
+}
 .font-extralight{
     font-weight: 200;
 }
@@ -1179,6 +1182,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .font-normal{
     font-weight: 400;
+}
+.leading-5{
+    line-height: 1.25rem;
+}
+.leading-8{
+    line-height: 2rem;
+}
+.leading-6{
+    line-height: 1.5rem;
 }
 .text-red-600{
     --tw-text-opacity: 1;
@@ -1551,6 +1563,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
     .lg\:font-medium{
         font-weight: 500;
+    }
+
+    .lg\:leading-6{
+        line-height: 1.5rem;
+    }
+
+    .lg\:leading-8{
+        line-height: 2rem;
+    }
+
+    .lg\:leading-10{
+        line-height: 2.5rem;
     }
 }
 @media (min-width: 1280px){
