@@ -57,10 +57,8 @@
         autoScrolling:true,
         scrollHorizontally: false,
         css3: true,
-	    scrollingSpeed: 750,
+	    scrollingSpeed: 700,
         fixedElements: '.navBar',
-        parallax: true,
-	    parallaxOptions: {type: 'reveal', percentage: 70, property: 'translate'},
         scrollBar: true,
     });
     
