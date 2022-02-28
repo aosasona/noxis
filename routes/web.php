@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Cookie;
 
 Route::get('/', [GeneralController::class, 'home'])->name('home'); //Home route
 
+Route::get('/home', function() {
+    return view('index');
+});
+
 Route::get('/signin', [AccountController::class, 'signin'])->name('signin'); //Sign-in route
 
 Route::get('/signup', [AccountController::class, 'signup'])->name('signup'); //Sign-in route
