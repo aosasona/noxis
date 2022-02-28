@@ -36,9 +36,9 @@
 
 <body class="antialiased bg-[#101010]"> 
   <div class="fixed top-0 z-[1] navBar">
-    <nav class="flex flex-row w-screen justify-between items-center h-12 lg:h-14 p-1 px-3 lg:px-12 box-border bg-[#151515]">
+    <nav class="flex flex-row w-screen justify-between items-center h-12 lg:h-14 p-1 px-5 lg:px-12 box-border bg-[#151515]">
        
-        <a href="/" class="no-underline h-4/5"><img src="{{ asset('img/logo.svg') }}" alt="Logo" class="h-full"/></a>
+        <a href="/" class="no-underline h-4/5 flex flex-row text-white items-center font-medium text-2xl"><img src="{{ asset('img/logo.svg') }}" alt="Logo" class="h-4/5 mr-2"/>Noxis</a>
         {{-- <div>
         @if(Cookie::get('username') == null)
         <a href="/signin" class="text-blue-500 hover:text-blue-700 text-sm font-medium px-3">Sign In</a>

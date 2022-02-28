@@ -114,7 +114,6 @@
     width : 100%;
     animation-delay: 800ms;
     transform-origin: top;
-    transform : scale(0);
     opacity: 0;
 }
 @keyframes boxOpen1 {
@@ -144,12 +143,10 @@
 @keyframes textOpen {
     0% {
         width : 0px;
-        transform : scale(0);
         opacity: 0;
     }
     100% {
         width : 100%;
-        transform : scale(1);
         opacity: 1;
     }
 }
