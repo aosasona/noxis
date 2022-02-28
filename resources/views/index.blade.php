@@ -115,7 +115,7 @@
         autoScrolling:true,
         scrollHorizontally: false,
         css3: true,
-	    scrollingSpeed: 380,
+	    scrollingSpeed: 250,
         fixedElements: '.navBar',
         scrollBar: true,
     });
