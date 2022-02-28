@@ -116,6 +116,48 @@
     transform : scaleY(0);
     opacity: 0;
 }
+#homeImg {
+    animation: 2000ms imgBounce ease-in-out infinite;
+    animation-direction: alternate-reverse;
+}
+.circle {
+    position: absolute;
+    top : -20vh;
+    left : -10vw;
+    width : 30rem;
+    height : 30rem;
+    z-index: -1;
+    background-color: rgba(235, 133, 0, 0.9);
+    border-radius: 50%;
+}
+.circle_second {
+    position: absolute;
+    bottom : -25vh;
+    right : 3vw;
+    width : 30rem;
+    height : 30rem;
+    z-index: -1;
+    background-color: rgba(38, 211, 139, 0.884);
+    border-radius: 50%;
+}
+.square {
+    position: absolute;
+    top : -15vh;
+    left : 0vw;
+    width : 20rem;
+    height : 20rem;
+    z-index: -1;
+    background-color: rgba(236, 149, 17, 0.884);
+}
+.square_second {
+    position: absolute;
+    bottom : -15vh;
+    right : 0vw;
+    width : 20rem;
+    height : 20rem;
+    z-index: -1;
+    background-color: rgba(1, 194, 136, 0.884);
+}
 @keyframes boxOpen1 {
     0% {
         height : 0px;
@@ -158,6 +200,17 @@
     100% {
         transform : scaleY(1);
         opacity: 1;
+    }
+}
+@keyframes imgBounce {
+    0% {
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
     }
 }
 @tailwind base;
