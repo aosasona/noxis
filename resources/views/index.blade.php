@@ -26,7 +26,7 @@
         </div>
 
         <div class="section">
-            <div class="w-full text-left lg:text-center font-light lg:font-medium leading-6 lg:leading-10 text-[15px] lg:text-2xl text-zinc-300 bg-[#101010]">
+            <div class="w-full text-left lg:text-center font-light lg:font-medium leading-6 lg:leading-10 text-[15px] lg:text-2xl text-zinc-300 bg-[#080808]">
                 <div class="m-auto w-5/6 lg:w-3/5">
                 <b class="text-sky-600">Noxis</b> is a web service aimed at giving you a platform to communicate quickly, easily & anonymously with whomever you want to chat with – 
                 without the distractions of setting passwords or filling long, boring forms. We don't have the standard registration process users usually go through, we don’t serve ads either, we serve you 😎
@@ -38,7 +38,7 @@
         </div>
 
         <div class="section">
-            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl bg-[#101010]">
+            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl bg-[#080808]">
             <h1 class="text-3xl lg:text-5xl font-medium text-white pb-5">Quick Setup</h1>
             <div class="leading-7 lg:leading-9 text-lg lg:text-xl text-zinc-300">
             <b class="text-sky-600">Noxis</b> is very easy to setup, you could chat on Noxis without EVER having an account and we'll never prompt you to create one
@@ -51,7 +51,7 @@
         </div>
 
         <div class="section">
-            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl bg-[#101010]">
+            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl bg-[#080808]">
             <h1 class="text-3xl lg:text-5xl font-medium text-white pb-5">Text Anonymously</h1>
             <div class="leading-7 lg:leading-9 text-lg lg:text-xl text-zinc-300">
             <b class="text-sky-600">No one</b> needs to know who you are, not even us because we don't log anything either. Now, you can finally tell your crush how you
@@ -63,7 +63,7 @@
         </div>
 
         <div class="section">
-            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl bg-[#101010]">
+            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl bg-[#080808]">
             <h1 class="text-3xl lg:text-5xl font-medium text-white pb-5">Chat Easily</h1>
             <div class="leading-7 lg:leading-9 text-lg lg:text-xl text-zinc-300">
             <b class="text-sky-600">Noxis</b> was built to be convenient, fun and secure. We're not perfect, but we tried to make the experience fun and easy for you with
