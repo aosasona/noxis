@@ -10,7 +10,7 @@
 
     <div class="w-full h-full flex flex-col items-center justify-center">
 
-<form method="POST" action="/auth/signup" class="bg-zinc-800 px-5 py-6 pb-9 rounded-xl w-4/5">
+<form method="POST" action="/auth/signup" class="bg-zinc-800 px-5 py-6 pb-9 rounded-xl w-[90%] lg:w-4/5">
     <h1 class="font-medium text-4xl lg:text-5xl mb-8 p-4">Sign Up</h1>
     <div class="lg:px-5">
         @csrf
