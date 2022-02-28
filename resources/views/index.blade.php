@@ -75,7 +75,7 @@
         </div>
 
         <div class="section">
-            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl bg-[#080808] py-4 px-6 rounded-md shadow-lg">
+            <div class="m-auto w-[90%] lg:w-3/5 text-white font-normal text-xl bg-[#080808] py-4 px-6 rounded-md shadow-lg">
             <h1 class="text-2xl lg:text-4xl font-medium text-white pb-5">Getting Started!</h1>
             <div class="leading-7 lg:leading-9 text-sm lg:text-xl text-zinc-300 list-decimal">
                 <li><span class="text-white">Proceed to the sign-up page using the button below or in the navigation
@@ -89,7 +89,7 @@
                     chatting! Guests do not need to sign up to chat with you.</span></li>
             <li><span class="text-white">Report issues to <b class="text-sky-600">@NoxisApp</b></span></li>
 
-            <span class="text-gray-300 text-[0.75rem] lg:text-[0.9rem] pt-10">Tip : If you can't remember your short link, using <b
+            <span class="text-gray-300 text-[0.75rem] lg:text-[0.9rem] pt-10 leading-4">Tip : If you can't remember your short link, using <b
                         class="text-sky-600">https://noxis.chat/users/YOUR_USERNAME</b> would also take people to your
                     profile.
             </div>
@@ -100,7 +100,7 @@
 
         <div class="section">
             <div>
-                
+
             </div>
         </div>
 
