@@ -67,7 +67,7 @@
             <h1 class="text-3xl lg:text-5xl font-medium text-white pb-5">Chat Easily</h1>
             <div class="leading-7 lg:leading-9 text-lg lg:text-xl text-zinc-300">
             <b class="text-sky-600">Noxis</b> was built to be convenient, fun and secure. We're not perfect, but we tried to make the experience fun and easy for you with
-            our minimal straight-to-the-point UI that has everything where it should be, fun and convenience features like our scan-to-chat QR codes & bubble colors.
+            our minimal straight-to-the-point UI that has everything where it should be, convenience features like our scan-to-chat QR codes & fun bubble colors.
             </div>
             </div>
             <div class="circle_fifth hidden lg:block"></div>
@@ -85,7 +85,7 @@
         autoScrolling:true,
         scrollHorizontally: false,
         css3: true,
-	    scrollingSpeed: 500,
+	    scrollingSpeed: 400,
         fixedElements: '.navBar',
         scrollBar: true,
     });
