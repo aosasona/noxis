@@ -74,6 +74,36 @@
             <div class="square_fifth block lg:hidden"></div>
         </div>
 
+        <div class="section">
+            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl bg-[#080808] py-4 px-6 rounded-md shadow-lg">
+            <h1 class="text-2xl lg:text-4xl font-medium text-white pb-5">Getting Started!</h1>
+            <div class="leading-7 lg:leading-9 text-sm lg:text-xl text-zinc-300 list-decimal">
+                <li><span class="text-white">Proceed to the sign-up page using the button below or in the navigation
+                    bar.</span></li>
+            <li><span class="text-white">Enter a valid e-mail and a custom username (this <b
+                        class="text-red-600">CAN NOT</b> be changed later) on the sign-up page.</span></li>
+            <li><span class="text-white">You will be sent an OTP via the registered email for login authentication
+                    every-time, we do <b class="text-red-600">NOT</b> use fixed passwords for security
+                    reasons.</span></li>
+            <li><span class="text-white"><b class="text-sky-600">Share</b> your Noxis link or QR code to start
+                    chatting! Guests do not need to sign up to chat with you.</span></li>
+            <li><span class="text-white">Report issues to <b class="text-sky-600">@NoxisApp</b></span></li>
+
+            <span class="text-gray-300 text-[0.75rem] lg:text-[0.9rem] pt-10">Tip : If you can't remember your short link, using <b
+                        class="text-sky-600">https://noxis.chat/users/YOUR_USERNAME</b> would also take people to your
+                    profile.
+            </div>
+            <div class="circle_fourth hidden lg:block"></div>
+            <div class="square_fourth block lg:hidden"></div>
+        </div>
+        </div>
+
+        <div class="section">
+            <div>
+                
+            </div>
+        </div>
+
     </div>
 
 
@@ -85,7 +115,7 @@
         autoScrolling:true,
         scrollHorizontally: false,
         css3: true,
-	    scrollingSpeed: 400,
+	    scrollingSpeed: 380,
         fixedElements: '.navBar',
         scrollBar: true,
     });
