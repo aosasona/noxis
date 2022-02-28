@@ -11,11 +11,11 @@
                 <div class="box2 h-4/5">
                     <div class="box3 w-4/5">
                         <div class="text-center">
-                            <h1 class="text-white text-sm xl:text-3xl font-semibold inline mainText">Say hi to <span class="text-sky-500 typedText"></span> chats.</h1>
-                        <div class="flex flex-col items-center xl:flex-row w-full xl:justify-evenly font-medium mt-7 xl:mt-10 text-xs xl:text-lg" id="homeLinks">
-                        <a href="/signup" class="p-2 px-5 bg-sky-700 hover:border-2 hover:bg-transparent hover:border-sky-700 text-white rounded-md w-4/5 xl:w-1/3 mx-2 my-2 xl:my-0">Get Started</a>
-                        <a href="/signin" class="p-2 px-5 hover:bg-sky-700 hover:border-none border-2 border-sky-700 text-white rounded-md w-4/5 xl:w-1/3 mx-2 my-2 xl:my-0">Sign In</a>
-                        <a href="/chats" class="p-2 px-5 bg-zinc-700 hover:border-2 hover:bg-transparent hover:border-zinc-700 text-white rounded-md w-4/5 xl:w-1/3 mx-2 my-2 xl:my-0"><i class="fa-solid fa-user-secret"></i> Continue as Anon</a>
+                            <h1 class="text-white text-sm lg:text-3xl font-semibold inline mainText">Say hi to <span class="text-sky-500 typedText"></span> chats.</h1>
+                        <div class="flex flex-col items-center lg:flex-row w-full lg:justify-evenly font-medium mt-7 lg:mt-10 text-xs lg:text-lg" id="homeLinks">
+                        <a href="/signup" class="p-2 px-5 bg-sky-700 hover:border-2 hover:bg-transparent hover:border-sky-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0">Get Started</a>
+                        <a href="/signin" class="p-2 px-5 hover:bg-sky-700 hover:border-none border-2 border-sky-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0">Sign In</a>
+                        <a href="/chats" class="p-2 px-5 bg-zinc-700 hover:border-2 hover:bg-transparent hover:border-zinc-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0"><i class="fa-solid fa-user-secret"></i> Continue as Anon</a>
                         </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
 
         <div class="section">
             <div class="w-full text-left lg:text-center font-light lg:font-medium text-lg lg:text-2xl text-zinc-400">
-                <div class="m-auto w-3/5">
+                <div class="m-auto w-5/6 lg:w-3/5">
                 Noxis is a web service aimed at giving you a platform to communicate quickly, easily & anonymously with whomever you want to chat with – 
                 without the distractions of setting passwords or filling long, boring forms. We don't have the standard registration process users usually go through, we don’t serve ads either, we serve you 😎
             </div></div>

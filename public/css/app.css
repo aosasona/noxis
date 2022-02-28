@@ -1412,6 +1412,10 @@ Ensure the default browser behavior of the `hidden` attribute.
         margin-top: 1.25rem;
     }
 
+    .lg\:mt-10{
+        margin-top: 2.5rem;
+    }
+
     .lg\:hidden{
         display: none;
     }
@@ -1454,6 +1458,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
     .lg\:justify-around{
         justify-content: space-around;
+    }
+
+    .lg\:justify-evenly{
+        justify-content: space-evenly;
     }
 
     .lg\:border-4{
@@ -1534,6 +1542,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     .lg\:text-lg{
         font-size: 1.125rem;
         line-height: 1.75rem;
+    }
+
+    .lg\:text-3xl{
+        font-size: 1.875rem;
+        line-height: 2.25rem;
     }
 
     .lg\:font-medium{
