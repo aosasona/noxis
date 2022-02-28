@@ -37,7 +37,14 @@
             <div class="square_second block lg:hidden"></div>
         </div>
 
-        
+        <div class="section">
+            <img src="{{ asset('img/chat.svg') }}" alt="Main SVG 1" class="w-1/3" />
+            <h1 class="text-2xl font-semibold ">Quick Setup</h1>
+            <p class="text-xs text-left p-3 font-semibold text-zinc-400"><b class="text-sky-600">Noxis</b> is very easy to
+                setup, you could chat on Noxis without EVER having an account and we'll never prompt you to create one
+                before chatting with someone. And if you do decide to sign up, it takes less than 3 minutes with stable
+                internet.</p>
+        </div>
 
     </div>
 
