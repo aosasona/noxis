@@ -15,9 +15,14 @@
                             <img src="{{ asset('img/mobile.png') }}" class="w-full m-auto lg:hidden" id="homeImg" />
                             <h1 class="text-white text-sm lg:text-3xl font-semibold inline mainText">Say Hi to <span class="text-sky-500 typedText"></span> chats.</h1>
                         <div class="flex flex-col items-center lg:flex-row w-full lg:justify-evenly font-medium mt-7 lg:mt-10 text-xs lg:text-lg" id="homeLinks">
-                        <a href="/signup" class="p-2 px-5 bg-sky-700 hover:border-2 hover:bg-transparent hover:border-sky-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0">Get Started</a>
-                        <a href="/signin" class="p-2 px-5 hover:bg-sky-700 hover:border-none border-2 border-sky-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0">Sign In</a>
-                        <a href="/chats" class="p-2 px-5 bg-zinc-700 hover:border-2 hover:bg-transparent hover:border-zinc-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0"><i class="fa-solid fa-user-secret"></i> Continue as Anon</a>
+                            @if (Cookie::get('username') == null)
+                                 <a href="/signup" class="p-2 px-5 bg-sky-700 hover:border-2 hover:bg-transparent hover:border-sky-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0">Get Started</a>
+                                <a href="/signin" class="p-2 px-5 hover:bg-sky-700 hover:border-none border-2 border-sky-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0">Sign In</a>
+                                <a href="/chats" class="p-2 px-5 bg-zinc-700 hover:border-2 hover:bg-transparent hover:border-zinc-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0"><i class="fa-solid fa-user-secret"></i> Continue as Anon</a>
+                            @else
+                            <a href="/users/{{ Cookie::get('username') }}" class="p-2 px-5 bg-sky-700 hover:border-2 hover:bg-transparent hover:border-sky-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0">My Account</a>
+                            @endif
+                       
                         </div>
                         </div>
                     </div>
