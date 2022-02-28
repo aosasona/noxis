@@ -13,9 +13,9 @@
                         <div class="text-center">
                             <h1 class="text-white text-sm xl:text-3xl font-semibold inline mainText">Say hi to <span class="text-sky-500 typedText"></span> chats.</h1>
                         <div class="flex flex-col items-center xl:flex-row w-full xl:justify-evenly font-medium mt-7 xl:mt-10 text-xs xl:text-lg" id="homeLinks">
-                        <a href="/signup" class="p-2 px-5 bg-sky-700 hover:border-sky-700 text-white rounded-md w-4/5 xl:w-1/3 mx-2 my-2 xl:my-0">Get Started</a>
-                        <a href="/signin" class="p-2 px-5 border-2 border-sky-700 text-white rounded-md w-4/5 xl:w-1/3 mx-2 my-2 xl:my-0">Sign In</a>
-                        <a href="/chats" class="p-2 px-5 bg-zinc-700 text-white rounded-md w-4/5 xl:w-1/3 mx-2 my-2 xl:my-0"><i class="fa-solid fa-user-secret"></i> Continue as Anon</a>
+                        <a href="/signup" class="p-2 px-5 bg-sky-700 hover:border-2 hover:bg-transparent hover:border-sky-700 text-white rounded-md w-4/5 xl:w-1/3 mx-2 my-2 xl:my-0">Get Started</a>
+                        <a href="/signin" class="p-2 px-5 hover:bg-sky-700 hover:border-none border-2 border-sky-700 text-white rounded-md w-4/5 xl:w-1/3 mx-2 my-2 xl:my-0">Sign In</a>
+                        <a href="/chats" class="p-2 px-5 bg-zinc-700 hover:border-2 hover:bg-transparent hover:border-zinc-700 text-white rounded-md w-4/5 xl:w-1/3 mx-2 my-2 xl:my-0"><i class="fa-solid fa-user-secret"></i> Continue as Anon</a>
                         </div>
                         </div>
                     </div>
@@ -46,9 +46,8 @@
         css3: true,
 	    scrollingSpeed: 500,
         fixedElements: '.navBar',
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['Next', 'Previous'],
+        parallax: true,
+	    parallaxOptions: {type: 'reveal', percentage: 70, property: 'translate'},
         scrollBar: true,
     });
     

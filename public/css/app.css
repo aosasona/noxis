@@ -1274,12 +1274,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:h-5:hover{
     height: 1.25rem;
 }
+.hover\:border-2:hover{
+    border-width: 2px;
+}
 .hover\:border-none:hover{
     border-style: none;
 }
 .hover\:border-sky-700:hover{
     --tw-border-opacity: 1;
     border-color: rgb(3 105 161 / var(--tw-border-opacity));
+}
+.hover\:border-zinc-700:hover{
+    --tw-border-opacity: 1;
+    border-color: rgb(63 63 70 / var(--tw-border-opacity));
 }
 .hover\:bg-sky-700:hover{
     --tw-bg-opacity: 1;
@@ -1300,6 +1307,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-red-900:hover{
     --tw-bg-opacity: 1;
     background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
+.hover\:bg-transparent:hover{
+    background-color: transparent;
+}
+.hover\:bg-sky-600:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(2 132 199 / var(--tw-bg-opacity));
 }
 .hover\:text-white:hover{
     --tw-text-opacity: 1;
