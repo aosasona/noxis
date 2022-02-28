@@ -24,7 +24,7 @@
         </div>
 
         <div class="section">
-            <div class="w-full text-left lg:text-center font-light lg:font-medium text-lg lg:text-2xl text-zinc-400">
+            <div class="w-full text-left lg:text-center font-light lg:font-medium text-sm lg:text-2xl text-zinc-400">
                 <div class="m-auto w-5/6 lg:w-3/5">
                 Noxis is a web service aimed at giving you a platform to communicate quickly, easily & anonymously with whomever you want to chat with – 
                 without the distractions of setting passwords or filling long, boring forms. We don't have the standard registration process users usually go through, we don’t serve ads either, we serve you 😎
