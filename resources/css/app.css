@@ -160,6 +160,16 @@
     background-color: rgba(38, 156, 211, 0.8);
     border-radius: 50%;
 }
+.circle_sixth {
+    position: absolute;
+    bottom : -15rem;
+    right : 2vw;
+    width : 30rem;
+    height : 30rem;
+    z-index: -1;
+    background-color: rgba(245, 245, 245, 0.8);
+    border-radius: 50%;
+}
 .circle_fifth {
     position: absolute;
     bottom : -15rem;
@@ -214,6 +224,35 @@
     height : 20rem;
     z-index: -1;
     background-color: rgba(175, 29, 204, 0.8);
+}
+.square_sixth {
+    position: absolute;
+    bottom : 0rem;
+    right : 0vw;
+    width : 20rem;
+    height : 10rem;
+    z-index: -1;
+    background-color: rgba(245, 245, 245, 0.8);
+}
+#circle1 {
+    animation: 2000ms circleFlex linear infinite;
+    animation-direction: alternate-reverse;
+}
+#circle2 {
+    animation: 2000ms circleFlex linear infinite;
+    animation-direction: alternate-reverse;
+}
+#circle3 {
+    animation: 2000ms circleFlex linear infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes circleFlex {
+    0% {
+        padding : 1.5rem;
+    }
+    100% {
+        padding : 0.5rem;
+    }
 }
 @keyframes boxOpen1 {
     0% {

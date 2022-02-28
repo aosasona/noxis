@@ -89,18 +89,27 @@
                     chatting! Guests do not need to sign up to chat with you.</span></li>
             <li><span class="text-white">Report issues to <b class="text-sky-600">@NoxisApp</b></span></li>
 
-            <span class="text-gray-300 text-[0.75rem] lg:text-[0.9rem] pt-10 leading-4">Tip : If you can't remember your short link, using <b
+            <span class="text-gray-300 text-[0.75rem] lg:text-[0.9rem] pt-8 leading-[0.8rem]">Tip : If you can't remember your short link, using <b
                         class="text-sky-600">https://noxis.chat/users/YOUR_USERNAME</b> would also take people to your
                     profile.
             </div>
-            <div class="circle_fourth hidden lg:block"></div>
-            <div class="square_fourth block lg:hidden"></div>
+            <div class="circle_sixth hidden lg:block"></div>
+            <div class="square_sixth block lg:hidden"></div>
         </div>
         </div>
 
         <div class="section">
-            <div>
+            <div class="flex flex-col items-center justify-center w-full">
+                <div class="border-2 max-w-[70vw] lg:max-w-[16vw] border-red-500 rounded-[50%] p-6" id="circle1"><div class="border-2 border-sky-600 rounded-[50%] p-6" id="circle2">
+                    <div class="border-2 border-yellow-50 rounded-[50%] p-6" id="circle3">
+                    <img src="{{ asset('img/pixel.png') }}" class="rounded-[50%] w-auto h-auto" />
+                </div>
+            </div>
+        </div>
 
+                <h2 class="text-white font-semibold text-sm mt-14">Built by <a href="https://twitter.com/_realao" target="_blank"
+                    rel="noreferrer" class="text-sky-600 no-underline">Ayodeji</a></h2>
+                    <h3 class="text-zinc-400 text-xs mt-3">Version 1.0.0</h3>
             </div>
         </div>
 
