@@ -9,11 +9,11 @@
         <div class="section" id="first">
             <div class="box w-[95%] lg:w-5/6">
                 <div class="box2 w-[98%] lg:h-4/5">
-                    <div class="box3 w-[98%] lg:w-4/5 py-3">
+                    <div class="box3 w-[98%] lg:w-4/5 py-4 box-content">
                         <div class="text-center">
                             <img src="{{ asset('img/laptop.png') }}" class="w-3/5 m-auto hidden lg:block" id="homeImg" />
                             <img src="{{ asset('img/mobile.png') }}" class="w-full m-auto lg:hidden" id="homeImg" />
-                            <h1 class="text-white text-sm lg:text-3xl font-semibold inline mainText">Say hi to <span class="text-sky-500 typedText"></span> chats.</h1>
+                            <h1 class="text-white text-sm lg:text-3xl font-semibold inline mainText">Say Hi to <span class="text-sky-500 typedText"></span> chats.</h1>
                         <div class="flex flex-col items-center lg:flex-row w-full lg:justify-evenly font-medium mt-7 lg:mt-10 text-xs lg:text-lg" id="homeLinks">
                         <a href="/signup" class="p-2 px-5 bg-sky-700 hover:border-2 hover:bg-transparent hover:border-sky-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0">Get Started</a>
                         <a href="/signin" class="p-2 px-5 hover:bg-sky-700 hover:border-none border-2 border-sky-700 text-white rounded-md w-4/5 lg:w-1/3 mx-2 my-2 lg:my-0">Sign In</a>
@@ -38,12 +38,40 @@
         </div>
 
         <div class="section">
-            <img src="{{ asset('img/chat.svg') }}" alt="Main SVG 1" class="w-1/3" />
-            <h1 class="text-2xl font-semibold ">Quick Setup</h1>
-            <p class="text-xs text-left p-3 font-semibold text-zinc-400"><b class="text-sky-600">Noxis</b> is very easy to
-                setup, you could chat on Noxis without EVER having an account and we'll never prompt you to create one
+            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl">
+            <h1 class="text-3xl lg:text-5xl font-medium text-white pb-5">Quick Setup</h1>
+            <div class="leading-7 lg:leading-9 text-lg lg:text-xl text-zinc-300">
+            <b class="text-sky-600">Noxis</b> is very easy to setup, you could chat on Noxis without EVER having an account and we'll never prompt you to create one
                 before chatting with someone. And if you do decide to sign up, it takes less than 3 minutes with stable
-                internet.</p>
+                internet.
+            </div>
+            </div>
+            <div class="circle_third hidden lg:block"></div>
+            <div class="square_third block lg:hidden"></div>
+        </div>
+
+        <div class="section">
+            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl">
+            <h1 class="text-3xl lg:text-5xl font-medium text-white pb-5">Text Anonymously</h1>
+            <div class="leading-7 lg:leading-9 text-lg lg:text-xl text-zinc-300">
+            <b class="text-sky-600">No one</b> needs to know who you are, not even us because we don't log anything either. Now, you can finally tell your crush how you
+            feel... as soon as you can make them sign up without giving yourself up (good luck with that lol).
+            </div>
+            <div class="circle_fourth hidden lg:block"></div>
+            <div class="square_fourth block lg:hidden"></div>
+        </div>
+        </div>
+
+        <div class="section">
+            <div class="m-auto w-5/6 lg:w-3/5 text-white font-normal text-xl">
+            <h1 class="text-3xl lg:text-5xl font-medium text-white pb-5">Chat Easily</h1>
+            <div class="leading-7 lg:leading-9 text-lg lg:text-xl text-zinc-300">
+            <b class="text-sky-600">Noxis</b> was built to be convenient, fun and secure. We're not perfect, but we tried to make the experience fun and easy for you with
+            our minimal straight-to-the-point UI that has everything where it should be, fun and convenience features like our scan-to-chat QR codes & bubble colors.
+            </div>
+            </div>
+            <div class="circle_fifth hidden lg:block"></div>
+            <div class="square_fifth block lg:hidden"></div>
         </div>
 
     </div>

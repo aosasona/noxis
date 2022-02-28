@@ -39,6 +39,10 @@
     <nav class="flex flex-row w-screen justify-between items-center h-12 lg:h-14 p-1 px-5 lg:px-12 box-border bg-[#101010]">
        
         <a href="/" class="no-underline h-4/5 flex flex-row text-white items-center font-medium text-lg xl:text-2xl"><img src="{{ asset('img/logo.svg') }}" alt="Logo" class="h-4/5 mr-1 lg:mr-2"/>Noxis</a>
+
+        <a href="https://twitter.com/NoxisApp" target="_blank" rel="noreferrer">
+          <i class="fab fa-twitter bg-sky-900 text-sky-500 hover:bg-sky-400 hover:text-sky-700 px-2 py-2 rounded-lg text-sm"></i>
+        </a>
         {{-- <div>
         @if(Cookie::get('username') == null)
         <a href="/signin" class="text-blue-500 hover:text-blue-700 text-sm font-medium px-3">Sign In</a>
