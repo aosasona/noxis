@@ -109,6 +109,13 @@
     transform-origin: top;
     opacity: 0;
 }
+#homeLinks {
+    animation: 800ms linkOpen ease-in-out forwards;
+    animation-delay: 800ms;
+    transform-origin: top;
+    transform : scaleY(0);
+    opacity: 0;
+}
 @keyframes boxOpen1 {
     0% {
         height : 0px;
@@ -135,11 +142,21 @@
 }
 @keyframes textOpen {
     0% {
-        width : 0px;
+        width : 0%;
         opacity: 0;
     }
     100% {
         width : 100%;
+        opacity: 1;
+    }
+}
+@keyframes linkOpen {
+    0% {
+        opacity: 0;
+        transform : scaleY(0);
+    }
+    100% {
+        transform : scaleY(1);
         opacity: 1;
     }
 }
