@@ -1435,6 +1435,10 @@ Ensure the default browser behavior of the `hidden` attribute.
         margin-right: 0.5rem;
     }
 
+    .lg\:block{
+        display: block;
+    }
+
     .lg\:hidden{
         display: none;
     }
@@ -1593,6 +1597,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
     .xl\:mt-10{
         margin-top: 2.5rem;
+    }
+
+    .xl\:block{
+        display: block;
+    }
+
+    .xl\:hidden{
+        display: none;
     }
 
     .xl\:h-\[95vh\]{
