@@ -101,14 +101,7 @@
     align-items : center;
     border-radius: 5px;
 }
-.box3 {
-    animation: 1000ms boxOpen3 ease-in-out forwards;
-    margin : 0 auto;
-    display : flex;
-    justify-content : center;
-    align-items : center;
-    border-radius: 5px;
-}
+
 .mainText {
     animation: 1000ms textOpen ease-in-out forwards;
     width : 100%;
