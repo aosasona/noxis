@@ -8,8 +8,8 @@
     <div id="fullpage">
         <div class="section" id="first">
             <div class="box w-[95%] lg:w-5/6">
-                <div class="box2 w-[95%] lg:h-4/5">
-                    <div class="box3 w-[95%] lg:w-4/5 py-3">
+                <div class="box2 w-[98%] lg:h-4/5">
+                    <div class="box3 w-[98%] lg:w-4/5 py-3">
                         <div class="text-center">
                             <img src="{{ asset('img/laptop.png') }}" class="w-3/5 m-auto hidden lg:block" id="homeImg" />
                             <img src="{{ asset('img/mobile.png') }}" class="w-full m-auto lg:hidden" id="homeImg" />

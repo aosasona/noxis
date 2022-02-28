@@ -142,19 +142,19 @@
 }
 .square {
     position: absolute;
-    top : -15vh;
+    top : 0vh;
     left : 0vw;
     width : 20rem;
-    height : 20rem;
+    height : 15rem;
     z-index: -1;
     background-color: rgba(236, 149, 17, 0.884);
 }
 .square_second {
     position: absolute;
-    bottom : -15vh;
+    bottom : -15rem;
     right : 0vw;
     width : 20rem;
-    height : 20rem;
+    height : 30rem;
     z-index: -1;
     background-color: rgba(1, 194, 136, 0.884);
 }
