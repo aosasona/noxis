@@ -976,6 +976,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[3vh\]{
     height: 3vh;
 }
+.h-full{
+    height: 100%;
+}
 .w-screen{
     width: 100vw;
 }
@@ -1015,6 +1018,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[90vw\]{
     width: 90vw;
 }
+.w-1\/2{
+    width: 50%;
+}
+.w-2\/5{
+    width: 40%;
+}
 .max-w-\[70vw\]{
     max-width: 70vw;
 }
@@ -1038,6 +1047,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .flex-col{
     flex-direction: column;
+}
+.flex-col-reverse{
+    flex-direction: column-reverse;
 }
 .items-center{
     align-items: center;
@@ -1635,6 +1647,10 @@ Ensure the default browser behavior of the `hidden` attribute.
         display: block;
     }
 
+    .lg\:flex{
+        display: flex;
+    }
+
     .lg\:hidden{
         display: none;
     }
@@ -1687,6 +1703,14 @@ Ensure the default browser behavior of the `hidden` attribute.
         flex-direction: row;
     }
 
+    .lg\:flex-col{
+        flex-direction: column;
+    }
+
+    .lg\:items-center{
+        align-items: center;
+    }
+
     .lg\:justify-center{
         justify-content: center;
     }
@@ -1701,6 +1725,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
     .lg\:border-4{
         border-width: 4px;
+    }
+
+    .lg\:bg-zinc-900{
+        --tw-bg-opacity: 1;
+        background-color: rgb(24 24 27 / var(--tw-bg-opacity));
     }
 
     .lg\:p-0{
@@ -1742,8 +1771,17 @@ Ensure the default browser behavior of the `hidden` attribute.
         padding-bottom: 1rem;
     }
 
+    .lg\:px-7{
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+    }
+
     .lg\:pb-2{
         padding-bottom: 0.5rem;
+    }
+
+    .lg\:pr-7{
+        padding-right: 1.75rem;
     }
 
     .lg\:text-center{

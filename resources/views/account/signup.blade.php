@@ -2,8 +2,15 @@
 
 @section('content')
 <title>{{ config('app.name', 'Noxis')}} | Sign Up</title>
-<div class="flex w-screen h-[85vh] justify-center items-center px-4">
-<form method="POST" action="/auth/signup" class="bg-zinc-800 px-7 py-6 pb-9 rounded-xl w-full lg:w-2/3">
+<div class="flex flex-col-reverse lg:flex-row w-screen h-screen justify-between items-center text-white">
+
+    <div class="w-full h-full bg-transparent lg:bg-zinc-900 lg:flex lg:flex-col lg:items-center lg:justify-center hidden">
+        <img src="{{ asset('img/laptop.png') }}" class="w-3/5 m-auto hidden lg:block" id="homeImg" />
+    </div>
+
+    <div class="w-full h-full flex flex-col items-center justify-center">
+
+<form method="POST" action="/auth/signup" class="bg-zinc-800 px-5 py-6 pb-9 rounded-xl w-4/5">
     <h1 class="font-medium text-4xl lg:text-5xl mb-8 p-4">Sign Up</h1>
     <div class="lg:px-5">
         @csrf
